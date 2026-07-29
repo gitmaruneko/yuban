@@ -19,17 +19,24 @@
       </section>
 
       <section>
-        <h2>下一步</h2>
-        <ul>
-          <li>編輯此頁內容</li>
-          <li>放入靜態資源於 <code>website/assets/</code></li>
-          <li>參考 README 中的啟動指引</li>
-        </ul>
+        <h2>資源搜尋（MVP 範例）</h2>
+        <div class="search-bar">
+          <input id="q" placeholder="搜尋關鍵字（標題/摘要/標籤）" />
+          <select id="age-filter">
+            <option value="">所有年齡</option>
+            <option value="0-3m">0-3m</option>
+            <option value="0-6m">0-6m</option>
+            <option value="12-36m">12-36m</option>
+          </select>
+          <button id="searchBtn">搜尋</button>
+        </div>
+        <div id="results"></div>
       </section>
     </main>
 
     <footer class="site-footer">
       <small>© yuban</small>
     </footer>
+    <script src="search.js"></script>
   </body>
 </html>
