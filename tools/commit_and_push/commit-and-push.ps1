@@ -23,7 +23,7 @@ $diff = git status --porcelain
 if (-not $diff) {
   Write-Output "No changes to commit."
 } else {
-  & git commit -m $Message
+  & $commitCmd
 }
 
 # Push current branch
