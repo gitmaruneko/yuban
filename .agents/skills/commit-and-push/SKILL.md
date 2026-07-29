@@ -30,6 +30,8 @@ Usage examples
   ```bash
   pwsh ./tools/commit_and_push/commit-and-push.ps1 -Message "chore: save changes"
   ```
+  
+Note: The examples above are PowerShell-specific. If you prefer a non-PowerShell workflow, call `git` directly or create a separate cross-platform wrapper. The repository intentionally retains the PowerShell script as the canonical implementation.
 
 - Bash wrapper (optional): create `tools/commit_and_push/commit-and-push.sh` that calls `pwsh` to run the PowerShell script for environments without native PowerShell.
 

@@ -16,3 +16,4 @@ Usage (PowerShell):
 Notes:
 - Requires `git` in PATH.
 - Run from within the repository (script resolves repo root automatically).
+ - Examples in this README are PowerShell-specific; use PowerShell or PowerShell Core (`pwsh`) to run the script on non-Windows platforms.
