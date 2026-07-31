@@ -4,6 +4,11 @@
 
 ## 歷史紀錄
 
+### 2026-07-31
+- 內容摘要：完成 MVP 首頁分類卡片與搜尋篩選功能，並部署 GitHub Pages。
+- 狀態：已完成
+- 備註：已實作首頁「政府資源 / 實用工具 / 教養與親子 / 日常生活」分類卡片；新增分類欄位與資源資料；完成 `website/index.html`、`website/search.js`、`website/styles.css` 與 `website/data/sample-resources.json` 之提交與推送；確認 GitHub Pages 已成功構建並發布至 `https://gitmaruneko.github.io/yuban/`。
+
 ### 2026-07-30
 - 內容摘要：建立育兒資源分類規則與專案共識文件。
 - 狀態：已完成
