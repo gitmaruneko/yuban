@@ -7,27 +7,31 @@ async function loadResources(){
 function renderItem(item){
   const statusLabel = item.ai_summary_status === 'verified' ? '已驗證' : 'AI 草稿';
   const statusClass = item.ai_summary_status === 'verified' ? 'verified' : 'draft';
+  const tags = item.tags?.map(tag => `<span class="meta-text">${tag}</span>`).join('') || '';
+  const category = item.category ? `<span class="meta-text">${item.category}</span>` : '';
+  const type = item.type ? `<span class="meta-text">${item.type}</span>` : '';
+  const age = item.age_ranges ? `<span class="meta-text">${item.age_ranges.join('、')}</span>` : '';
+
   return `
-    <article class="resource-card">
-      <div>
-        <h3>${item.title}</h3>
-        <p>${item.summary}</p>
+    <li class="resource-item">
+      <div class="resource-row">
+        <div>
+          <a class="resource-link" href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">
+            ${item.title}
+            <span class="resource-tooltip">
+              <span class="badge status ${statusClass}">${statusLabel}</span>
+              <span class="tooltip-text">${item.summary || '無摘要'}</span>
+            </span>
+          </a>
+        </div>
+        <div class="resource-meta">
+          ${tags}
+          ${category}
+          ${type}
+          ${age}
+        </div>
       </div>
-      <div class="resource-meta">
-        <span class="tag">${item.category || '未分類'}</span>
-        <span class="tag">${item.type || '文章'}</span>
-        <span class="tag">${item.source?.name || '來源不明'}</span>
-        <span class="tag">${item.age_ranges?.join(', ') || '不限年齡'}</span>
-      </div>
-      <div class="resource-meta">
-        ${item.tags?.map(tag => `<span class="tag">${tag}</span>`).join('')}
-      </div>
-      <div class="resource-meta">
-        <span class="badge type">${item.type || '文章'}</span>
-        <span class="badge status ${statusClass}">${statusLabel}</span>
-      </div>
-      <a class="card-link" href="${item.url || '#'}" target="_blank">查看原始資源</a>
-    </article>
+    </li>
   `;
 }
 
