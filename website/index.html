@@ -3,25 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>yuban — 靜態站</title>
+    <title>yuban — 靜態育兒資源</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <h1>yuban</h1>
-      <p>個人/專案靜態網站範本</p>
+      <div class="hero-copy">
+        <span class="eyebrow">育伴 MVP</span>
+        <h1>育兒資源一站搜尋</h1>
+        <p>整合育兒文章、影片、工具與指南，提供年齡篩選與可信度標籤，讓父母快速找到適合內容。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#search">開始搜尋資源</a>
+          <a class="button secondary" href="#results">查看示例資源</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="hero-label">搜尋快速入口</p>
+        <div class="hero-search-box">
+          <input placeholder="搜尋標題 / 摘要 / 標籤" disabled />
+          <select disabled>
+            <option>年齡階段</option>
+          </select>
+          <button disabled>搜尋</button>
+        </div>
+        <p class="hero-note">這裡展示 MVP 版面概念，正式搜尋請往下滑。</p>
+      </div>
     </header>
 
     <main class="content">
-      <section>
-        <h2>歡迎</h2>
-        <p>這是靜態站的起始頁，放在 <code>website/</code> 下。</p>
+      <section class="panel categories-panel">
+        <div class="panel-header">
+          <div>
+            <h2>熱門分類</h2>
+            <p>直接從常見育兒主題開始瀏覽，或再搭配年齡篩選讓結果更精準。</p>
+          </div>
+        </div>
+        <div class="category-grid">
+          <button type="button" class="category-pill active" data-category="">全部主題</button>
+          <button type="button" class="category-pill" data-category="政府資源">政府資源</button>
+          <button type="button" class="category-pill" data-category="實用工具">實用工具</button>
+          <button type="button" class="category-pill" data-category="教養與親子">教養與親子</button>
+          <button type="button" class="category-pill" data-category="日常生活">日常生活</button>
+        </div>
       </section>
 
-      <section>
-        <h2>資源搜尋（MVP 範例）</h2>
+      <section id="search" class="panel search-panel">
+        <div class="panel-header">
+          <div>
+            <h2>搜尋育兒資源</h2>
+            <p>輸入關鍵字並以年齡階段過濾，快速找到符合需求的資源。</p>
+          </div>
+        </div>
         <div class="search-bar">
-          <input id="q" placeholder="搜尋關鍵字（標題/摘要/標籤）" />
+          <input id="q" placeholder="搜尋標題 / 摘要 / 標籤" />
           <select id="age-filter">
             <option value="">所有年齡</option>
             <option value="0-3m">0-3m</option>
@@ -30,7 +64,16 @@
           </select>
           <button id="searchBtn">搜尋</button>
         </div>
-        <div id="results"></div>
+      </section>
+
+      <section id="results" class="panel results-panel">
+        <div class="results-header">
+          <div>
+            <h2>搜尋結果</h2>
+            <p id="resultsSummary">載入資源中...</p>
+          </div>
+        </div>
+        <div id="resultsGrid" class="results-grid"></div>
       </section>
     </main>
 
