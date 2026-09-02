@@ -1,100 +1,993 @@
 [
   {
-    "id": "r1",
-    "title": "新生兒睡眠基礎指南",
-    "summary": "介紹新生兒睡眠節律與安全睡眠做法",
-    "ai_summary_status": "ai_draft",
-    "type": "article",
-    "category": "日常生活",
-    "source": { "name": "Parenting Blog", "url": "https://example.com/sleep" },
-    "tags": ["睡眠","新生兒"],
-    "age_ranges": ["0-3m"],
-    "url": "https://example.com/sleep",
-    "media": [],
-    "created_at": "2026-07-20"
-  },
-  {
-    "id": "r2",
-    "title": "嬰兒腹部按摩教學（影片）",
-    "summary": "10 分鐘教學，緩解脹氣與促進排便",
+    "id": "resource-f8f7c331f479",
+    "title": "孕產兒關懷網站",
+    "summary": "整合孕前、孕期、產後與嬰幼兒照護資訊，涵蓋心理健康、母乳哺育、嬰幼兒發展、哺集乳室等資源，並提供孕產婦關懷諮詢管道。",
+    "type": "連結入口",
+    "type_label": "連結入口",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府",
+      "url": "https://mammy.hpa.gov.tw/"
+    },
+    "is_hub": true,
+    "age_label": "孕前–2歲",
+    "age_ranges": [
+      "孕期",
+      "0-1歲",
+      "1-3歲"
+    ],
+    "topic": "孕產與嬰幼兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "孕產婦",
+      "新生兒",
+      "母乳",
+      "發展",
+      "諮詢"
+    ],
     "ai_summary_status": "verified",
-    "type": "video",
-    "category": "日常生活",
-    "source": { "name": "YouTube: BabyCare", "url": "https://youtube.com/watch?v=abc123" },
-    "tags": ["腸胃","按摩"],
-    "age_ranges": ["0-6m"],
-    "url": "https://youtube.com/watch?v=abc123",
-    "media": [{"id":"m1","kind":"youtube","url":"https://youtube.com/watch?v=abc123","title":"嬰兒腹部按摩"}],
-    "created_at": "2026-06-10"
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "中央主管機關官方網站；由國健署婦幼健康體系提供與維護。",
+    "notice": "供衛教與資源查找；急症或個別醫療問題應立即就醫。",
+    "url": "https://mammy.hpa.gov.tw/"
   },
   {
-    "id": "r3",
-    "title": "選擇嬰兒奶粉的幾個要點",
-    "summary": "比較配方、過敏原與保存方式的重點提醒",
-    "ai_summary_status": "ai_draft",
-    "type": "article",
-    "category": "教養與親子",
-    "source": { "name": "育兒指南", "url": "https://example.com/formula" },
-    "tags": ["營養","奶粉"],
-    "age_ranges": ["0-12m"],
-    "url": "https://example.com/formula",
-    "media": [],
-    "created_at": "2026-05-05"
-  },
-  {
-    "id": "r4",
-    "title": "政府托育補助申請懶人包",
-    "summary": "整理最新托育補助、育兒津貼與育嬰假申請流程與注意事項",
+    "id": "resource-0c4a145c1f59",
+    "title": "兒童衛教手冊",
+    "summary": "提供早產兒居家照護、嬰兒安全睡眠與猝死預防、副食品、嬰幼兒營養、事故傷害預防，以及常用服務聯絡資訊。",
+    "type": "文章",
+    "type_label": "電子手冊",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府",
+      "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1459"
+    },
+    "is_hub": false,
+    "age_label": "0–6歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "健康與生活照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "新生兒",
+      "安全睡眠",
+      "副食品",
+      "營養",
+      "事故預防"
+    ],
     "ai_summary_status": "verified",
-    "type": "article",
-    "category": "政府資源",
-    "source": { "name": "育兒服務官方網站", "url": "https://example.gov/taiwan" },
-    "tags": ["補助","政策","育嬰假"],
-    "age_ranges": ["0-12m"],
-    "url": "https://example.gov/taiwan",
-    "media": [],
-    "created_at": "2026-07-22"
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "國健署正式出版的家長衛教手冊；頁面提供最新版與分章內容。",
+    "notice": "版本會更新，下載或引用前請確認頁面上的最新出版年月。",
+    "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1459"
   },
   {
-    "id": "r5",
-    "title": "學步期安全指南",
-    "summary": "家中安全檢查清單與玩具挑選建議",
+    "id": "resource-7c0e191a0673",
+    "title": "兒童健康手冊預防接種相關資料",
+    "summary": "彙整最新版兒童健康手冊的預防接種內容，並連結兒童常規疫苗時程、接種間隔、疫苗說明與補種資訊。",
+    "type": "文章",
+    "type_label": "資訊專區／文件下載",
+    "source": {
+      "name": "衛生福利部疾病管制署",
+      "type": "政府",
+      "url": "https://www.cdc.gov.tw/Category/MPage/zbAABlJGVoZDRGROm-WXSA"
+    },
+    "is_hub": true,
+    "age_label": "0–6歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "預防接種",
+    "topic_group": "健康與照護",
+    "tags": [
+      "疫苗",
+      "接種時程",
+      "兒童健康手冊",
+      "補種"
+    ],
     "ai_summary_status": "verified",
-    "type": "article",
-    "category": "日常生活",
-    "source": { "name": "Child Safety Org", "url": "https://example.com/safety" },
-    "tags": ["安全","學步"],
-    "age_ranges": ["12-36m"],
-    "url": "https://example.com/safety",
-    "media": [],
-    "created_at": "2026-04-18"
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "中央防疫主管機關官方資料；頁面持續收錄各年度兒童健康手冊。",
+    "notice": "接種時程與適用條件可能調整，應以最新公告及醫療人員評估為準。",
+    "url": "https://www.cdc.gov.tw/Category/MPage/zbAABlJGVoZDRGROm-WXSA"
   },
   {
-    "id": "r5",
-    "title": "0-6 個月成長曲線計算器（工具）",
-    "summary": "簡單工具，輸入身長體重得到成長百分位數（示意）",
-    "ai_summary_status": "ai_draft",
-    "type": "tool",
-    "category": "實用工具",
-    "source": { "name": "yuban tools", "url": "" },
-    "tags": ["工具","成長"],
-    "age_ranges": ["0-6m"],
-    "url": "",
-    "media": [],
-    "created_at": "2026-07-01"
-  },
-  {
-    "id": "r6",
-    "title": "嬰兒安撫奶嘴選購指南",
-    "summary": "比較材質與安全性，並提供推薦型號",
+    "id": "resource-568280580541",
+    "title": "兒童發展篩檢服務方案",
+    "summary": "說明未滿7歲兒童6次發展篩檢服務、適用年齡與執行資格，協助家長按時接受動作、語言、認知與社會情緒等面向的標準化篩檢。",
+    "type": "文章",
+    "type_label": "政策／服務說明",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=4824"
+    },
+    "is_hub": false,
+    "age_label": "0–6歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童發展篩檢",
+    "topic_group": "發展與學習",
+    "tags": [
+      "發展里程碑",
+      "篩檢",
+      "早期發現",
+      "幼兒專責醫師"
+    ],
     "ai_summary_status": "verified",
-    "type": "product",
-    "category": "教養與親子",
-    "source": { "name": "BabyStore Review", "url": "https://example.com/pacifiers" },
-    "tags": ["用品","奶嘴"],
-    "age_ranges": ["0-12m"],
-    "url": "https://example.com/pacifiers",
-    "media": [],
-    "created_at": "2026-03-12"
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "國健署兒童發展篩檢官方方案，載明服務制度與合格執行人員。",
+    "notice": "篩檢不等於診斷；未通過或有疑慮時應依醫師建議接受進一步評估。",
+    "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=4824"
+  },
+  {
+    "id": "resource-bced7305e1b9",
+    "title": "發展遲緩兒童早期療育",
+    "summary": "整合各縣市通報轉介與個案管理中心、兒童發展聯合評估中心、社區療育據點、線上發展檢核及早療費用補助等資源。",
+    "type": "連結入口",
+    "type_label": "資源入口",
+    "source": {
+      "name": "衛生福利部（社會及家庭署、國民健康署）",
+      "type": "政府",
+      "url": "https://www.mohw.gov.tw/cp-190-238-1.html"
+    },
+    "is_hub": true,
+    "age_label": "0–6歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "早期療育",
+    "topic_group": "發展與學習",
+    "tags": [
+      "發展遲緩",
+      "聯合評估",
+      "通報轉介",
+      "社區療育",
+      "補助"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "衛福部官方整合頁；連結全國評估、轉介、療育與補助系統。",
+    "notice": "線上檢核僅供初步觀察；疑似遲緩宜及早向醫療院所或地方通報轉介中心求助。",
+    "url": "https://www.mohw.gov.tw/cp-190-238-1.html"
+  },
+  {
+    "id": "resource-401ff7f7a2ba",
+    "title": "育兒親職網",
+    "summary": "提供0至3歲照顧者依年齡查找的影音微課程，主題含兒童發展、兒童安全、生活照顧、親子互動及雙／多胞胎照護。",
+    "type": "連結入口",
+    "type_label": "線上課程入口",
+    "source": {
+      "name": "衛生福利部社會及家庭署",
+      "type": "政府",
+      "url": "https://babyedu.sfaa.gov.tw/mooc/index.php"
+    },
+    "is_hub": true,
+    "age_label": "0–3歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲"
+    ],
+    "topic": "親職知能",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "生活照顧",
+      "親子互動",
+      "兒童安全",
+      "兒童發展",
+      "雙胞胎"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "社家署官方親職教育平台；課程以系統化短影音呈現並提供無障礙版本。",
+    "notice": "一般衛教不能取代個別專業評估；出現健康或發展異常時請尋求專業協助。",
+    "url": "https://babyedu.sfaa.gov.tw/mooc/index.php"
+  },
+  {
+    "id": "resource-d7f125e92c95",
+    "title": "托育媒合平臺",
+    "summary": "供家長依地區與需求查詢居家托育人員、托嬰中心及相關托育資訊，協助尋找合法登記或立案的托育服務。",
+    "type": "工具／用品",
+    "type_label": "查詢工具",
+    "source": {
+      "name": "衛生福利部社會及家庭署",
+      "type": "政府",
+      "url": "https://ncwisweb.sfaa.gov.tw/home/index"
+    },
+    "is_hub": true,
+    "age_label": "0–3歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲"
+    ],
+    "topic": "托育媒合",
+    "topic_group": "托育與服務",
+    "tags": [
+      "保母",
+      "托嬰中心",
+      "準公共托育",
+      "合法立案",
+      "媒合"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "社家署官方全國托育查詢與媒合平台；政府機關亦指引家長使用。",
+    "notice": "名單不等於品質保證；送托前仍應核對登記、評鑑、契約、環境與實際照顧安排。",
+    "url": "https://ncwisweb.sfaa.gov.tw/home/index"
+  },
+  {
+    "id": "resource-dfc188e5884e",
+    "title": "0-6歲國家一起養2.0",
+    "summary": "彙整生育補助、0至2歲托育補助、0至6歲育兒津貼與就學補助、公共化及準公共教保、育嬰留停等中央育兒支持措施。",
+    "type": "文章",
+    "type_label": "政策專頁",
+    "source": {
+      "name": "行政院（衛福部、教育部、勞動部、內政部）",
+      "type": "政府",
+      "url": "https://www.ey.gov.tw/Page/5A8A0CB5B41DA11E/1edab400-96b1-479d-919d-8ee14340fd26"
+    },
+    "is_hub": false,
+    "age_label": "孕前–6歲",
+    "age_ranges": [
+      "孕期",
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "補助與家庭支持",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "生育補助",
+      "育兒津貼",
+      "托育補助",
+      "幼兒園",
+      "育嬰留停"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "行政院官方政策整合頁，資料來源跨衛福、教育、勞動與內政部會。",
+    "notice": "補助金額、資格與申請窗口可能調整，申請前應再查中央與戶籍地最新規定。",
+    "url": "https://www.ey.gov.tw/Page/5A8A0CB5B41DA11E/1edab400-96b1-479d-919d-8ee14340fd26"
+  },
+  {
+    "id": "resource-210600881a1f",
+    "title": "全國教保資訊網",
+    "summary": "提供學前教保政策、法令、親職教育與補助資訊，並可查詢合法立案幼兒園、基本資料、基礎評鑑及相關公開資訊。",
+    "type": "連結入口",
+    "type_label": "查詢入口",
+    "source": {
+      "name": "教育部國民及學前教育署",
+      "type": "政府",
+      "url": "https://www.ece.moe.edu.tw/ch/"
+    },
+    "is_hub": true,
+    "age_label": "2–6歲",
+    "age_ranges": [
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "幼兒園與學前教保",
+    "topic_group": "發展與學習",
+    "tags": [
+      "幼兒園查詢",
+      "合法立案",
+      "基礎評鑑",
+      "準公共",
+      "就學補助"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "教育主管機關官方全國教保資訊平台，提供幼兒園查詢與政策資訊。",
+    "notice": "招生、收費與評鑑資料以當學年度及地方教育局最新公告為準，參觀後再做選擇。",
+    "url": "https://www.ece.moe.edu.tw/ch/"
+  },
+  {
+    "id": "resource-905e0121ff50",
+    "title": "教育部家庭教育資源網",
+    "summary": "整合親職、家庭關係、情緒與多元家庭等學習資源，提供電子手冊、影音教材、各縣市家庭教育中心資訊與家庭教育諮詢管道。",
+    "type": "連結入口",
+    "type_label": "連結入口",
+    "source": {
+      "name": "教育部",
+      "type": "政府",
+      "url": "https://familyedu.moe.gov.tw/index.aspx"
+    },
+    "is_hub": true,
+    "age_label": "全齡",
+    "age_ranges": [
+      "全齡"
+    ],
+    "topic": "親職與家庭關係",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "親職教育",
+      "親子關係",
+      "情緒教育",
+      "家庭教育中心",
+      "諮詢"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "教育部官方家庭教育平台，連結全國各縣市家庭教育中心與公共學習資源。",
+    "notice": "各地課程、活動與諮詢時段不同，使用前請查看所在地中心的最新公告。",
+    "url": "https://familyedu.moe.gov.tw/index.aspx"
+  },
+  {
+    "id": "resource-4b94ab4e9296",
+    "title": "臺大兒童醫院健兒門診：兒童健康檢查",
+    "summary": "說明兒童定期健康檢查的重要性、檢查時程與項目、就診前準備，以及生長、發展、營養、口腔與事故預防等評估內容。",
+    "type": "文章",
+    "type_label": "衛教文章／門診資訊",
+    "source": {
+      "name": "國立臺灣大學醫學院附設醫院兒童醫院",
+      "type": "醫院",
+      "url": "https://www.ntuh.gov.tw/ntuch/Fpage.action?muid=3153"
+    },
+    "is_hub": false,
+    "age_label": "0–6歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童預防保健",
+    "topic_group": "健康與照護",
+    "tags": [
+      "兒童健檢",
+      "生長評估",
+      "發展診察",
+      "預防注射",
+      "健兒門診"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "國家級醫學中心兒童醫院官方衛教與門診說明，由兒科臨床體系提供。",
+    "notice": "門診時段與補助時程可能變動；就診前應查看最新公告並攜帶健保卡及兒童健康手冊。",
+    "url": "https://www.ntuh.gov.tw/ntuch/Fpage.action?muid=3153"
+  },
+  {
+    "id": "resource-bba88a1390f3",
+    "title": "臺北榮總兒童醫學部新生兒科衛教",
+    "summary": "彙整新手爸媽口袋書與新生兒照護主題，包括餵養、母乳保存、洗澡、作息、黃疸、溢吐奶、皮膚照護、篩檢及早產兒照護。",
+    "type": "連結入口",
+    "type_label": "醫院衛教專區",
+    "source": {
+      "name": "臺北榮民總醫院兒童醫學部",
+      "type": "醫院",
+      "url": "https://wd.vghtpe.gov.tw/ped/Fpage.action?muid=17203"
+    },
+    "is_hub": true,
+    "age_label": "0–1歲",
+    "age_ranges": [
+      "0-1歲"
+    ],
+    "topic": "新生兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "新手爸媽",
+      "母乳",
+      "洗澡",
+      "黃疸",
+      "溢吐奶",
+      "早產兒"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "醫學中心兒童醫學部官方衛教專區，內容由新生兒照護團隊維護。",
+    "notice": "症狀嚴重、持續或與文章描述不符時應儘速就醫，不宜只靠網路資訊自行處置。",
+    "url": "https://wd.vghtpe.gov.tw/ped/Fpage.action?muid=17203"
+  },
+  {
+    "id": "resource-ed2ccb20347c",
+    "title": "臺灣兒科醫學會兒科衛教",
+    "summary": "提供民眾版兒科衛教與專業建議，主題包括嬰兒哺育、安全睡眠與嬰兒猝死預防、兒童發燒、疫苗與用藥安全。",
+    "type": "連結入口",
+    "type_label": "專業衛教專區",
+    "source": {
+      "name": "臺灣兒科醫學會",
+      "type": "專業組織",
+      "url": "https://www.pediatr.org.tw/people/edu.asp"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童健康",
+    "topic_group": "健康與照護",
+    "tags": [
+      "兒科",
+      "嬰兒哺育",
+      "安全睡眠",
+      "發燒",
+      "疫苗",
+      "用藥"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "兒科專科醫學會民眾衛教資料，內容由兒科專家或專業委員會提出。",
+    "notice": "部分文章發布較早，閱讀時應留意日期並與現行政府指引及臨床醫師建議互相核對。",
+    "url": "https://www.pediatr.org.tw/people/edu.asp"
+  },
+  {
+    "id": "resource-950a00862248",
+    "title": "台灣母乳哺育聯合學會",
+    "summary": "提供母乳哺育倡議、專業教育、研究與公開資訊，並連結民眾母乳諮詢管道，協助家庭取得哺乳支持。",
+    "type": "連結入口",
+    "type_label": "專業資源入口",
+    "source": {
+      "name": "台灣母乳哺育聯合學會",
+      "type": "專業組織",
+      "url": "https://www.breastfeedingtaiwan.org/"
+    },
+    "is_hub": true,
+    "age_label": "孕期–2歲以上",
+    "age_ranges": [
+      "孕期",
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "母乳哺育",
+    "topic_group": "健康與照護",
+    "tags": [
+      "母乳",
+      "哺乳支持",
+      "嬰幼兒餵食",
+      "泌乳",
+      "諮詢"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "由醫師、護理師、助產師、營養師、藥師與公衛等專業人員組成的母乳哺育專業團體。",
+    "notice": "哺乳困難、嬰兒體重增加不佳或用藥疑問，應尋求合格醫療或泌乳專業人員的個別評估。",
+    "url": "https://www.breastfeedingtaiwan.org/"
+  },
+  {
+    "id": "resource-d4463ea527eb",
+    "title": "靖娟兒童安全文教基金會",
+    "summary": "提供交通、遊戲、居家與托育安全教材、刊物與影音，也辦理兒童事故傷害預防、創傷家庭支持、弱勢家庭服務與政策倡議。",
+    "type": "連結入口",
+    "type_label": "專業資源入口",
+    "source": {
+      "name": "財團法人靖娟兒童安全文教基金會",
+      "type": "專業組織",
+      "url": "https://www.safe.org.tw/"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童事故傷害預防",
+    "topic_group": "安全與保護",
+    "tags": [
+      "交通安全",
+      "居家安全",
+      "遊戲安全",
+      "托育安全",
+      "創傷支持"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "長期專注兒童事故傷害防制與安全教育的非營利專業組織，並提供教材、研究及家庭服務。",
+    "notice": "活動與直接服務可能有地區、資格或期間限制；緊急事故請先聯絡119或就醫。",
+    "url": "https://www.safe.org.tw/"
+  },
+  {
+    "id": "resource-ef474aeeb31b",
+    "title": "兒童就醫地圖",
+    "summary": "可依地區與服務類別查找兒童醫療資源，包含兒童發展篩檢、聯合評估等院所資訊，協助家長找到合適的就醫或轉介地點。",
+    "type": "工具／用品",
+    "type_label": "查詢工具",
+    "source": {
+      "name": "衛生福利部兒童醫療健康資訊整合平台",
+      "type": "政府",
+      "url": "https://healthforkids.mohw.gov.tw/HospitalMap/?id=920da57226144ffab67339c1a5f2fec1"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童就醫資源",
+    "topic_group": "健康與照護",
+    "tags": [
+      "兒科",
+      "就醫地圖",
+      "發展篩檢",
+      "醫療院所",
+      "轉介"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "衛生福利部官方兒童醫療資訊平台，整合各地兒童醫療服務院所查詢。",
+    "notice": "院所服務項目與時段可能變動，前往前宜先電話確認；危急狀況請撥119或立即就近急診。",
+    "url": "https://healthforkids.mohw.gov.tw/HospitalMap/?id=920da57226144ffab67339c1a5f2fec1"
+  },
+  {
+    "id": "resource-ad7e78c736d0",
+    "title": "0-7歲兒童生長曲線",
+    "summary": "提供0至7歲兒童身高、體重與頭圍的生長曲線及判讀說明，協助照顧者持續觀察孩子的生長趨勢。",
+    "type": "文章",
+    "type_label": "圖表／衛教說明",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1596&pid=549&sid=20116"
+    },
+    "is_hub": false,
+    "age_label": "0–7歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "生長發育",
+    "topic_group": "健康與照護",
+    "tags": [
+      "生長曲線",
+      "身高",
+      "體重",
+      "頭圍",
+      "百分位"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "國健署官方生長曲線資料；0至5歲採世界衛生組織標準，5至7歲銜接國內參考資料。",
+    "notice": "單次百分位不能代替診斷，應觀察連續變化；生長停滯或曲線明顯跨越時請諮詢兒科醫師。",
+    "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1596&pid=549&sid=20116"
+  },
+  {
+    "id": "resource-50f2d0264f65",
+    "title": "兒童視力保健工作手冊",
+    "summary": "整理學齡前兒童視力篩檢、近視防治、異常辨識、轉介與日常護眼原則，供第一線人員及家長參考。",
+    "type": "文章",
+    "type_label": "電子手冊",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府",
+      "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=5029"
+    },
+    "is_hub": false,
+    "age_label": "0–6歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "視力保健",
+    "topic_group": "健康與照護",
+    "tags": [
+      "視力篩檢",
+      "近視防治",
+      "弱視",
+      "護眼",
+      "轉介"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "國健署邀集眼科與近視防治專家編修之官方工作手冊，內容包含篩檢及轉介實務。",
+    "notice": "手冊供衛教與初步辨識；瞇眼、歪頭、遮眼或視力疑慮應接受眼科專業檢查。",
+    "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=5029"
+  },
+  {
+    "id": "resource-acfc7ce2de13",
+    "title": "兒童潔牙＆塗氟 健康幸福",
+    "summary": "提供幼兒潔牙、含氟牙膏與牙齒塗氟等衛教影片、海報及宣導單張，協助家庭建立日常口腔保健習慣。",
+    "type": "影片",
+    "type_label": "影音／宣導教材",
+    "source": {
+      "name": "衛生福利部口腔健康司",
+      "type": "政府",
+      "url": "https://dep.mohw.gov.tw/DOOH/cp-6543-71338-124.html"
+    },
+    "is_hub": true,
+    "age_label": "0歲–學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童口腔保健",
+    "topic_group": "健康與照護",
+    "tags": [
+      "刷牙",
+      "含氟牙膏",
+      "牙齒塗氟",
+      "齲齒預防",
+      "牙科"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "衛福部口腔健康主管單位官方幼兒潔牙與塗氟衛教專區。",
+    "notice": "塗氟補助年齡與頻率可能依政策調整；請以最新公告及牙醫師評估為準。",
+    "url": "https://dep.mohw.gov.tw/DOOH/cp-6543-71338-124.html"
+  },
+  {
+    "id": "resource-440fb0707354",
+    "title": "113保護專線",
+    "summary": "提供全年無休、24小時的家庭暴力、性侵害與兒少保護通報及諮詢，另有線上諮詢與簡訊服務。",
+    "type": "工具／用品",
+    "type_label": "保護專線／線上服務",
+    "source": {
+      "name": "衛生福利部保護服務司",
+      "type": "政府",
+      "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲及照顧者",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒少保護",
+    "topic_group": "安全與保護",
+    "tags": [
+      "113",
+      "兒少保護",
+      "家庭暴力",
+      "性侵害",
+      "通報",
+      "諮詢"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "中央主管機關官方保護專線，全國可用且免付費，提供多元求助管道。",
+    "notice": "如有人身安全的立即危險先撥110；需要緊急醫療救護請撥119。",
+    "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html"
+  },
+  {
+    "id": "resource-d9fe74bf597e",
+    "title": "聯合國兒童權利公約資訊網",
+    "summary": "彙整兒童權利公約條文、兒少易讀版、教育教材、統計資料、申訴資訊及兒少參與內容，協助家庭理解兒童權利。",
+    "type": "連結入口",
+    "type_label": "資訊入口",
+    "source": {
+      "name": "衛生福利部社會及家庭署",
+      "type": "政府",
+      "url": "https://crc.sfaa.gov.tw/?AspxAutoDetectCookieSupport=1"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童權利",
+    "topic_group": "安全與保護",
+    "tags": [
+      "CRC",
+      "兒童權利",
+      "最佳利益",
+      "表意參與",
+      "不歧視",
+      "申訴"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "社家署建置的官方兒童權利公約資訊平台，收錄政府報告、教材與兒少版資源。",
+    "notice": "網站資訊屬一般說明；個案權益爭議或法律問題仍應向主管機關或專業人員諮詢。",
+    "url": "https://crc.sfaa.gov.tw/?AspxAutoDetectCookieSupport=1"
+  },
+  {
+    "id": "resource-7311bf35dfe5",
+    "title": "全國兒童課後照顧服務中心資訊網",
+    "summary": "供家長查詢各縣市立案的兒童課後照顧服務中心及公開資訊，協助安排國小學童放學後的照顧。",
+    "type": "工具／用品",
+    "type_label": "查詢工具",
+    "source": {
+      "name": "教育部",
+      "type": "政府",
+      "url": "https://afterschool.moe.gov.tw/"
+    },
+    "is_hub": true,
+    "age_label": "6–12歲",
+    "age_ranges": [
+      "3-6歲"
+    ],
+    "topic": "課後照顧",
+    "topic_group": "發展與學習",
+    "tags": [
+      "國小",
+      "課後照顧",
+      "立案中心",
+      "安親",
+      "公開資訊"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "教育部建置之全國課後照顧服務中心資訊系統，政府入口網站亦指引家長使用。",
+    "notice": "公開名單不等於個別品質保證；報名前仍應核對立案、收費、契約、人員與環境安全。",
+    "url": "https://afterschool.moe.gov.tw/"
+  },
+  {
+    "id": "resource-b13918b65922",
+    "title": "馬偕兒童醫院衛教資訊",
+    "summary": "依兒童各專科提供疾病、檢查、照護與就醫衛教，涵蓋新生兒、感染、過敏、內分泌、心臟、腸胃及青少年健康等主題。",
+    "type": "連結入口",
+    "type_label": "醫院衛教專區",
+    "source": {
+      "name": "馬偕紀念醫院兒童醫院",
+      "type": "醫院",
+      "url": "https://www.mmh.org.tw/child/health_topiclist.php"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒科疾病與照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "新生兒",
+      "感染",
+      "過敏",
+      "內分泌",
+      "心臟",
+      "青少年"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "兒童專科醫院官方衛教平台，可依兒童專科瀏覽衛教主題及單張。",
+    "notice": "文章不能取代診察；若症狀嚴重、持續惡化或孩子精神狀況不佳，應儘速就醫。",
+    "url": "https://www.mmh.org.tw/child/health_topiclist.php"
+  },
+  {
+    "id": "resource-d71e52a5980a",
+    "title": "高醫兒科疾病衛教",
+    "summary": "彙整兒科常見疾病與照護衛教資料，便於家長查找症狀觀察、居家照護、檢查及治療相關說明。",
+    "type": "連結入口",
+    "type_label": "醫院衛教專區",
+    "source": {
+      "name": "高雄醫學大學附設中和紀念醫院",
+      "type": "醫院",
+      "url": "https://www.kmuh.org.tw/web/kmuhdept/health_education/%E5%85%92%E7%A7%91%E7%96%BE%E7%97%85.aspx"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒科疾病衛教",
+    "topic_group": "健康與照護",
+    "tags": [
+      "兒科",
+      "常見疾病",
+      "居家照護",
+      "就醫",
+      "衛教單張"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "醫學中心官方衛教專區，由醫院臨床體系提供兒科疾病資訊。",
+    "notice": "請留意各篇資料更新日期；用藥、檢查與治療仍須依孩子實際狀況由醫療人員評估。",
+    "url": "https://www.kmuh.org.tw/web/kmuhdept/health_education/%E5%85%92%E7%A7%91%E7%96%BE%E7%97%85.aspx"
+  },
+  {
+    "id": "resource-b0f31ce00665",
+    "title": "育兒成｜全方位兒童發展整合照護平臺",
+    "summary": "以兒童發展為核心，提供認知、語言、動作、社會情緒、發展疑慮、居家活動、評估與早療等整合資訊。",
+    "type": "連結入口",
+    "type_label": "專業資訊平台",
+    "source": {
+      "name": "國立成功大學兒童發展專業團隊",
+      "type": "大學／醫療專業團隊",
+      "url": "https://kidaid.org.tw/"
+    },
+    "is_hub": true,
+    "age_label": "0–6歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "發展里程碑",
+      "語言",
+      "動作",
+      "社會情緒",
+      "居家活動",
+      "早療"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "由大學與兒童發展專業團隊建置的整合照護平台，內容聚焦發展與家庭可操作策略。",
+    "notice": "線上資訊不等於發展診斷；家長有疑慮時可先做正式篩檢，再依專業建議接受評估。",
+    "url": "https://kidaid.org.tw/"
+  },
+  {
+    "id": "resource-e2b060a9be4c",
+    "title": "台灣早產兒基金會",
+    "summary": "提供早產防治、出院後追蹤、居家照護、疾病衛教、社會福利、醫療補助、合約醫院及諮詢服務資訊。",
+    "type": "連結入口",
+    "type_label": "專業資源入口",
+    "source": {
+      "name": "財團法人台灣早產兒基金會",
+      "type": "專業組織",
+      "url": "https://www.pbf.org.tw/"
+    },
+    "is_hub": true,
+    "age_label": "孕期–學齡前",
+    "age_ranges": [
+      "孕期",
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "早產兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "早產",
+      "安胎",
+      "居家照護",
+      "追蹤檢查",
+      "醫療補助",
+      "社會福利"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "長期專注早產防治與早產兒照護的非營利專業基金會，並與合約醫院合作提供服務。",
+    "notice": "補助、追蹤與諮詢服務可能有資格或合作院所限制；請先查看最新辦法或聯絡基金會。",
+    "url": "https://www.pbf.org.tw/"
+  },
+  {
+    "id": "resource-90ed8cd4bc64",
+    "title": "台灣兒童青少年精神醫學會衛教專欄",
+    "summary": "提供兒童與青少年心理健康、創傷、情緒行為、網路使用與親子數位規範等專業衛教，並可查找相關醫師資訊。",
+    "type": "連結入口",
+    "type_label": "專業衛教專區",
+    "source": {
+      "name": "台灣兒童青少年精神醫學會",
+      "type": "專業組織",
+      "url": "https://www.tscap.org.tw/TW/home/Default.asp"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "兒童青少年心理健康",
+    "topic_group": "情緒與心理",
+    "tags": [
+      "情緒",
+      "行為",
+      "創傷",
+      "網路使用",
+      "親子溝通",
+      "兒童心智科"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "兒童青少年精神醫學專科學會官方網站，衛教內容與專業資訊由相關專科體系提供。",
+    "notice": "若孩子有自傷、自殺或傷人風險，勿只查閱文章，應立即就近急診、撥119或尋求專業危機協助。",
+    "url": "https://www.tscap.org.tw/TW/home/Default.asp"
+  },
+  {
+    "id": "resource-a61e1277a847",
+    "title": "兒福聯盟親子百寶箱",
+    "summary": "依0至18歲年齡及主題整理親職文章、影音與實作建議，涵蓋回應式照顧、情緒健康、反霸凌、數位教養與照顧者支持。",
+    "type": "連結入口",
+    "type_label": "親職內容專區",
+    "source": {
+      "name": "財團法人中華民國兒童福利聯盟基金會",
+      "type": "專業組織",
+      "url": "https://www.children.org.tw/publication_research/treasure_chest"
+    },
+    "is_hub": true,
+    "age_label": "0–18歲及照顧者",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "親職教養與家庭支持",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "回應式照顧",
+      "情緒教育",
+      "反霸凌",
+      "數位教養",
+      "照顧者支持"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "兒童福利專業非營利組織的公開親職資源，內容可依年齡與議題分類查找。",
+    "notice": "文章提供一般性建議；涉及兒少安全、心理危機、醫療或法律問題時，應轉向相應專業服務。",
+    "url": "https://www.children.org.tw/publication_research/treasure_chest"
+  },
+  {
+    "id": "resource-f21efa711cde",
+    "title": "iWIN網路內容防護機構",
+    "summary": "提供兒少網路素養、網路霸凌、私密影像外流、防護工具與平台設定教學，並受理有害兒少網路內容申訴。",
+    "type": "工具／用品",
+    "type_label": "網安資源／申訴入口",
+    "source": {
+      "name": "iWIN網路內容防護機構",
+      "type": "專業組織",
+      "url": "https://i.win.org.tw/"
+    },
+    "is_hub": true,
+    "age_label": "6–18歲及照顧者",
+    "age_ranges": [
+      "3-6歲"
+    ],
+    "topic": "兒少網路安全",
+    "topic_group": "安全與保護",
+    "tags": [
+      "網路素養",
+      "網路霸凌",
+      "私密影像",
+      "內容申訴",
+      "防護工具",
+      "3C"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "依兒少權益法規設置的網路內容防護專責機構，提供教育、防護與申訴服務。",
+    "notice": "發現私密影像或有害內容時應保留必要網址與證據但不要轉傳；有人身危險請先撥110。",
+    "url": "https://i.win.org.tw/"
+  },
+  {
+    "id": "resource-11baae717a56",
+    "title": "國民健康署親子共讀專區",
+    "summary": "提供從孕期、嬰兒到幼兒階段的分齡共讀影片與技巧，協助家長透過說故事促進語言、理解、情緒與親子互動。",
+    "type": "混合型內容",
+    "type_label": "影音／衛教專區",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=3808"
+    },
+    "is_hub": true,
+    "age_label": "孕期–6歲",
+    "age_ranges": [
+      "孕期",
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "topic": "親子共讀",
+    "topic_group": "發展與學習",
+    "tags": [
+      "繪本",
+      "語言發展",
+      "認知",
+      "情緒",
+      "親子互動",
+      "分齡技巧"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": "2026-09-02",
+    "credibility_note": "國健署官方親子共讀專區，提供分齡指引與公開衛教影音。",
+    "notice": "依孩子興趣與發展彈性調整，不宜用共讀表現互相比較；若有語言發展疑慮應諮詢專業人員。",
+    "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=3808"
   }
 ]

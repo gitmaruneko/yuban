@@ -17,6 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      - name: Validate resource index
+        run: python tools/validate_resources.py
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v5
         with:
