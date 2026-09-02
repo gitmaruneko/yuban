@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="向育伴推薦新的育兒資源，或回報現有資源的連結與內容問題。" />
+    <title>提交資源｜育伴 YuBan</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="submit.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#submissionForm">跳到提交表單</a>
+
+    <header class="topbar">
+      <div class="page-shell topbar-inner">
+        <a class="brand" href="index.html" aria-label="育伴首頁">
+          <span class="brand-mark" aria-hidden="true">育</span>
+          <span class="brand-name"><strong>育伴</strong><small>YuBan</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="主要導覽">
+          <a href="index.html#explore">探索資源</a>
+          <a href="learning-materials/index.html">學習素材</a>
+          <a class="nav-cta" href="submit.html" aria-current="page">提交資源</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="subpage-main">
+      <div class="page-shell">
+        <nav class="breadcrumb" aria-label="麵包屑">
+          <a href="index.html">首頁</a>
+          <span aria-hidden="true">／</span>
+          <span id="breadcrumbLabel">提交資源</span>
+        </nav>
+
+        <header class="page-intro">
+          <p class="eyebrow">一起補齊好內容</p>
+          <h1 id="pageTitle">推薦一份育兒資源</h1>
+          <p id="pageDescription">
+            分享你覺得可靠、實用的文章、影片、工具或入口網站。送出後會前往 GitHub 建立公開提案，讓整理過程可以被追蹤。
+          </p>
+        </header>
+
+        <div class="submission-layout">
+          <section class="submission-card" aria-labelledby="form-title">
+            <h2 id="form-title" class="visually-hidden">資源提交表單</h2>
+            <form id="submissionForm" class="submission-form">
+              <input id="submissionMode" type="hidden" value="submit" />
+
+              <label class="form-field" for="resourceTitle">
+                <span>資源名稱 <span class="required-mark" aria-hidden="true">＊</span></span>
+                <input id="resourceTitle" name="title" required autocomplete="off" />
+              </label>
+
+              <label class="form-field" for="resourceUrl">
+                <span>原始網址 <span class="required-mark" aria-hidden="true">＊</span></span>
+                <input
+                  id="resourceUrl"
+                  name="url"
+                  type="url"
+                  required
+                  inputmode="url"
+                  placeholder="https://"
+                />
+              </label>
+
+              <div class="form-row">
+                <label class="form-field" for="resourceAge">
+                  <span>適用年齡</span>
+                  <select id="resourceAge" name="age">
+                    <option value="尚待確認">尚待確認</option>
+                    <option value="孕期">孕期</option>
+                    <option value="0-1歲">0–1 歲</option>
+                    <option value="1-3歲">1–3 歲</option>
+                    <option value="3-6歲">3–6 歲</option>
+                    <option value="全齡">全齡</option>
+                  </select>
+                </label>
+
+                <label class="form-field" for="resourceType">
+                  <span>內容類型</span>
+                  <select id="resourceType" name="type">
+                    <option value="尚待確認">尚待確認</option>
+                    <option value="文章">文章</option>
+                    <option value="影片">影片</option>
+                    <option value="工具／用品">工具／用品</option>
+                    <option value="混合型內容">混合型內容</option>
+                    <option value="連結入口">連結入口</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="form-field" for="submissionReason">
+                <span id="reasonLabel">為什麼推薦這份資源？ <span class="required-mark" aria-hidden="true">＊</span></span>
+                <textarea
+                  id="submissionReason"
+                  name="reason"
+                  required
+                  placeholder="請簡單說明內容特色、適合的家庭，或你希望回報的問題。"
+                ></textarea>
+                <span class="form-help">請勿填寫孩子姓名、病歷、聯絡方式或其他個人敏感資訊。</span>
+              </label>
+
+              <p id="formStatus" class="form-status" aria-live="polite"></p>
+              <button id="submitButton" class="button primary" type="submit">前往 GitHub 送出提案</button>
+            </form>
+          </section>
+
+          <aside class="page-aside" aria-labelledby="review-process-title">
+            <h2 id="review-process-title">我們會檢查</h2>
+            <ul class="check-list">
+              <li>原始來源與網址是否清楚</li>
+              <li>摘要是否準確反映原文</li>
+              <li>適用年齡、主題與內容類型</li>
+              <li>是否需要健康或安全提醒</li>
+            </ul>
+            <p class="privacy-note">
+              GitHub Issue 是公開頁面。請勿提交任何可識別個人身分、醫療或家庭隱私的內容。
+            </p>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">育</span>
+            <span class="brand-name"><strong>育伴</strong><small>YuBan</small></span>
+          </a>
+          <p>陪父母更快找到可信、實用的育兒資源。</p>
+        </div>
+        <nav aria-label="頁尾導覽">
+          <a href="index.html#explore">探索資源</a>
+          <a href="submit.html">提交資源</a>
+        </nav>
+      </div>
+      <p class="footer-legal">© 2026 育伴 YuBan．本站內容不取代醫療診斷或專業建議。</p>
+    </footer>
+  </body>
+</html>

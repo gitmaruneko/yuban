@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="查看育伴整理的育兒資源摘要、適用年齡、來源與核實狀態。" />
+    <title>資源詳情｜育伴 YuBan</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="resource.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#resourceDetail">跳到資源詳情</a>
+
+    <header class="topbar">
+      <div class="page-shell topbar-inner">
+        <a class="brand" href="index.html" aria-label="育伴首頁">
+          <span class="brand-mark" aria-hidden="true">育</span>
+          <span class="brand-name"><strong>育伴</strong><small>YuBan</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="主要導覽">
+          <a href="index.html#explore">探索資源</a>
+          <a href="learning-materials/index.html">學習素材</a>
+          <a class="nav-cta" href="submit.html">提交資源</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="resourceDetail" class="subpage-main">
+      <div class="page-shell">
+        <nav class="breadcrumb" aria-label="麵包屑">
+          <a href="index.html">首頁</a>
+          <span aria-hidden="true">／</span>
+          <a href="index.html#explore">探索資源</a>
+          <span aria-hidden="true">／</span>
+          <span id="breadcrumbTitle">資源詳情</span>
+        </nav>
+
+        <div id="detailLoading" class="notice-card" role="status">正在載入資源詳情…</div>
+
+        <div id="detailError" class="notice-card error-notice" role="alert" hidden>
+          <h1>找不到這筆資源</h1>
+          <p>連結可能不完整，或資料已經更新。</p>
+          <a class="button primary" href="index.html#explore">回到資源搜尋</a>
+        </div>
+
+        <div id="detailContent" hidden>
+          <div class="detail-layout">
+            <article class="detail-article">
+              <header class="detail-header">
+                <div class="detail-kickers">
+                  <span id="detailTopicGroup" class="topic-label"></span>
+                  <span id="detailStatus" class="status-badge"></span>
+                </div>
+                <h1 id="detailTitle" class="detail-title"></h1>
+                <p id="detailSummary" class="detail-summary"></p>
+              </header>
+
+              <section class="detail-section" aria-labelledby="resource-info-title">
+                <h2 id="resource-info-title">這份資源適合誰？</h2>
+                <dl class="detail-meta-grid">
+                  <div><dt>適用年齡</dt><dd id="detailAge"></dd></div>
+                  <div><dt>主題</dt><dd id="detailTopic"></dd></div>
+                  <div><dt>內容形式</dt><dd id="detailType"></dd></div>
+                  <div><dt>提供方類型</dt><dd id="detailSourceType"></dd></div>
+                </dl>
+              </section>
+
+              <section class="detail-section" aria-labelledby="tags-title">
+                <h2 id="tags-title">內容關鍵字</h2>
+                <ul id="detailTags" class="tag-list"></ul>
+              </section>
+
+              <section class="detail-section" aria-labelledby="review-title">
+                <h2 id="review-title">核實與閱讀提醒</h2>
+                <div class="detail-notes">
+                  <div class="detail-note">
+                    <strong>可信度備註</strong>
+                    <p id="detailCredibility"></p>
+                  </div>
+                  <div class="detail-note caution">
+                    <strong>閱讀前請注意</strong>
+                    <p id="detailNotice"></p>
+                  </div>
+                </div>
+              </section>
+            </article>
+
+            <aside class="detail-sidebar" aria-labelledby="original-source-title">
+              <h2 id="original-source-title">原始來源</h2>
+              <p id="detailSourceName" class="source-name-large"></p>
+              <a
+                id="originalSourceLink"
+                class="button primary external-button"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >前往原始網站</a>
+              <p class="sidebar-disclaimer">
+                即將離開育伴。外部網站內容與隱私政策由原始來源負責，重要資訊請確認其更新日期。
+              </p>
+              <p id="reviewedAt" class="sidebar-disclaimer"></p>
+              <a id="reportResource" class="report-link" href="submit.html?mode=report">回報連結或內容問題</a>
+            </aside>
+          </div>
+
+          <section class="related-section" aria-labelledby="related-title">
+            <h2 id="related-title">同類資源</h2>
+            <div id="relatedResources" class="related-list"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">育</span>
+            <span class="brand-name"><strong>育伴</strong><small>YuBan</small></span>
+          </a>
+          <p>陪父母更快找到可信、實用的育兒資源。</p>
+        </div>
+        <nav aria-label="頁尾導覽">
+          <a href="index.html#explore">探索資源</a>
+          <a href="submit.html">提交資源</a>
+        </nav>
+      </div>
+      <p class="footer-legal">© 2026 育伴 YuBan．本站內容不取代醫療診斷或專業建議。</p>
+    </footer>
+  </body>
+</html>

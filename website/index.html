@@ -2,84 +2,198 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>yuban — 靜態育兒資源</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="育伴 YuBan 整理台灣孕期至學齡前育兒資源，提供年齡、主題與來源篩選，以及清楚的來源和人工核實狀態。"
+    />
+    <title>育伴 YuBan｜可信育兒資源一站搜尋</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="search.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="hero-copy">
-        <span class="eyebrow">育伴 MVP</span>
-        <h1>育兒資源一站搜尋</h1>
-        <p>整合育兒文章、影片、工具與指南，提供年齡篩選與可信度標籤，讓父母快速找到適合內容。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#search">開始搜尋資源</a>
-          <a class="button secondary" href="learning-materials/index.html">查看學習素材</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <p class="hero-label">搜尋快速入口</p>
-        <div class="hero-search-box">
-          <input placeholder="搜尋標題 / 摘要 / 標籤" disabled />
-          <select disabled>
-            <option>年齡階段</option>
-          </select>
-          <button disabled>搜尋</button>
-        </div>
-        <p class="hero-note">這裡展示 MVP 版面概念，正式搜尋請往下滑。</p>
+    <a class="skip-link" href="#explore">跳到資源搜尋</a>
+
+    <header class="topbar">
+      <div class="page-shell topbar-inner">
+        <a class="brand" href="index.html" aria-label="育伴首頁">
+          <span class="brand-mark" aria-hidden="true">育</span>
+          <span class="brand-name"><strong>育伴</strong><small>YuBan</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="主要導覽">
+          <a href="#explore" aria-current="page">探索資源</a>
+          <a href="learning-materials/index.html">學習素材</a>
+          <a class="nav-cta" href="submit.html">提交資源</a>
+        </nav>
       </div>
     </header>
 
-    <main class="content">
-      <section class="panel categories-panel">
-        <div class="panel-header">
-          <div>
-            <h2>熱門分類</h2>
-            <p>直接從常見育兒主題開始瀏覽，或再搭配年齡篩選讓結果更精準。</p>
+    <main>
+      <section class="hero">
+        <div class="page-shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">給孕期至學齡前家庭</p>
+            <h1>可信育兒資訊，<br /><span>少一點翻找，<br />多一點陪伴。</span></h1>
+            <p class="hero-lead">
+              從政府、醫院與專業組織整理實用資源；先看摘要、適用年齡與來源，再安心前往閱讀。
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#explore">開始找資源</a>
+              <a class="button secondary" href="learning-materials/index.html">瀏覽注音學習素材</a>
+            </div>
+            <ul class="trust-list" aria-label="育伴資源特色">
+              <li>原始來源清楚標示</li>
+              <li>人工核實狀態可見</li>
+              <li>依孩子年齡快速篩選</li>
+            </ul>
           </div>
-        </div>
-        <div class="category-grid">
-          <button type="button" class="category-pill active" data-category="">全部主題</button>
-          <button type="button" class="category-pill" data-category="政府資源">政府資源</button>
-          <button type="button" class="category-pill" data-category="實用工具">實用工具</button>
-          <button type="button" class="category-pill" data-category="教養與親子">教養與親子</button>
-          <button type="button" class="category-pill" data-category="日常生活">日常生活</button>
+
+          <aside class="hero-editorial" aria-label="MVP 資源概況">
+            <p class="editorial-kicker">本期策展</p>
+            <p class="editorial-quote">先把真正需要的資訊，放到家長最容易找到的位置。</p>
+            <dl class="hero-stats">
+              <div>
+                <dt>已整理資源</dt>
+                <dd><span id="resourceCount">30</span><small>筆</small></dd>
+              </div>
+              <div>
+                <dt>來源類型</dt>
+                <dd><span id="sourceTypeCount">4</span><small>類</small></dd>
+              </div>
+              <div>
+                <dt>目前核實</dt>
+                <dd><span id="verifiedRate">100</span><small>%</small></dd>
+              </div>
+            </dl>
+            <p class="editorial-note">內容供資訊參考，醫療問題仍應諮詢合格專業人員。</p>
+          </aside>
         </div>
       </section>
 
-      <section id="search" class="panel search-panel">
-        <div class="panel-header">
-          <div>
-            <h2>搜尋育兒資源</h2>
-            <p>輸入關鍵字並以年齡階段過濾，快速找到符合需求的資源。</p>
+      <section id="explore" class="explore-section" aria-labelledby="explore-title">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">探索資源</p>
+              <h2 id="explore-title">現在想找什麼？</h2>
+            </div>
+            <p>可輸入關鍵字，也能依孩子年齡先縮小範圍。</p>
           </div>
-        </div>
-        <div class="search-bar">
-          <input id="q" placeholder="搜尋標題 / 摘要 / 標籤" />
-          <select id="age-filter">
-            <option value="">所有年齡</option>
-            <option value="0-3m">0-3m</option>
-            <option value="0-6m">0-6m</option>
-            <option value="12-36m">12-36m</option>
-          </select>
-          <button id="searchBtn">搜尋</button>
+
+          <form id="searchForm" class="search-panel" role="search">
+            <div class="query-row">
+              <label class="query-field" for="q">
+                <span class="visually-hidden">搜尋育兒資源</span>
+                <span class="search-icon" aria-hidden="true"></span>
+                <input
+                  id="q"
+                  name="q"
+                  type="search"
+                  autocomplete="off"
+                  placeholder="例如：安全睡眠、發展篩檢、親子共讀"
+                />
+              </label>
+              <button class="button primary search-submit" type="submit">搜尋</button>
+            </div>
+
+            <fieldset class="age-filter">
+              <legend>孩子目前階段</legend>
+              <div class="filter-chips">
+                <label><input type="radio" name="age" value="" checked /><span>全部</span></label>
+                <label><input type="radio" name="age" value="孕期" /><span>孕期</span></label>
+                <label><input type="radio" name="age" value="0-1歲" /><span>0–1 歲</span></label>
+                <label><input type="radio" name="age" value="1-3歲" /><span>1–3 歲</span></label>
+                <label><input type="radio" name="age" value="3-6歲" /><span>3–6 歲</span></label>
+                <label><input type="radio" name="age" value="全齡" /><span>全齡</span></label>
+              </div>
+            </fieldset>
+
+            <details class="more-filters" id="moreFilters">
+              <summary>更多篩選 <span id="filterCount" class="filter-count" hidden>0</span></summary>
+              <div class="filter-grid">
+                <label for="topic-filter">
+                  <span>主題</span>
+                  <select id="topic-filter" name="topic">
+                    <option value="">所有主題</option>
+                  </select>
+                </label>
+                <label for="source-filter">
+                  <span>來源</span>
+                  <select id="source-filter" name="source">
+                    <option value="">所有來源</option>
+                  </select>
+                </label>
+                <label for="type-filter">
+                  <span>內容類型</span>
+                  <select id="type-filter" name="type">
+                    <option value="">所有類型</option>
+                  </select>
+                </label>
+                <button id="resetFilters" class="text-button" type="button">清除全部條件</button>
+              </div>
+            </details>
+          </form>
+
+          <div class="results-toolbar">
+            <div>
+              <h2>推薦資源</h2>
+              <p id="resultsSummary" aria-live="polite">正在載入資源…</p>
+            </div>
+            <p class="search-engine-note" id="searchEngineNote">支援錯字與近似詞搜尋</p>
+          </div>
+
+          <div id="loadError" class="notice-card error-notice" role="alert" hidden>
+            <h3>目前無法載入資源</h3>
+            <p>請重新整理頁面；若是在電腦上預覽，請使用本機靜態伺服器開啟網站。</p>
+          </div>
+
+          <div id="resultsGrid" class="resource-grid" aria-live="polite" aria-busy="true">
+            <div class="resource-skeleton"></div>
+            <div class="resource-skeleton"></div>
+            <div class="resource-skeleton"></div>
+          </div>
         </div>
       </section>
 
-      <section id="results" class="panel results-panel">
-        <div class="results-header">
+      <section class="trust-section" aria-labelledby="trust-title">
+        <div class="page-shell trust-grid">
           <div>
-            <h2>搜尋結果</h2>
-            <p id="resultsSummary">載入資源中...</p>
+            <p class="eyebrow">我們如何整理</p>
+            <h2 id="trust-title">看得見來源，也看得懂核實程度</h2>
+          </div>
+          <div class="trust-explanations">
+            <article>
+              <span class="status-badge verified">人工核實</span>
+              <h3>資料已由人員檢查</h3>
+              <p>確認摘要、分類與原始來源；不代表醫療認證，也不替原始內容背書。</p>
+            </article>
+            <article>
+              <span class="status-badge draft">AI 整理・待人工核實</span>
+              <h3>協助加快初步整理</h3>
+              <p>尚未完成人工檢查，閱讀時應回到原始來源確認內容與更新日期。</p>
+            </article>
           </div>
         </div>
-        <ul id="resultsGrid" class="results-list"></ul>
       </section>
     </main>
 
     <footer class="site-footer">
-      <small>© yuban</small>
+      <div class="page-shell footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">育</span>
+            <span class="brand-name"><strong>育伴</strong><small>YuBan</small></span>
+          </a>
+          <p>陪父母更快找到可信、實用的育兒資源。</p>
+        </div>
+        <nav aria-label="頁尾導覽">
+          <a href="#explore">探索資源</a>
+          <a href="submit.html">提交資源</a>
+          <a href="https://github.com/gitmaruneko/yuban" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </div>
+      <p class="footer-legal">© 2026 育伴 YuBan．本站內容不取代醫療診斷或專業建議。</p>
     </footer>
-    <script src="search.js"></script>
   </body>
 </html>
