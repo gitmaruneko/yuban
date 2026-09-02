@@ -55,3 +55,4 @@ To update skills:
 
 ```bash
 npx skills@latest update
+```

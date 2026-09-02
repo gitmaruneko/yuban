@@ -1,13 +1,29 @@
-yuban static website
+# 育伴 MVP 靜態網站
 
-Quick start:
+## 本機預覽
 
-Serve locally with Python 3:
+請透過靜態伺服器預覽，避免瀏覽器阻擋 JSON 載入：
 
 ```bash
 python -m http.server 8000 --directory website
 ```
 
-Open http://localhost:8000 in your browser.
+開啟 http://localhost:8000/。
 
-Or use VS Code Live Server extension and open `website/index.html`.
+## 資源資料
+
+網站資料由 `docs/resource_v0.2.xlsx` 產生。更新工作簿後，在專案根目錄執行：
+
+```bash
+python tools/import_resources.py
+python tools/validate_resources.py
+```
+
+匯入程式會要求 MVP 資料維持 30 筆、網址不重複，並把工作簿的詳細分類轉成 PRD 定義的網站分類。
+
+## 頁面
+
+- `index.html`：資源搜尋與篩選
+- `resource.html?id=...`：育伴資源詳情
+- `submit.html`：資源推薦與問題回報
+- `learning-materials/`：可下載的學習素材
