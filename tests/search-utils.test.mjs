@@ -102,6 +102,12 @@ test("分類欄位可同時套用年齡、地區、資源類型、對象、來�
   );
 });
 
+test("全國資源會出現在任一縣市的地區篩選結果", () => {
+  const resource = normalizeResource(resources[0]);
+
+  assert.deepEqual(filterResources([resource], { region: "高雄市" }), [resource]);
+});
+
 test("舊資源缺少新分類欄位時會套用相容預設值", () => {
   const normalized = normalizeResource(resources[0]);
 

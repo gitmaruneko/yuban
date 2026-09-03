@@ -4,6 +4,7 @@ import {
   normalizeResource,
   RESULTS_PAGE_SIZE,
   searchResources,
+  TAIWAN_REGIONS,
 } from "./search-utils.mjs";
 
 const RESOURCE_DATA_URL = "data/sample-resources.json";
@@ -137,7 +138,6 @@ async function loadSearchEngine() {
   const typeSelect = document.querySelector("#type-filter");
   const regionSelect = document.querySelector("#region-filter");
   const categorySelect = document.querySelector("#category-filter");
-  const audienceSelect = document.querySelector("#audience-filter");
   const originSelect = document.querySelector("#origin-filter");
   const languageSelect = document.querySelector("#language-filter");
   const resetButton = document.querySelector("#resetFilters");
@@ -169,9 +169,8 @@ async function loadSearchEngine() {
   populateSelect(topicSelect, resources.map((resource) => resource.topic));
   populateSelect(sourceSelect, resources.map((resource) => resource.source.type));
   populateSelect(typeSelect, resources.map((resource) => resource.type));
-  populateSelect(regionSelect, getValues(resources, "regions"));
+  populateSelect(regionSelect, ["全國", ...TAIWAN_REGIONS, ...getValues(resources, "regions")]);
   populateSelect(categorySelect, getValues(resources, "resource_categories"));
-  populateSelect(audienceSelect, getValues(resources, "audiences"));
   populateSelect(originSelect, resources.map((resource) => resource.origin_region));
   populateSelect(languageSelect, getValues(resources, "languages"));
 
@@ -193,7 +192,6 @@ async function loadSearchEngine() {
   typeSelect.value = initialParams.get("type") || "";
   regionSelect.value = initialParams.get("region") || "";
   categorySelect.value = initialParams.get("category") || "";
-  audienceSelect.value = initialParams.get("audience") || "";
   originSelect.value = initialParams.get("origin") || "";
   languageSelect.value = initialParams.get("language") || "";
   const requestedAge = initialParams.get("age") || "";
@@ -205,7 +203,6 @@ async function loadSearchEngine() {
     typeSelect.value ||
     regionSelect.value ||
     categorySelect.value ||
-    audienceSelect.value ||
     originSelect.value ||
     languageSelect.value
   ) moreFilters.open = true;
@@ -219,7 +216,6 @@ async function loadSearchEngine() {
       type: typeSelect.value,
       region: regionSelect.value,
       category: categorySelect.value,
-      audience: audienceSelect.value,
       origin: originSelect.value,
       language: languageSelect.value,
     };
@@ -234,7 +230,6 @@ async function loadSearchEngine() {
     if (state.type) params.set("type", state.type);
     if (state.region) params.set("region", state.region);
     if (state.category) params.set("category", state.category);
-    if (state.audience) params.set("audience", state.audience);
     if (state.origin) params.set("origin", state.origin);
     if (state.language) params.set("language", state.language);
     const queryString = params.toString();
@@ -284,7 +279,6 @@ async function loadSearchEngine() {
       state.type,
       state.region,
       state.category,
-      state.audience,
       state.origin,
       state.language,
     ].filter(Boolean).length;
@@ -315,7 +309,6 @@ async function loadSearchEngine() {
     typeSelect,
     regionSelect,
     categorySelect,
-    audienceSelect,
     originSelect,
     languageSelect,
   ].forEach((select) => {

@@ -1,4 +1,9 @@
 export const RESULTS_PAGE_SIZE = 24;
+export const TAIWAN_REGIONS = [
+  "台北市", "新北市", "桃園市", "台中市", "台南市", "高雄市", "基隆市", "新竹市", "嘉義市",
+  "新竹縣", "苗栗縣", "彰化縣", "南投縣", "雲林縣", "嘉義縣", "屏東縣", "宜蘭縣", "花蓮縣",
+  "台東縣", "澎湖縣", "金門縣", "連江縣",
+];
 
 const RESOURCE_CATEGORY_BY_TYPE = {
   "文章": "學習教材",
@@ -94,7 +99,10 @@ export function filterResources(resources, state) {
     const matchesTopic = !state.topic || resource.topic === state.topic;
     const matchesSource = !state.source || resource.source.type === state.source;
     const matchesType = !state.type || resource.type === state.type;
-    const matchesRegion = !state.region || resource.regions?.includes(state.region);
+    const matchesRegion =
+      !state.region ||
+      resource.regions?.includes(state.region) ||
+      resource.regions?.includes("全國");
     const matchesCategory =
       !state.category || resource.resource_categories?.includes(state.category);
     const matchesAudience = !state.audience || resource.audiences?.includes(state.audience);
