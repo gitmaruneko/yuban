@@ -12,14 +12,14 @@ python -m http.server 8000 --directory website
 
 ## 資源資料
 
-網站資料由 `docs/resource_v0.2.xlsx` 產生。新增資源時，將新資料追加到工作簿後，在專案根目錄執行：
+網站資料由 `docs/resource_total.xlsx` 產生。新增資源時，將新資料填入新的 Excel 工作簿後，在專案根目錄執行：
 
 ```bash
-python tools/import_resources.py
+python tools/import_resources.py --input docs/你的新資源.xlsx
 python tools/validate_resources.py
 ```
 
-匯入程式會將工作簿中的新資源與既有 JSON 索引比對；相同網址或 ID 的資料會跳過，不會重複加入。資源數量不限，並把工作簿的詳細分類轉成 PRD 定義的網站分類。
+匯入程式會將工作簿中的新資源與既有 JSON 索引比對；相同網址或 ID 的資料會跳過，不會重複加入，並將來源檔歸檔到 `docs/imported-resources/`，再更新完整的 `docs/resource_total.xlsx`。資源數量不限，並把工作簿的詳細分類轉成 PRD 定義的網站分類。
 
 ## 頁面
 

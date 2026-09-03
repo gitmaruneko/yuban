@@ -7,10 +7,12 @@ import argparse
 import hashlib
 import json
 import re
+import shutil
 from pathlib import Path
 from urllib.parse import urlparse
 
-from openpyxl import load_workbook
+from openpyxl import Workbook, load_workbook
+from openpyxl.styles import Font
 
 
 REQUIRED_HEADERS = (
@@ -35,6 +37,8 @@ REQUIRED_HEADERS = (
     "語言",
 )
 LEGACY_REQUIRED_HEADERS = REQUIRED_HEADERS[:13]
+ARCHIVE_DIR = Path("docs/imported-resources")
+TOTAL_WORKBOOK_PATH = Path("docs/resource_total.xlsx")
 
 TYPE_MAP = {
     "文章": "文章",
@@ -352,12 +356,70 @@ def merge_resources(
     return merged, skipped
 
 
+def resource_to_row(resource: dict[str, object]) -> list[str]:
+    source = resource["source"]
+    age_label = str(resource["age_label"])
+    review_status = "人工核實"
+    if resource.get("ai_summary_status") != "verified":
+        review_status = "AI 整理・待人工核實"
+    reviewed_at = resource.get("reviewed_at")
+    if review_status == "人工核實" and reviewed_at:
+        review_status = f"人工核實（{reviewed_at}）"
+
+    return [
+        str(resource["title"]),
+        str(resource["url"]),
+        str(resource["summary"]),
+        str(resource["type_label"]),
+        str(source["type"]),
+        str(source["name"]),
+        "是" if resource.get("is_hub") else "否",
+        age_label,
+        str(resource["topic"]),
+        ", ".join(str(tag) for tag in resource.get("tags", [])),
+        review_status,
+        str(resource["credibility_note"]),
+        str(resource["notice"]),
+        ", ".join(str(value) for value in resource.get("age_groups", ["全齡"])),
+        ", ".join(str(value) for value in resource.get("regions", ["全國"])),
+        ", ".join(str(value) for value in resource.get("resource_categories", ["學習教材"])),
+        ", ".join(str(value) for value in resource.get("audiences", ["家長"])),
+        str(resource.get("origin_region", "台灣")),
+        ", ".join(str(value) for value in resource.get("languages", ["繁體中文"])),
+    ]
+
+
+def write_total_workbook(resources: list[dict[str, object]], output_path: Path) -> None:
+    workbook = Workbook()
+    worksheet = workbook.active
+    worksheet.title = "資源清單"
+    worksheet.append(REQUIRED_HEADERS)
+    for cell in worksheet[1]:
+        cell.font = Font(bold=True)
+    for resource in resources:
+        worksheet.append(resource_to_row(resource))
+
+    for column in worksheet.columns:
+        max_length = max(len(str(cell.value or "")) for cell in column)
+        worksheet.column_dimensions[column[0].column_letter].width = min(max_length + 2, 50)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    workbook.save(output_path)
+
+
+def archive_input(input_path: Path, archive_dir: Path) -> Path:
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    archived_path = archive_dir / input_path.name
+    if input_path.resolve() != archived_path.resolve():
+        shutil.copy2(input_path, archived_path)
+    return archived_path
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--input",
         type=Path,
-        default=Path("docs/resource_v0.2.xlsx"),
+        default=TOTAL_WORKBOOK_PATH,
         help="來源 Excel 工作簿",
     )
     parser.add_argument(
@@ -381,10 +443,14 @@ def main() -> None:
         json.dumps(resources, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    archived_path = archive_input(args.input, ARCHIVE_DIR)
+    write_total_workbook(resources, TOTAL_WORKBOOK_PATH)
     print(
         f"Imported {len(incoming) - skipped} new resources into {args.output} "
         f"({skipped} duplicates skipped, {len(resources)} total)"
     )
+    print(f"Archived source workbook to {archived_path}")
+    print(f"Generated total workbook at {TOTAL_WORKBOOK_PATH}")
 
 
 if __name__ == "__main__":

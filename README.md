@@ -34,14 +34,14 @@ python tools/validate_resources.py
 
 ### 新增育兒資源
 
-將新資源依照 `docs/resource-template.csv` 的欄位格式填入 Excel 工作簿，再在專案根目錄執行：
+將新資源依照 `docs/resource-template.csv` 的欄位格式填入 Excel 工作簿，放在 `docs/` 後，在專案根目錄執行：
 
 ```bash
-python tools/import_resources.py
+python tools/import_resources.py --input docs/你的新資源.xlsx
 python tools/validate_resources.py
 ```
 
-匯入程式會將 Excel 資料追加到既有網站索引；相同網址或 ID 的資源會自動跳過，不會重複加入。完成檢查後提交 `website/data/sample-resources.json`，推送到 `main` 才會發布更新。
+匯入成功後，來源 Excel 會歸檔至 `docs/imported-resources/`，完整累積資料會產生在 `docs/resource_total.xlsx`。相同網址或 ID 的資源會自動跳過，不會重複加入；若省略 `--input`，則會以 `docs/resource_total.xlsx` 作為輸入。
 
 資源模板另外提供年齡群組、地區、資源類型、使用對象、來源地區與語言欄位。地區可填入全國、縣市或鄉鎮名稱；多個值請以逗號分隔。既有索引資料會由網站以相容預設值載入，之後可逐筆補齊分類。
 
