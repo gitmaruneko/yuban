@@ -8,6 +8,7 @@ import {
 } from "./search-utils.mjs";
 
 const RESOURCE_DATA_URL = "data/sample-resources.json";
+const SUPPORT_CONFIG_URL = "data/support-config.json";
 const FUSE_MODULE_URL = "https://cdn.jsdelivr.net/npm/fuse.js@7.5.0/dist/fuse.min.mjs";
 
 const collator = new Intl.Collator("zh-Hant");
@@ -104,6 +105,28 @@ function populateSelect(select, values) {
 function getValues(resources, field) {
   return resources.flatMap((resource) => resource[field] || []);
 }
+
+async function initializeSupport() {
+  const section = document.querySelector("#supportSection");
+  try {
+    const response = await fetch(SUPPORT_CONFIG_URL);
+    if (!response.ok) throw new Error(`Support config request failed: ${response.status}`);
+    const config = await response.json();
+    const provider = config.providers?.find(
+      (item) => item.enabled && item.type === "qr_code" && item.qr_code_url,
+    );
+    if (!config.enabled || !provider) return;
+
+    document.querySelector("#supportMessage").textContent = config.message;
+    document.querySelector("#supportQr").src = provider.qr_code_url;
+    document.querySelector("#supportProvider").textContent = `使用${provider.name}掃描贊助`;
+    section.hidden = false;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+initializeSupport();
 
 function debounce(callback, delay) {
   let timeoutId;

@@ -1042,6 +1042,53 @@ textarea::placeholder {
   text-align: center;
 }
 
+.support-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 28px 0;
+  border-top: 1px solid rgba(200, 208, 201, 0.8);
+}
+
+.support-section h2 {
+  margin-bottom: 8px;
+  font-size: 1.55rem;
+}
+
+.support-section p {
+  max-width: 520px;
+  margin-bottom: 6px;
+  color: var(--ink-soft);
+}
+
+.support-purpose {
+  font-size: 0.8rem;
+}
+
+.support-qr-wrap {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 6px;
+  justify-items: center;
+}
+
+.support-qr {
+  display: block;
+  width: 132px;
+  height: 132px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
+
+.support-provider {
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 /* Resource detail */
 .subpage-main {
   min-height: 72vh;

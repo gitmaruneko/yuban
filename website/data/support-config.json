@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "title": "支持育伴",
+  "message": "如果育伴對你有幫助，歡迎支持網站維護與資源整理。",
+  "purpose": [
+    "網站維護",
+    "資源整理與核實"
+  ],
+  "providers": [
+    {
+      "id": "streetpay",
+      "name": "街口支付",
+      "type": "qr_code",
+      "enabled": true,
+      "qr_code_url": "assets/streetpay-qr.jpg",
+      "payment_url": ""
+    },
+    {
+      "id": "linepay",
+      "name": "LINE Pay",
+      "type": "qr_code",
+      "enabled": false,
+      "qr_code_url": "",
+      "payment_url": ""
+    }
+  ]
+}

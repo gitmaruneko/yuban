@@ -27,3 +27,7 @@ python tools/validate_resources.py
 - `resource.html?id=...`：育伴資源詳情
 - `submit.html`：資源推薦與問題回報
 - `learning-materials/`：可下載的學習素材
+
+## 贊助設定
+
+`data/support-config.json` 管理街口支付與 LINE Pay 的贊助設定。目前已啟用街口 QR Code，網站會在首頁頁尾展示；未來可透過 `enabled` 與 provider 設定停用或切換收款方式。
