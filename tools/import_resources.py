@@ -37,6 +37,21 @@ REQUIRED_HEADERS = (
 LEGACY_REQUIRED_HEADERS = REQUIRED_HEADERS[:13]
 
 TYPE_MAP = {
+    "文章": "文章",
+    "影片": "影片",
+    "工具／用品": "工具／用品",
+    "混合型內容": "混合型內容",
+    "連結入口": "連結入口",
+    "網站入口": "連結入口",
+    "Podcast入口": "連結入口",
+    "分類入口": "連結入口",
+    "課程平台": "連結入口",
+    "工具平台": "工具／用品",
+    "搜尋工具": "工具／用品",
+    "互動工具": "工具／用品",
+    "文章／工具": "混合型內容",
+    "圖文文章": "文章",
+    "YouTube影片": "影片",
     "電子手冊": "文章",
     "資訊專區／文件下載": "文章",
     "政策／服務說明": "文章",
@@ -77,9 +92,40 @@ AGE_STAGE_MAP = {
     "2–6歲": ["1-3歲", "3-6歲"],
     "6–12歲": ["3-6歲"],
     "6–18歲及照顧者": ["3-6歲"],
+    "0–15歲": ["0-1歲", "1-3歲", "3-6歲", "全齡"],
+    "全年齡": ["全齡"],
+    "嬰兒": ["0-1歲"],
+    "嬰兒至學齡前": ["0-1歲", "1-3歲", "3-6歲"],
+    "嬰幼兒": ["0-1歲", "1-3歲"],
+    "嬰幼兒／學齡前": ["0-1歲", "1-3歲", "3-6歲"],
+    "孕期至學齡前": ["孕期", "0-1歲", "1-3歲", "3-6歲"],
+    "孕 期至學齡前": ["孕期", "0-1歲", "1-3歲", "3-6歲"],
+    "孕期至幼兒期": ["孕期", "0-1歲", "1-3歲"],
+    "孕期／新生兒": ["孕期", "0-1歲"],
+    "學步兒": ["1-3歲"],
+    "學齡前": ["3-6歲"],
+    "家長與兒童": ["全齡"],
+    "幼兒至學齡兒童": ["1-3歲", "3-6歲"],
+    "幼兒／學齡兒童": ["1-3歲", "3-6歲"],
+    "新生兒／嬰兒": ["0-1歲"],
 }
 
 TOPIC_GROUPS = {
+    "綜合育兒": "親職與家庭",
+    "健康與安全": "健康與照護",
+    "健康與發展": "健康與照護",
+    "學習與教育": "發展與學習",
+    "學習與閱讀": "發展與學習",
+    "情緒與行為": "情緒與心理",
+    "托育與幼兒園": "托育與服務",
+    "托育 與幼兒園": "托育與服務",
+    "發展與早療": "發展與學習",
+    "睡眠": "健康與照護",
+    "補助與權益": "親職與家庭",
+    "親子互動與教養": "親職與家庭",
+    "親子活動": "親職與家庭",
+    "遊戲與學習": "發展與學習",
+    "飲食與營養": "健康與照護",
     "孕產與嬰幼兒照護": "健康與照護",
     "健康與生活照護": "健康與照護",
     "預防接種": "健康與照護",
@@ -112,9 +158,65 @@ TOPIC_GROUPS = {
     "兒童青少年心理健康": "情緒與心理",
 }
 
+AGE_GROUP_MAP = {
+    "0–1歲": "學齡前",
+    "0–3歲": "學齡前",
+    "0–5歲": "學齡前",
+    "0–6歲": "學齡前",
+    "0–12歲": "國小",
+    "0–15歲": "全齡",
+    "2–3歲": "學齡前",
+    "2–6歲": "學齡前",
+    "2–12歲": "國小",
+    "3–5歲": "學齡前",
+    "孕期–0歲": "學齡前",
+    "孕期–3歲": "學齡前",
+    "孕期–6歲": "學齡前",
+}
+
+RESOURCE_CATEGORY_MAP = {
+    "入口型資源": "機構",
+    "工具型": "機構",
+    "互動工具型": "機構",
+    "分齡指南型": "學習教材",
+    "問答型": "學習教材",
+    "地區活動指南型": "活動",
+    "地方補助整理型": "補助",
+    "實作指南型": "學習教材",
+    "專業指南型": "學習教材",
+    "影音實作型": "學習教材",
+    "影音解說型": "學習教材",
+    "影音音訊型": "學習教材",
+    "情境解決型": "學習教材",
+    "懶人包型": "學習教材",
+    "指南型": "學習教材",
+    "時效活動型": "活動",
+    "權益指南型": "政策",
+    "比較指南型": "學習教材",
+    "決策指南型": "學習教材",
+    "深度解讀型": "學習教材",
+    "總覽型": "機構",
+    "補助指南型": "補助",
+    "課程型": "課程",
+    "費用指南型": "學習教材",
+    "選擇指南型": "學習教材",
+}
+
+AUDIENCE_MAP = {
+    "家庭": ["家長"],
+    "家長與幼兒": ["家長", "兒童"],
+    "家長／兒童": ["家長", "兒童"],
+    "家長／準父母": ["家長"],
+    "家長／照顧者": ["家長"],
+}
+
 
 def split_tags(value: str) -> list[str]:
-    return [tag.strip() for tag in re.split(r"[,，、;；]", value) if tag.strip()]
+    return [normalize_text(tag) for tag in re.split(r"[,，、;；]", value) if tag.strip()]
+
+
+def normalize_text(value: str) -> str:
+    return re.sub(r"\s+", " ", str(value)).strip()
 
 
 def make_resource_id(url: str) -> str:
@@ -123,11 +225,12 @@ def make_resource_id(url: str) -> str:
 
 
 def parse_review_status(value: str) -> tuple[str, str | None]:
+    value = normalize_text(value)
     reviewed_at = None
     date_match = re.search(r"(\d{4}-\d{2}-\d{2})", value)
     if date_match:
         reviewed_at = date_match.group(1)
-    status = "verified" if value.startswith("人工核實") else "ai_draft"
+    status = "verified" if value.startswith(("人工核實", "通過")) else "ai_draft"
     return status, reviewed_at
 
 
@@ -138,10 +241,10 @@ def validate_url(url: str, row_number: int) -> None:
 
 
 def convert_row(row: dict[str, str], row_number: int) -> dict[str, object]:
-    raw_type = row["內容類型"]
-    age_label = row["年齡階段"]
-    topic = row["主題"]
-    url = row["連結"]
+    raw_type = normalize_text(row["內容類型"])
+    age_label = normalize_text(row["年齡階段"])
+    topic = normalize_text(row["主題"])
+    url = normalize_text(row["連結"])
 
     if raw_type not in TYPE_MAP:
         raise ValueError(f"第 {row_number} 列有未定義的內容類型：{raw_type}")
@@ -167,11 +270,11 @@ def convert_row(row: dict[str, str], row_number: int) -> dict[str, object]:
         "is_hub": row["是否為入口型資源"] == "是",
         "age_label": age_label,
         "age_ranges": AGE_STAGE_MAP[age_label],
-        "age_groups": split_tags(row["年齡群組"]),
+        "age_groups": [AGE_GROUP_MAP.get(value, value) for value in split_tags(row["年齡群組"])],
         "regions": split_tags(row["地區"]),
-        "resource_categories": split_tags(row["資源類型"]),
-        "audiences": split_tags(row["使用對象"]),
-        "origin_region": row["來源地區"],
+        "resource_categories": [RESOURCE_CATEGORY_MAP.get(value, value) for value in split_tags(row["資源類型"])],
+        "audiences": [audience for value in split_tags(row["使用對象"]) for audience in AUDIENCE_MAP.get(value, [value])],
+        "origin_region": normalize_text(row["來源地區"]),
         "languages": split_tags(row["語言"]),
         "topic": topic,
         "topic_group": TOPIC_GROUPS[topic],
@@ -190,7 +293,7 @@ def load_resources(workbook_path: Path) -> list[dict[str, object]]:
     rows = worksheet.iter_rows(values_only=True)
 
     try:
-        headers = tuple(str(value).strip() if value is not None else "" for value in next(rows))
+        headers = tuple(re.sub(r"\s+", "", str(value)) if value is not None else "" for value in next(rows))
     except StopIteration as exc:
         raise ValueError("工作簿沒有任何資料") from exc
 
@@ -209,7 +312,7 @@ def load_resources(workbook_path: Path) -> list[dict[str, object]]:
             missing = [headers[index] for index, value in enumerate(values) if value in (None, "")]
             raise ValueError(f"第 {row_number} 列缺少欄位：{', '.join(missing)}")
 
-        row = {headers[index]: str(value).strip() for index, value in enumerate(values)}
+        row = {headers[index]: normalize_text(value) for index, value in enumerate(values)}
         if headers == LEGACY_REQUIRED_HEADERS:
             row.update(
                 {

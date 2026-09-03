@@ -989,5 +989,1640 @@
     "credibility_note": "國健署官方親子共讀專區，提供分齡指引與公開衛教影音。",
     "notice": "依孩子興趣與發展彈性調整，不宜用共讀表現互相比較；若有語言發展疑慮應諮詢專業人員。",
     "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=3808"
+  },
+  {
+    "id": "resource-bd75ac748b33",
+    "title": "親子天下｜育兒與教育入口",
+    "summary": "親子天下主站入口，涵蓋 0–15 歲家庭的教養、健康、教育、活動、Baby Life、影音、Podcast 與線上學習等內容。",
+    "type": "連結入口",
+    "type_label": "網站入口",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體",
+      "url": "https://www.parenting.com.tw/"
+    },
+    "is_hub": true,
+    "age_label": "0–15歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲",
+      "全齡"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "綜合育兒",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "育兒入口",
+      "教養",
+      "健康",
+      "教育",
+      "活動",
+      "影音",
+      "Podcast"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：大型專業親子媒體，內容具編輯制度。",
+    "notice": "入口過廣，不應取代育伴細分主題的精選資源。",
+    "url": "https://www.parenting.com.tw/"
+  },
+  {
+    "id": "resource-463012c7672b",
+    "title": "親子天下 Baby Life",
+    "summary": "提供寶寶身高體重紀錄、發展追蹤與育兒健康相關功能的嬰幼兒工具入口。",
+    "type": "工具／用品",
+    "type_label": "工具平台",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體／工具平台",
+      "url": "https://babyapp.parenting.com.tw/"
+    },
+    "is_hub": true,
+    "age_label": "嬰幼兒",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "健康與發展",
+    "topic_group": "健康與照護",
+    "tags": [
+      "成長紀錄",
+      "身高體重",
+      "發展追蹤",
+      "嬰幼兒健康"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：親子天下旗下工具型服務。",
+    "notice": "部分功能可能需登入；健康建議不應取代醫療專業判斷。",
+    "url": "https://babyapp.parenting.com.tw/"
+  },
+  {
+    "id": "resource-c9a397e0a8ff",
+    "title": "選擇幼兒園｜全台幼兒園資訊",
+    "summary": "提供全台幼兒園搜尋與比較入口，可作為家長初步查找園所與理解園所差異的工具。",
+    "type": "工具／用品",
+    "type_label": "搜尋工具",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體／工具平台",
+      "url": "https://exclusive.parenting.com.tw/preschool"
+    },
+    "is_hub": true,
+    "age_label": "學齡前",
+    "age_ranges": [
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "托育與幼兒園",
+    "topic_group": "托育與服務",
+    "tags": [
+      "幼兒園",
+      "選校",
+      "園所搜尋",
+      "公幼",
+      "私幼",
+      "非營利",
+      "準公共"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：實用工具，但資料仍應與政府教保資訊交叉確認。",
+    "notice": "園所裁罰、立案與收費等關鍵資訊應優先連結官方資料。",
+    "url": "https://exclusive.parenting.com.tw/preschool"
+  },
+  {
+    "id": "resource-c0501d9d83f8",
+    "title": "兒童健康與發展文章列表",
+    "summary": "親子天下兒童健康與發展主題入口，持續更新兒童發展、健康、運動與相關專題。",
+    "type": "連結入口",
+    "type_label": "分類入口",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體",
+      "url": "https://www.parenting.com.tw/category/6"
+    },
+    "is_hub": true,
+    "age_label": "0–15歲",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲",
+      "全齡"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "健康與安全",
+    "topic_group": "健康與照護",
+    "tags": [
+      "兒童健康",
+      "兒童發展",
+      "健康知識",
+      "主題入口"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：專業媒體分類入口。",
+    "notice": "內容量大，育伴應只將此頁作入口，並另拆精選文章。",
+    "url": "https://www.parenting.com.tw/category/6"
+  },
+  {
+    "id": "resource-f1817881c4e5",
+    "title": "親子天下 Podcast",
+    "summary": "親子天下 Podcast 聚合入口，涵蓋育兒、教養、教育、學齡前與家庭生活等節目。",
+    "type": "連結入口",
+    "type_label": "Podcast入口",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體",
+      "url": "https://portaly.cc/parentingcw_podcast"
+    },
+    "is_hub": true,
+    "age_label": "全年齡",
+    "age_ranges": [
+      "全齡"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "綜合育兒",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "Podcast",
+      "育兒音訊",
+      "教養",
+      "教育",
+      "學齡前"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：品牌官方 Podcast 聚合入口。",
+    "notice": "單集是否值得收錄仍應依主題、講者與內容品質個別審查。",
+    "url": "https://portaly.cc/parentingcw_podcast"
+  },
+  {
+    "id": "resource-8742eebac9d5",
+    "title": "親子天下線上學校",
+    "summary": "提供家長教養與兒童學習的線上課程，涵蓋情緒、教養、閱讀、學科與健康等主題。",
+    "type": "連結入口",
+    "type_label": "課程平台",
+    "source": {
+      "name": "親子天下",
+      "type": "商業內容／媒體",
+      "url": "https://learning.parenting.com.tw/"
+    },
+    "is_hub": true,
+    "age_label": "家長與兒童",
+    "age_ranges": [
+      "全齡"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "課程"
+    ],
+    "audiences": [
+      "家長",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "學習與教育",
+    "topic_group": "發展與學習",
+    "tags": [
+      "線上課程",
+      "教養課程",
+      "學習課程",
+      "付費"
+    ],
+    "ai_summary_status": "ai_draft",
+    "reviewed_at": null,
+    "credibility_note": "中：具專業講師與系統化內容，但屬付費商業服務。",
+    "notice": "網站呈現需明確標示付費／商業性，不應優先於免費官方或公益資源。",
+    "url": "https://learning.parenting.com.tw/"
+  },
+  {
+    "id": "resource-ca26360f0acb",
+    "title": "寶寶安全睡眠守則：降低嬰兒猝死症候群風險！5個重要原則",
+    "summary": "整理嬰兒安全睡眠的五大原則，包括仰睡、避免枕頭與鬆軟物、避免過熱及不同床等。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜引用官方／醫療指引",
+      "url": "https://www.parenting.com.tw/article/6001432"
+    },
+    "is_hub": false,
+    "age_label": "新生兒／嬰兒",
+    "age_ranges": [
+      "0-1歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "睡眠",
+    "topic_group": "健康與照護",
+    "tags": [
+      "安全睡眠",
+      "SIDS",
+      "仰睡",
+      "睡眠環境",
+      "枕頭",
+      "同床"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：內容明確引用國健署與美國兒科學會建議。",
+    "notice": "安全議題應同時提供國健署等官方來源；不可只依媒體文章。",
+    "url": "https://www.parenting.com.tw/article/6001432"
+  },
+  {
+    "id": "resource-547afee6a9aa",
+    "title": "嬰兒睡眠安全｜破解5大寶寶睡眠迷思與風險行為",
+    "summary": "從兒童死因回溯資料整理常見嬰兒睡眠風險，包括趴睡、同床、枕頭、鬆軟寢具與防撞用品。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜資料整理",
+      "url": "https://www.parenting.com.tw/article/6001757"
+    },
+    "is_hub": false,
+    "age_label": "新生兒／嬰兒",
+    "age_ranges": [
+      "0-1歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "睡眠",
+    "topic_group": "健康與照護",
+    "tags": [
+      "嬰兒睡眠",
+      "睡眠風險",
+      "趴睡",
+      "同床",
+      "枕頭",
+      "窒息"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：以死因回溯資料與安全觀念整理風險。",
+    "notice": "與安全睡眠守則內容高度重疊，育伴排序應低於核心官方／指南資源。",
+    "url": "https://www.parenting.com.tw/article/6001757"
+  },
+  {
+    "id": "resource-6d57610a5b3f",
+    "title": "新生兒配方奶怎麼選？10大品牌、水解、泡奶SOP全攻略",
+    "summary": "整理母乳與配方奶差異、一般與水解配方、挑選原則、沖泡保存方式及品牌比較。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜商業比較內容",
+      "url": "https://www.parenting.com.tw/article/6001561"
+    },
+    "is_hub": false,
+    "age_label": "新生兒／嬰兒",
+    "age_ranges": [
+      "0-1歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "飲食與營養",
+    "topic_group": "健康與照護",
+    "tags": [
+      "配方奶",
+      "奶粉",
+      "水解奶粉",
+      "泡奶",
+      "新生兒餵養"
+    ],
+    "ai_summary_status": "ai_draft",
+    "reviewed_at": null,
+    "credibility_note": "中：整理完整，但含品牌比較，商業影響較高。",
+    "notice": "餵養與泡奶安全應搭配衛福部／WHO等權威來源；品牌比較不作育伴核心推薦。",
+    "url": "https://www.parenting.com.tw/article/6001561"
+  },
+  {
+    "id": "resource-b56aeedfd5c7",
+    "title": "4-6個月副食品該怎麼吃？從十倍粥到低敏蔬果泥清單",
+    "summary": "整理 4–6 個月開始副食品的準備訊號、添加順序、食材、奶量分配與過敏原注意事項。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體",
+      "url": "https://www.parenting.com.tw/article/6001980"
+    },
+    "is_hub": false,
+    "age_label": "嬰兒",
+    "age_ranges": [
+      "0-1歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "飲食與營養",
+    "topic_group": "健康與照護",
+    "tags": [
+      "副食品",
+      "4個月",
+      "6個月",
+      "過敏原",
+      "奶量",
+      "嬰兒飲食"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：實用性高，內容結構完整。",
+    "notice": "副食品開始時機與過敏原導入屬健康議題，應搭配兒科／官方指引。",
+    "url": "https://www.parenting.com.tw/article/6001980"
+  },
+  {
+    "id": "resource-c9057b4a6575",
+    "title": "副食品過敏怎麼辦？兒科醫師媽媽分享判斷與處理方法",
+    "summary": "由兒科醫師整理副食品過敏常見症狀、當下處理方式與安全嘗試新食物的方法。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下（陳昱潔醫師）",
+      "type": "醫療專業｜媒體",
+      "url": "https://www.parenting.com.tw/article/6001215"
+    },
+    "is_hub": false,
+    "age_label": "嬰兒",
+    "age_ranges": [
+      "0-1歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "飲食與營養",
+    "topic_group": "健康與照護",
+    "tags": [
+      "副食品過敏",
+      "食物過敏",
+      "紅疹",
+      "過敏症狀",
+      "兒科"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：作者為兒科醫師，專業背景明確。",
+    "notice": "嚴重過敏、呼吸困難等急症仍應直接就醫；網站需顯示醫療警示。",
+    "url": "https://www.parenting.com.tw/article/6001215"
+  },
+  {
+    "id": "resource-5762a6a34149",
+    "title": "副食品分量如何拿捏？與奶量比例如何分配？",
+    "summary": "以常見問題形式整理副食品分量、質地、奶量比例與轉為正餐的判斷。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體",
+      "url": "https://www.parenting.com.tw/article/5079107"
+    },
+    "is_hub": false,
+    "age_label": "嬰兒",
+    "age_ranges": [
+      "0-1歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "飲食與營養",
+    "topic_group": "健康與照護",
+    "tags": [
+      "副食品分量",
+      "奶量",
+      "副食品質地",
+      "正餐"
+    ],
+    "ai_summary_status": "ai_draft",
+    "reviewed_at": null,
+    "credibility_note": "中：更新過但原始文章較早，實用性仍高。",
+    "notice": "與較新的副食品指南內容重疊，建議作補充而非核心推薦。",
+    "url": "https://www.parenting.com.tw/article/5079107"
+  },
+  {
+    "id": "resource-93bf2629008d",
+    "title": "兒童發展里程碑評估懶人包：看懂0-6歲里程碑對照與量表使用",
+    "summary": "整理國健署 0–6 歲發展里程碑、兒童發展篩檢量表使用方式，以及懷疑發展遲緩時的下一步。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜引用官方資料",
+      "url": "https://www.parenting.com.tw/article/6002372"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "發展里程碑",
+      "發展篩檢",
+      "兒童發展",
+      "0-6歲",
+      "早療"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：整理國健署最新發展篩檢資訊，時效性佳。",
+    "notice": "篩檢不等於診斷；應同時提供國健署量表與正式評估資源。",
+    "url": "https://www.parenting.com.tw/article/6002372"
+  },
+  {
+    "id": "resource-109d0fccc469",
+    "title": "擔心孩子可能發展遲緩？認識發展遲緩原因、症狀與評估方式",
+    "summary": "說明發展遲緩的常見面向、風險因子、評估流程、早期療育與相關補助。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體",
+      "url": "https://www.parenting.com.tw/article/5095468"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "發展遲緩",
+      "早期療育",
+      "發展評估",
+      "療育補助"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：內容完整且有更新。",
+    "notice": "涉及醫療與發展評估，育伴應優先搭配官方早療／醫院評估入口。",
+    "url": "https://www.parenting.com.tw/article/5095468"
+  },
+  {
+    "id": "resource-d208d81b2599",
+    "title": "兒童語言發展秘訣：如何評估與鼓勵孩子的語言發展能力",
+    "summary": "整理不同階段的語言發展特徵、親子互動方式、語言遲緩警訊與尋求語言治療協助的時機。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體",
+      "url": "https://www.parenting.com.tw/article/5097119"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "語言發展",
+      "語言遲緩",
+      "語言治療",
+      "親子互動"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：適合作為快速理解與行動導引。",
+    "notice": "發展遲緩判定需由專業人員評估，不能以文章自我診斷。",
+    "url": "https://www.parenting.com.tw/article/5097119"
+  },
+  {
+    "id": "resource-238c842420f6",
+    "title": "孩子有分離焦慮症怎麼辦？0歲到上幼兒園的實用對策整理",
+    "summary": "說明嬰幼兒分離焦慮的發展背景，並提供從嬰兒到幼兒園階段的陪伴與應對方式。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜引用官方育兒手冊",
+      "url": "https://www.parenting.com.tw/article/5092374"
+    },
+    "is_hub": false,
+    "age_label": "嬰兒至學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "情緒與行為",
+    "topic_group": "情緒與心理",
+    "tags": [
+      "分離焦慮",
+      "依附",
+      "幼兒園適應",
+      "哭鬧"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：引用衛福部相關手冊並整合教養建議。",
+    "notice": "文章標題使用「症」字，但多數幼兒分離焦慮屬正常發展；網站摘要應避免病理化。",
+    "url": "https://www.parenting.com.tw/article/5092374"
+  },
+  {
+    "id": "resource-3c30581726f1",
+    "title": "兩歲小孩不聽話：當孩子一直「不要不要」，家長怎麼辦？",
+    "summary": "由心理師說明 2–3 歲反抗期的發展機制，並提供肯定句、有限選擇與平靜陪伴等正向教養技巧。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下（林冠翔心理師）",
+      "type": "心理專業｜媒體",
+      "url": "https://www.parenting.com.tw/article/6002157"
+    },
+    "is_hub": false,
+    "age_label": "學步兒",
+    "age_ranges": [
+      "1-3歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "情緒與行為",
+    "topic_group": "情緒與心理",
+    "tags": [
+      "2歲",
+      "不要不要",
+      "反抗期",
+      "正向教養",
+      "有限選擇"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：心理師專業背景明確，內容聚焦具體可操作做法。",
+    "notice": "適合作為情境式資源，不宜把正常發展直接標示為「不聽話」。",
+    "url": "https://www.parenting.com.tw/article/6002157"
+  },
+  {
+    "id": "resource-7c7e218b604b",
+    "title": "正向教養分齡指南：學齡前幼兒（3～5歲）",
+    "summary": "依 3–5 歲發展特徵整理語言、學習、獨立性與親子教養方向。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下／明怡基金會",
+      "type": "教育／公益專業｜媒體",
+      "url": "https://www.parenting.com.tw/article/6000007"
+    },
+    "is_hub": false,
+    "age_label": "學齡前",
+    "age_ranges": [
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "親子互動與教養",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "正向教養",
+      "3歲",
+      "4歲",
+      "5歲",
+      "學齡前",
+      "發展"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：分齡清楚，來源與合作組織透明。",
+    "notice": "可與其他年齡版本形成分齡資源群組。",
+    "url": "https://www.parenting.com.tw/article/6000007"
+  },
+  {
+    "id": "resource-9a7a3f2e936b",
+    "title": "化解上幼兒園的分離焦慮！8個事前準備＋5個實戰做法",
+    "summary": "整理幼兒入園分離焦慮的常見原因、入園前準備與孩子當下崩潰時的具體應對。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜幼教專業訪談",
+      "url": "https://www.parenting.com.tw/article/6000820"
+    },
+    "is_hub": false,
+    "age_label": "學齡前",
+    "age_ranges": [
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "托育與幼兒園",
+    "topic_group": "托育與服務",
+    "tags": [
+      "幼兒園適應",
+      "分離焦慮",
+      "開學",
+      "入園準備"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：情境明確、具體可操作。",
+    "notice": "與一般分離焦慮文章部分重疊，但在『入園適應』情境有獨立價值。",
+    "url": "https://www.parenting.com.tw/article/6000820"
+  },
+  {
+    "id": "resource-07e98af36915",
+    "title": "勇敢上學去：幼兒園分離焦慮應對模擬器",
+    "summary": "透過互動情境模擬，讓家長練習面對孩子上學哭鬧與分離焦慮時的回應方式。",
+    "type": "工具／用品",
+    "type_label": "互動工具",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體／互動工具",
+      "url": "https://www.parenting.com.tw/article/6002386"
+    },
+    "is_hub": false,
+    "age_label": "學齡前",
+    "age_ranges": [
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "托育與幼兒園",
+    "topic_group": "托育與服務",
+    "tags": [
+      "分離焦慮",
+      "幼兒園",
+      "互動模擬",
+      "情境練習"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：互動性高，與純文章資源互補。",
+    "notice": "屬輔助練習工具，不應取代專業評估或園所實際溝通。",
+    "url": "https://www.parenting.com.tw/article/6002386"
+  },
+  {
+    "id": "resource-f08c8d38290c",
+    "title": "怎麼挑托嬰中心才安心？家長送托6大疑問一次解答",
+    "summary": "整理托嬰中心評鑑、師生比、托育人員、超收、環境安全與教保方式等參觀重點。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜專業評鑑觀點",
+      "url": "https://www.parenting.com.tw/article/5068234"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "托育與幼兒園",
+    "topic_group": "托育與服務",
+    "tags": [
+      "托嬰中心",
+      "選托育",
+      "評鑑",
+      "師生比",
+      "超收",
+      "參觀"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：內容雖早期發布但已有更新，且採訪長期評鑑委員。",
+    "notice": "園所是否合法、評鑑與裁罰紀錄仍應導向政府官方平台確認。",
+    "url": "https://www.parenting.com.tw/article/5068234"
+  },
+  {
+    "id": "resource-d45a2388da83",
+    "title": "2026托嬰中心費用：公、私托與準公托收費標準",
+    "summary": "整理不同托嬰中心類型的費用與查詢方式，並示範如何利用托育媒合平台查看園所收費。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜政策整理",
+      "url": "https://www.parenting.com.tw/article/5096048"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "托育與幼兒園",
+    "topic_group": "托育與服務",
+    "tags": [
+      "托嬰中心費用",
+      "公托",
+      "私托",
+      "準公共",
+      "收費"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：具操作價值並導向政府托育媒合平台。",
+    "notice": "費用與補助可能調整，需定期複核；正式金額以官方與園所公告為準。",
+    "url": "https://www.parenting.com.tw/article/5096048"
+  },
+  {
+    "id": "resource-a9c3d49ad043",
+    "title": "要讓孩子上幼幼班嗎？幼幼班入學年齡、學費與準備指南",
+    "summary": "整理 2 歲幼幼班與托嬰中心差異、入學年齡、費用補助、報名方式、用品與分離焦慮準備。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜政策整理",
+      "url": "https://www.parenting.com.tw/article/6002041"
+    },
+    "is_hub": false,
+    "age_label": "學步兒",
+    "age_ranges": [
+      "1-3歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "托育與幼兒園",
+    "topic_group": "托育與服務",
+    "tags": [
+      "幼幼班",
+      "2歲專班",
+      "托嬰中心",
+      "入學",
+      "學費",
+      "準備清單"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：2026 年更新，資訊完整且任務導向。",
+    "notice": "招生資格、師生比、費用與補助應依當年度官方公告複核。",
+    "url": "https://www.parenting.com.tw/article/6002041"
+  },
+  {
+    "id": "resource-d2e6c8c84e59",
+    "title": "圖解：選幼兒園指南圖文懶人包",
+    "summary": "以圖解比較公立、私立、非營利、準公共幼兒園的特色、學費與補助，並說明查詢方式。",
+    "type": "文章",
+    "type_label": "圖文文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜政策整理",
+      "url": "https://www.parenting.com.tw/article/6001446"
+    },
+    "is_hub": false,
+    "age_label": "學齡前",
+    "age_ranges": [
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "托育與幼兒園",
+    "topic_group": "托育與服務",
+    "tags": [
+      "選幼兒園",
+      "公幼",
+      "私幼",
+      "非營利",
+      "準公共",
+      "學費"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：適合快速比較不同園所類型。",
+    "notice": "政策與學費資訊需定期更新；園所實際資訊以官方平台為準。",
+    "url": "https://www.parenting.com.tw/article/6001446"
+  },
+  {
+    "id": "resource-33fb083b7f48",
+    "title": "十一個家長最常問的選幼兒園Q&A",
+    "summary": "以 11 個常見問題整理兩歲入園、參觀重點、雙語、違規紀錄、學費與園所品質等選校疑問。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜專家訪談",
+      "url": "https://www.parenting.com.tw/article/6000653"
+    },
+    "is_hub": false,
+    "age_label": "學齡前",
+    "age_ranges": [
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "托育與幼兒園",
+    "topic_group": "托育與服務",
+    "tags": [
+      "選幼兒園",
+      "Q&A",
+      "幼幼班",
+      "雙語幼兒園",
+      "違規裁罰",
+      "學費"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：以家長實際決策問題為結構，符合育伴情境式導航。",
+    "notice": "與選園懶人包互補；同一頁面不宜同時展示過多同來源選校文章。",
+    "url": "https://www.parenting.com.tw/article/6000653"
+  },
+  {
+    "id": "resource-d2a7d9a2bee8",
+    "title": "2026托育補助金額、申請方式、縣市加碼一次看",
+    "summary": "整理 2026 托育補助資格、金額、申請方式、縣市加碼、常見問題與試算資訊。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜政策整理",
+      "url": "https://www.parenting.com.tw/article/5090550"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "補助"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "補助與權益",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "托育補助",
+      "公托",
+      "準公托",
+      "保母",
+      "申請",
+      "2026"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：時效性佳且任務導向。",
+    "notice": "政策資源必須搭配政府正式申請／公告入口；補助金額需定期複核。",
+    "url": "https://www.parenting.com.tw/article/5090550"
+  },
+  {
+    "id": "resource-68a32938a690",
+    "title": "2026生育補助、生育津貼、育兒津貼查詢",
+    "summary": "整合生育給付、生育津貼、托育補助、育兒津貼、幼兒園補助與育嬰留停等 0–6 歲主要家庭補助。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜政策整理",
+      "url": "https://www.parenting.com.tw/article/5091069"
+    },
+    "is_hub": false,
+    "age_label": "孕期至學齡前",
+    "age_ranges": [
+      "孕期",
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "補助與權益",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "生育補助",
+      "生育津貼",
+      "育兒津貼",
+      "托育補助",
+      "育嬰假",
+      "2026"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：適合作為補助總覽入口。",
+    "notice": "屬二手整理資料；每項補助應再導向主管機關官方來源。",
+    "url": "https://www.parenting.com.tw/article/5091069"
+  },
+  {
+    "id": "resource-1bda81f2d557",
+    "title": "生育津貼多久下來？2026各縣市生育津貼金額、申請方法總整理",
+    "summary": "整理各縣市生育津貼金額、資格、設籍條件、申請期限與辦理方式。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜地方政策整理",
+      "url": "https://www.parenting.com.tw/article/5090800"
+    },
+    "is_hub": false,
+    "age_label": "孕期／新生兒",
+    "age_ranges": [
+      "孕期",
+      "0-1歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "補助"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "補助與權益",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "生育津貼",
+      "縣市補助",
+      "新生兒",
+      "設籍",
+      "申請期限"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：地方資訊整理完整且有更新。",
+    "notice": "地方政策變動頻繁；地區欄位若未來拆成單縣市資源，應改連各縣市官方頁。",
+    "url": "https://www.parenting.com.tw/article/5090800"
+  },
+  {
+    "id": "resource-314beaee835f",
+    "title": "2026育嬰假新制！掌握育嬰留職停薪津貼與申請流程",
+    "summary": "整理 2026 育嬰留職停薪新制、津貼、資格、申請流程及與產假等假別的比較。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜勞動權益整理",
+      "url": "https://www.parenting.com.tw/article/5087210"
+    },
+    "is_hub": false,
+    "age_label": "孕期至幼兒期",
+    "age_ranges": [
+      "孕期",
+      "0-1歲",
+      "1-3歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "政策"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "補助與權益",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "育嬰假",
+      "育嬰留停",
+      "育嬰津貼",
+      "請假權益",
+      "2026"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：2026 年更新，實用性高。",
+    "notice": "勞動權益與津貼請以勞動部／勞保局最新規定為準。",
+    "url": "https://www.parenting.com.tw/article/5087210"
+  },
+  {
+    "id": "resource-c50371a7aec1",
+    "title": "什麼是親子共讀？0～5歲的共讀技巧、好處、書單一次掌握",
+    "summary": "整理親子共讀的好處、開始年齡、原則與 0–5 歲分齡共讀方式。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體",
+      "url": "https://www.parenting.com.tw/article/5092189"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "學習與閱讀",
+    "topic_group": "發展與學習",
+    "tags": [
+      "親子共讀",
+      "繪本",
+      "閱讀習慣",
+      "分齡閱讀",
+      "0-5歲"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：內容系統化且可直接應用於家庭。",
+    "notice": "書單帶有出版社內容選擇偏好時，育伴可聚焦方法而非產品推薦。",
+    "url": "https://www.parenting.com.tw/article/5092189"
+  },
+  {
+    "id": "resource-554cece48379",
+    "title": "育兒100問｜2歲怎麼陪玩？5個簡單的在家親子遊戲",
+    "summary": "以影音示範 2 歲幼兒可在家進行的親子遊戲，包含身體認知、數學、自理、肌肉協調與想像力。",
+    "type": "影片",
+    "type_label": "YouTube影片",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體影音",
+      "url": "https://www.youtube.com/watch?v=B1knP5vump4"
+    },
+    "is_hub": false,
+    "age_label": "學步兒",
+    "age_ranges": [
+      "1-3歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "遊戲與學習",
+    "topic_group": "發展與學習",
+    "tags": [
+      "2歲陪玩",
+      "親子遊戲",
+      "在家活動",
+      "認知",
+      "自理",
+      "動作"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：親子天下官方影音，操作示範價值高。",
+    "notice": "影音內容適合作為文章型資源的補充；避免同一主題收錄過多單集。",
+    "url": "https://www.youtube.com/watch?v=B1knP5vump4"
+  },
+  {
+    "id": "resource-6de0f2041bea",
+    "title": "育兒100問｜夜驚原因與5個減緩方式",
+    "summary": "以影音方式說明孩子睡著後驚醒大哭的夜驚現象、可能原因與日常減緩方式。",
+    "type": "影片",
+    "type_label": "YouTube影片",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體影音",
+      "url": "https://www.youtube.com/watch?v=TPL0tDrKxxY"
+    },
+    "is_hub": false,
+    "age_label": "幼兒／學齡兒童",
+    "age_ranges": [
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "國小"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "睡眠",
+    "topic_group": "健康與照護",
+    "tags": [
+      "夜驚",
+      "兒童睡眠",
+      "睡眠問題",
+      "哭醒"
+    ],
+    "ai_summary_status": "ai_draft",
+    "reviewed_at": null,
+    "credibility_note": "中：官方影音入口可確認，但健康內容需再核對講者與醫療專業依據。",
+    "notice": "若出現頻繁、受傷、呼吸異常或其他不尋常症狀，應尋求醫療協助。",
+    "url": "https://www.youtube.com/watch?v=TPL0tDrKxxY"
+  },
+  {
+    "id": "resource-62ead798b177",
+    "title": "2026台北捷運親子景點全攻略",
+    "summary": "依台北捷運路線整理親子景點、免費公園、博物館與親子館，並提供篩選工具與一日遊建議。",
+    "type": "混合型內容",
+    "type_label": "文章／工具",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜活動整理",
+      "url": "https://www.parenting.com.tw/article/6001254"
+    },
+    "is_hub": false,
+    "age_label": "幼兒至學齡兒童",
+    "age_ranges": [
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "國小"
+    ],
+    "regions": [
+      "台北市／新北市"
+    ],
+    "resource_categories": [
+      "活動"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "親子活動",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "台北親子景點",
+      "捷運",
+      "公園",
+      "博物館",
+      "親子館",
+      "一日遊"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "中高：地區性實用整理，並具篩選工具。",
+    "notice": "景點開放時間、票價與整修狀況變動快；使用前需確認各場館官方資訊。",
+    "url": "https://www.parenting.com.tw/article/6001254"
+  },
+  {
+    "id": "resource-6149dee23b84",
+    "title": "2026年7月全台親子活動總整理",
+    "summary": "按北中南東整理 2026 年 7 月展覽、體驗、劇場、夏令營與親子景點。",
+    "type": "文章",
+    "type_label": "文章",
+    "source": {
+      "name": "親子天下",
+      "type": "媒體｜活動整理",
+      "url": "https://www.parenting.com.tw/article/6002339"
+    },
+    "is_hub": false,
+    "age_label": "幼兒至學齡兒童",
+    "age_ranges": [
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "國小"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "活動"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "親子活動",
+    "topic_group": "親職與家庭",
+    "tags": [
+      "親子活動",
+      "展覽",
+      "體驗",
+      "暑假",
+      "2026年7月"
+    ],
+    "ai_summary_status": "ai_draft",
+    "reviewed_at": null,
+    "credibility_note": "中高：當期活動整理完整，但時效性極高。",
+    "notice": "僅適合作為『時效型資源』範例；目前已過期，不建議匯入正式公開清單。",
+    "url": "https://www.parenting.com.tw/article/6002339"
   }
 ]
