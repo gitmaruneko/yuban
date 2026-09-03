@@ -1,3 +1,5 @@
+export const RESULTS_PAGE_SIZE = 24;
+
 export function getSearchableText(resource) {
   return [
     resource.title,
@@ -53,4 +55,8 @@ export function filterResources(resources, state) {
     const matchesType = !state.type || resource.type === state.type;
     return matchesAge && matchesTopic && matchesSource && matchesType;
   });
+}
+
+export function getVisibleResources(resources, visibleCount = RESULTS_PAGE_SIZE) {
+  return resources.slice(0, visibleCount);
 }

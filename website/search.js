@@ -1,4 +1,9 @@
-import { filterResources, searchResources } from "./search-utils.mjs";
+import {
+  filterResources,
+  getVisibleResources,
+  RESULTS_PAGE_SIZE,
+  searchResources,
+} from "./search-utils.mjs";
 
 const RESOURCE_DATA_URL = "data/sample-resources.json";
 const FUSE_MODULE_URL = "https://cdn.jsdelivr.net/npm/fuse.js@7.5.0/dist/fuse.min.mjs";
@@ -63,6 +68,29 @@ function renderResourceCard(resource) {
   return article;
 }
 
+function renderResourceListItem(resource) {
+  const article = createElement("article", "resource-list-item");
+  const status = getStatus(resource);
+  const title = createElement("h3", "resource-title");
+  const titleLink = createElement("a", "", resource.title);
+  titleLink.href = `resource.html?id=${encodeURIComponent(resource.id)}`;
+  title.append(titleLink);
+
+  const summary = createElement("p", "resource-summary", resource.summary);
+  const meta = createElement("dl", "resource-list-meta");
+  appendMetaItem(meta, "適用", resource.age_label);
+  appendMetaItem(meta, "主題", resource.topic);
+  appendMetaItem(meta, "來源", resource.source.name);
+  const statusItem = createElement("div", "resource-meta-item");
+  statusItem.append(
+    createElement("dt", "", "核實"),
+    createElement("dd", `status-badge ${status.className}`, status.label),
+  );
+  meta.append(statusItem);
+  article.append(title, summary, meta);
+  return article;
+}
+
 function populateSelect(select, values) {
   [...new Set(values)].sort(collator.compare).forEach((value) => {
     const option = createElement("option", "", value);
@@ -109,6 +137,11 @@ async function loadSearchEngine() {
   const resultsSummary = document.querySelector("#resultsSummary");
   const loadError = document.querySelector("#loadError");
   const searchEngineNote = document.querySelector("#searchEngineNote");
+  const loadMoreWrap = document.querySelector("#loadMoreWrap");
+  const loadMoreButton = document.querySelector("#loadMore");
+  const viewButtons = [...document.querySelectorAll("[data-view]")];
+  let viewMode = "list";
+  let visibleCount = RESULTS_PAGE_SIZE;
 
   let resources;
   try {
@@ -170,17 +203,26 @@ async function loadSearchEngine() {
     window.history.replaceState(null, "", nextUrl);
   }
 
-  function renderResults() {
+  function renderResults(resetVisibleCount = false) {
+    if (resetVisibleCount) visibleCount = RESULTS_PAGE_SIZE;
     const state = getState();
     const filtered = filterResources(resources, state);
     const results = searchResources(filtered, state.query, FuseSearch);
+    const visibleResults = getVisibleResources(results, visibleCount);
 
     resultsGrid.replaceChildren();
     if (results.length) {
-      results.forEach((resource) => resultsGrid.append(renderResourceCard(resource)));
+      resultsGrid.classList.toggle("is-list", viewMode === "list");
+      resultsGrid.classList.toggle("is-cards", viewMode === "cards");
+      visibleResults.forEach((resource) =>
+        resultsGrid.append(
+          viewMode === "list" ? renderResourceListItem(resource) : renderResourceCard(resource),
+        ),
+      );
       resultsSummary.textContent = state.query
-        ? `找到 ${results.length} 筆與「${state.query}」相關的資源`
-        : `顯示 ${results.length} 筆資源`;
+        ? `顯示 ${visibleResults.length} / ${results.length} 筆與「${state.query}」相關的資源`
+        : `顯示 ${visibleResults.length} / ${results.length} 筆資源`;
+      loadMoreWrap.hidden = visibleResults.length >= results.length;
     } else {
       const emptyState = createElement("div", "empty-state");
       emptyState.append(
@@ -193,6 +235,7 @@ async function loadSearchEngine() {
       emptyState.append(clearButton);
       resultsGrid.append(emptyState);
       resultsSummary.textContent = "找不到符合條件的資源";
+      loadMoreWrap.hidden = true;
     }
 
     resultsGrid.setAttribute("aria-busy", "false");
@@ -205,23 +248,38 @@ async function loadSearchEngine() {
   function resetAll() {
     form.reset();
     moreFilters.open = false;
-    renderResults();
+    renderResults(true);
     queryInput.focus();
   }
 
   const renderAfterTyping = debounce(renderResults, 180);
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    renderResults();
+    renderResults(true);
   });
-  queryInput.addEventListener("input", renderAfterTyping);
+  queryInput.addEventListener("input", () => renderAfterTyping(true));
   form.querySelectorAll('input[name="age"]').forEach((radio) => {
-    radio.addEventListener("change", renderResults);
+    radio.addEventListener("change", () => renderResults(true));
   });
   [topicSelect, sourceSelect, typeSelect].forEach((select) => {
-    select.addEventListener("change", renderResults);
+    select.addEventListener("change", () => renderResults(true));
   });
   resetButton.addEventListener("click", resetAll);
+  loadMoreButton.addEventListener("click", () => {
+    visibleCount += RESULTS_PAGE_SIZE;
+    renderResults();
+  });
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      viewMode = button.dataset.view;
+      viewButtons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      renderResults();
+    });
+  });
 
-  renderResults();
+  renderResults(true);
 })();

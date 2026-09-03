@@ -1,7 +1,11 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { filterResources, searchResources } from "../website/search-utils.mjs";
+import {
+  filterResources,
+  getVisibleResources,
+  searchResources,
+} from "../website/search-utils.mjs";
 
 const resources = [
   {
@@ -53,4 +57,18 @@ test("篩選條件會同時套用主題、來源與內容類型", () => {
     }),
     [resources[0]],
   );
+});
+
+test("結果預設只顯示前 24 筆", () => {
+  const manyResources = Array.from({ length: 30 }, (_, index) => ({ id: index }));
+
+  assert.equal(getVisibleResources(manyResources).length, 24);
+  assert.deepEqual(getVisibleResources(manyResources), manyResources.slice(0, 24));
+});
+
+test("載入更多會增加一批結果但不超過總數", () => {
+  const manyResources = Array.from({ length: 50 }, (_, index) => ({ id: index }));
+
+  assert.equal(getVisibleResources(manyResources, 48).length, 48);
+  assert.equal(getVisibleResources(manyResources, 72).length, 50);
 });

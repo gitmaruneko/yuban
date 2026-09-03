@@ -645,6 +645,36 @@ textarea::placeholder {
   font-size: 1.5rem;
 }
 
+.results-tools {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.view-switcher {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.view-button {
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  background: transparent;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.view-button.is-active {
+  color: #fff;
+  background: var(--leaf);
+}
+
 .results-toolbar p {
   margin-bottom: 0;
   color: var(--ink-soft);
@@ -660,8 +690,72 @@ textarea::placeholder {
 
 .resource-grid {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.resource-grid.is-cards {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.resource-list-item {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.9fr) minmax(0, 1.5fr) minmax(360px, 1.2fr);
+  gap: 18px;
+  align-items: center;
+  padding: 15px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.resource-list-item .resource-title,
+.resource-list-item .resource-summary {
+  margin-bottom: 0;
+}
+
+.resource-list-item .resource-title {
+  font-size: 1.05rem;
+}
+
+.resource-list-item .resource-summary {
+  min-height: 0;
+  font-size: 0.86rem;
+  -webkit-line-clamp: 2;
+}
+
+.resource-list-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.resource-list-meta .resource-meta-item {
+  display: flex;
+  gap: 5px;
+}
+
+.resource-list-meta dt {
+  color: #7a8882;
+}
+
+.resource-list-meta dd {
+  margin: 0;
+  font-weight: 650;
+}
+
+.resource-list-meta .resource-meta-item:last-child {
+  margin-left: auto;
+}
+
+.load-more-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
 }
 
 .resource-card {
@@ -695,13 +789,7 @@ textarea::placeholder {
   margin-bottom: 15px;
 }
 
-.topic-label {
-  color: var(--coral);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-}
-
+  margin-left: auto;
 .status-badge {
   display: inline-flex;
   align-items: center;
@@ -1283,6 +1371,10 @@ textarea::placeholder {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .resource-grid.is-list {
+    grid-template-columns: 1fr;
+  }
+
   .filter-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1380,6 +1472,25 @@ textarea::placeholder {
   .related-list,
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .resource-grid.is-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-list-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .resource-list-meta .status-badge {
+    margin-left: 0;
+  }
+
+  .results-tools {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 10px;
   }
 
   .resource-summary {

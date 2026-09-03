@@ -140,7 +140,13 @@
               <h2>推薦資源</h2>
               <p id="resultsSummary" aria-live="polite">正在載入資源…</p>
             </div>
-            <p class="search-engine-note" id="searchEngineNote">支援錯字與近似詞搜尋</p>
+            <div class="results-tools">
+              <p class="search-engine-note" id="searchEngineNote">支援錯字與近似詞搜尋</p>
+              <div class="view-switcher" aria-label="結果顯示方式">
+                <button class="view-button is-active" type="button" data-view="list" aria-pressed="true">列表</button>
+                <button class="view-button" type="button" data-view="cards" aria-pressed="false">卡片</button>
+              </div>
+            </div>
           </div>
 
           <div id="loadError" class="notice-card error-notice" role="alert" hidden>
@@ -152,6 +158,9 @@
             <div class="resource-skeleton"></div>
             <div class="resource-skeleton"></div>
             <div class="resource-skeleton"></div>
+          </div>
+          <div class="load-more-wrap" id="loadMoreWrap" hidden>
+            <button class="button secondary" id="loadMore" type="button">載入更多</button>
           </div>
         </div>
       </section>
