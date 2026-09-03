@@ -700,6 +700,7 @@ textarea::placeholder {
 }
 
 .resource-list-item {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(190px, 0.9fr) minmax(0, 1.5fr) minmax(360px, 1.2fr);
   gap: 18px;
