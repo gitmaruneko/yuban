@@ -220,6 +220,10 @@ h3,
   background: var(--leaf-dark);
 }
 
+.primary-nav .nav-cta[aria-current="page"] {
+  color: #fff;
+}
+
 .hero {
   position: relative;
   overflow: hidden;

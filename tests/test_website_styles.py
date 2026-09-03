@@ -6,6 +6,14 @@ STYLES_PATH = Path(__file__).parents[1] / "website" / "styles.css"
 
 
 class WebsiteStyleRegressionTests(unittest.TestCase):
+    def test_current_navigation_cta_keeps_white_text(self):
+        styles = STYLES_PATH.read_text(encoding="utf-8")
+
+        self.assertIn(
+            '.primary-nav .nav-cta[aria-current="page"] {\n  color: #fff;',
+            styles,
+        )
+
     def test_resource_list_item_contains_expanded_title_link(self):
         styles = STYLES_PATH.read_text(encoding="utf-8")
 
