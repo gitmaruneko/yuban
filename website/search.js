@@ -155,7 +155,7 @@ async function loadSearchEngine() {
 
   let resources;
   try {
-    [resources] = await Promise.all([loadResources(), loadSearchEngine()]);
+    resources = await loadResources();
   } catch (error) {
     console.error(error);
     resultsGrid.replaceChildren();
@@ -165,6 +165,13 @@ async function loadSearchEngine() {
     resultsSummary.textContent = "資源載入失敗";
     return;
   }
+
+  loadSearchEngine().then(() => {
+    if (FuseSearch) {
+      searchEngineNote.textContent = "支援錯字與近似詞搜尋";
+      renderResults();
+    }
+  });
 
   populateSelect(topicSelect, resources.map((resource) => resource.topic));
   populateSelect(sourceSelect, resources.map((resource) => resource.source.type));
@@ -183,7 +190,7 @@ async function loadSearchEngine() {
       resources.length) *
       100,
   );
-  if (!FuseSearch) searchEngineNote.textContent = "使用基本關鍵字搜尋";
+  searchEngineNote.textContent = "使用基本關鍵字搜尋";
 
   const initialParams = new URLSearchParams(window.location.search);
   queryInput.value = initialParams.get("q") || "";
