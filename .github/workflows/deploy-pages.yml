@@ -17,6 +17,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      - name: Run Python unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run JavaScript unit tests
+        run: node --test tests/search-utils.test.mjs
+
       - name: Validate resource index
         run: python tools/validate_resources.py
 

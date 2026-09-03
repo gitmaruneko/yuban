@@ -39,8 +39,7 @@ def validate_http_url(url: str, resource_id: str) -> None:
         fail(f"{resource_id}: invalid HTTP(S) URL: {url}")
 
 
-def main() -> None:
-    resources = json.loads(RESOURCE_PATH.read_text(encoding="utf-8"))
+def validate_resources(resources: object) -> None:
     if not isinstance(resources, list):
         fail("Resource index must contain a JSON array")
     if len(resources) != EXPECTED_COUNT:
@@ -85,6 +84,11 @@ def main() -> None:
                 fail(f"{label}: source.{field} is required")
         if source["url"] != resource["url"]:
             fail(f"{label}: source URL does not match resource URL")
+
+
+def main() -> None:
+    resources = json.loads(RESOURCE_PATH.read_text(encoding="utf-8"))
+    validate_resources(resources)
 
     print(f"Validated {len(resources)} resources in {RESOURCE_PATH}")
 

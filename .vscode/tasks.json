@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Python unit tests",
+      "type": "process",
+      "command": "python",
+      "args": ["-m", "unittest", "discover", "-s", "tests", "-v"],
+      "problemMatcher": []
+    },
+    {
+      "label": "JavaScript unit tests",
+      "type": "process",
+      "command": "node",
+      "args": ["--test", "tests/search-utils.test.mjs"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Validate resource data",
+      "type": "process",
+      "command": "python",
+      "args": ["tools/validate_resources.py"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run All Tests",
+      "dependsOn": [
+        "Python unit tests",
+        "JavaScript unit tests",
+        "Validate resource data"
+      ],
+      "dependsOrder": "sequence",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
