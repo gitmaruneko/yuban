@@ -4,6 +4,7 @@ import test from "node:test";
 import {
   filterResources,
   getVisibleResources,
+  normalizeResource,
   searchResources,
 } from "../website/search-utils.mjs";
 
@@ -71,4 +72,43 @@ test("載入更多會增加一批結果但不超過總數", () => {
 
   assert.equal(getVisibleResources(manyResources, 48).length, 48);
   assert.equal(getVisibleResources(manyResources, 72).length, 50);
+});
+
+test("分類欄位可同時套用年齡、地區、資源類型、對象、來源地區與語言", () => {
+  const resource = normalizeResource({
+    ...resources[0],
+    age_groups: ["國小"],
+    regions: ["新北市"],
+    resource_categories: ["政策"],
+    audiences: ["家長", "教師"],
+    origin_region: "日本",
+    languages: ["英文"],
+  });
+
+  assert.deepEqual(
+    filterResources([resource], {
+      age: "國小",
+      region: "新北市",
+      category: "政策",
+      audience: "教師",
+      origin: "日本",
+      language: "英文",
+    }),
+    [resource],
+  );
+  assert.deepEqual(
+    filterResources([resource], { age: "國中", region: "新北市" }),
+    [],
+  );
+});
+
+test("舊資源缺少新分類欄位時會套用相容預設值", () => {
+  const normalized = normalizeResource(resources[0]);
+
+  assert.deepEqual(normalized.age_groups, ["學齡前"]);
+  assert.deepEqual(normalized.regions, ["全國"]);
+  assert.deepEqual(normalized.resource_categories, ["學習教材"]);
+  assert.deepEqual(normalized.audiences, ["家長"]);
+  assert.equal(normalized.origin_region, "台灣");
+  assert.deepEqual(normalized.languages, ["繁體中文"]);
 });

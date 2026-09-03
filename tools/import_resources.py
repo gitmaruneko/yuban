@@ -27,7 +27,14 @@ REQUIRED_HEADERS = (
     "審核狀態",
     "可信度備註",
     "注意事項",
+    "年齡群組",
+    "地區",
+    "資源類型",
+    "使用對象",
+    "來源地區",
+    "語言",
 )
+LEGACY_REQUIRED_HEADERS = REQUIRED_HEADERS[:13]
 
 TYPE_MAP = {
     "電子手冊": "文章",
@@ -160,6 +167,12 @@ def convert_row(row: dict[str, str], row_number: int) -> dict[str, object]:
         "is_hub": row["是否為入口型資源"] == "是",
         "age_label": age_label,
         "age_ranges": AGE_STAGE_MAP[age_label],
+        "age_groups": split_tags(row["年齡群組"]),
+        "regions": split_tags(row["地區"]),
+        "resource_categories": split_tags(row["資源類型"]),
+        "audiences": split_tags(row["使用對象"]),
+        "origin_region": row["來源地區"],
+        "languages": split_tags(row["語言"]),
         "topic": topic,
         "topic_group": TOPIC_GROUPS[topic],
         "tags": split_tags(row["關鍵標籤"]),
@@ -181,7 +194,7 @@ def load_resources(workbook_path: Path) -> list[dict[str, object]]:
     except StopIteration as exc:
         raise ValueError("工作簿沒有任何資料") from exc
 
-    if headers != REQUIRED_HEADERS:
+    if headers not in (REQUIRED_HEADERS, LEGACY_REQUIRED_HEADERS):
         raise ValueError(
             "工作簿欄位與預期不符。\n"
             f"預期：{REQUIRED_HEADERS}\n"
@@ -197,6 +210,17 @@ def load_resources(workbook_path: Path) -> list[dict[str, object]]:
             raise ValueError(f"第 {row_number} 列缺少欄位：{', '.join(missing)}")
 
         row = {headers[index]: str(value).strip() for index, value in enumerate(values)}
+        if headers == LEGACY_REQUIRED_HEADERS:
+            row.update(
+                {
+                    "年齡群組": "全齡" if row["年齡階段"] == "全齡" else "學齡前",
+                    "地區": "全國",
+                    "資源類型": "學習教材",
+                    "使用對象": "家長",
+                    "來源地區": "台灣",
+                    "語言": "繁體中文",
+                }
+            )
         resources.append(convert_row(row, row_number))
 
     ids = [resource["id"] for resource in resources]

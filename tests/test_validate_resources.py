@@ -58,6 +58,20 @@ class ValidateResourcesTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unsupported age stages"):
             validate_resources(resources)
 
+    def test_rejects_unsupported_resource_category(self):
+        resources = copy.deepcopy(self.resources)
+        resources[0]["resource_categories"] = ["未定義類型"]
+
+        with self.assertRaisesRegex(ValueError, "unsupported resource_categories"):
+            validate_resources(resources)
+
+    def test_rejects_non_array_taxonomy_field(self):
+        resources = copy.deepcopy(self.resources)
+        resources[0]["languages"] = "繁體中文"
+
+        with self.assertRaisesRegex(ValueError, "languages must be a non-empty string array"):
+            validate_resources(resources)
+
 
 if __name__ == "__main__":
     unittest.main()

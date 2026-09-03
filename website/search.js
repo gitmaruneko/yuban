@@ -1,6 +1,7 @@
 import {
   filterResources,
   getVisibleResources,
+  normalizeResource,
   RESULTS_PAGE_SIZE,
   searchResources,
 } from "./search-utils.mjs";
@@ -99,6 +100,10 @@ function populateSelect(select, values) {
   });
 }
 
+function getValues(resources, field) {
+  return resources.flatMap((resource) => resource[field] || []);
+}
+
 function debounce(callback, delay) {
   let timeoutId;
   return (...args) => {
@@ -112,7 +117,7 @@ async function loadResources() {
   if (!response.ok) throw new Error(`Resource request failed: ${response.status}`);
   const resources = await response.json();
   if (!Array.isArray(resources)) throw new Error("Resource data is not an array");
-  return resources;
+  return resources.map(normalizeResource);
 }
 
 async function loadSearchEngine() {
@@ -130,6 +135,11 @@ async function loadSearchEngine() {
   const topicSelect = document.querySelector("#topic-filter");
   const sourceSelect = document.querySelector("#source-filter");
   const typeSelect = document.querySelector("#type-filter");
+  const regionSelect = document.querySelector("#region-filter");
+  const categorySelect = document.querySelector("#category-filter");
+  const audienceSelect = document.querySelector("#audience-filter");
+  const originSelect = document.querySelector("#origin-filter");
+  const languageSelect = document.querySelector("#language-filter");
   const resetButton = document.querySelector("#resetFilters");
   const moreFilters = document.querySelector("#moreFilters");
   const filterCount = document.querySelector("#filterCount");
@@ -159,6 +169,11 @@ async function loadSearchEngine() {
   populateSelect(topicSelect, resources.map((resource) => resource.topic));
   populateSelect(sourceSelect, resources.map((resource) => resource.source.type));
   populateSelect(typeSelect, resources.map((resource) => resource.type));
+  populateSelect(regionSelect, getValues(resources, "regions"));
+  populateSelect(categorySelect, getValues(resources, "resource_categories"));
+  populateSelect(audienceSelect, getValues(resources, "audiences"));
+  populateSelect(originSelect, resources.map((resource) => resource.origin_region));
+  populateSelect(languageSelect, getValues(resources, "languages"));
 
   document.querySelector("#resourceCount").textContent = resources.length;
   document.querySelector("#sourceTypeCount").textContent = new Set(
@@ -176,10 +191,24 @@ async function loadSearchEngine() {
   topicSelect.value = initialParams.get("topic") || "";
   sourceSelect.value = initialParams.get("source") || "";
   typeSelect.value = initialParams.get("type") || "";
+  regionSelect.value = initialParams.get("region") || "";
+  categorySelect.value = initialParams.get("category") || "";
+  audienceSelect.value = initialParams.get("audience") || "";
+  originSelect.value = initialParams.get("origin") || "";
+  languageSelect.value = initialParams.get("language") || "";
   const requestedAge = initialParams.get("age") || "";
   const ageRadio = form.querySelector(`input[name="age"][value="${CSS.escape(requestedAge)}"]`);
   if (ageRadio) ageRadio.checked = true;
-  if (topicSelect.value || sourceSelect.value || typeSelect.value) moreFilters.open = true;
+  if (
+    topicSelect.value ||
+    sourceSelect.value ||
+    typeSelect.value ||
+    regionSelect.value ||
+    categorySelect.value ||
+    audienceSelect.value ||
+    originSelect.value ||
+    languageSelect.value
+  ) moreFilters.open = true;
 
   function getState() {
     return {
@@ -188,6 +217,11 @@ async function loadSearchEngine() {
       topic: topicSelect.value,
       source: sourceSelect.value,
       type: typeSelect.value,
+      region: regionSelect.value,
+      category: categorySelect.value,
+      audience: audienceSelect.value,
+      origin: originSelect.value,
+      language: languageSelect.value,
     };
   }
 
@@ -198,6 +232,11 @@ async function loadSearchEngine() {
     if (state.topic) params.set("topic", state.topic);
     if (state.source) params.set("source", state.source);
     if (state.type) params.set("type", state.type);
+    if (state.region) params.set("region", state.region);
+    if (state.category) params.set("category", state.category);
+    if (state.audience) params.set("audience", state.audience);
+    if (state.origin) params.set("origin", state.origin);
+    if (state.language) params.set("language", state.language);
     const queryString = params.toString();
     const nextUrl = `${window.location.pathname}${queryString ? `?${queryString}` : ""}#explore`;
     window.history.replaceState(null, "", nextUrl);
@@ -239,7 +278,16 @@ async function loadSearchEngine() {
     }
 
     resultsGrid.setAttribute("aria-busy", "false");
-    const advancedCount = [state.topic, state.source, state.type].filter(Boolean).length;
+    const advancedCount = [
+      state.topic,
+      state.source,
+      state.type,
+      state.region,
+      state.category,
+      state.audience,
+      state.origin,
+      state.language,
+    ].filter(Boolean).length;
     filterCount.textContent = advancedCount;
     filterCount.hidden = advancedCount === 0;
     updateUrl(state);
@@ -261,7 +309,16 @@ async function loadSearchEngine() {
   form.querySelectorAll('input[name="age"]').forEach((radio) => {
     radio.addEventListener("change", () => renderResults(true));
   });
-  [topicSelect, sourceSelect, typeSelect].forEach((select) => {
+  [
+    topicSelect,
+    sourceSelect,
+    typeSelect,
+    regionSelect,
+    categorySelect,
+    audienceSelect,
+    originSelect,
+    languageSelect,
+  ].forEach((select) => {
     select.addEventListener("change", () => renderResults(true));
   });
   resetButton.addEventListener("click", resetAll);
