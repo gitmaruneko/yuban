@@ -203,10 +203,26 @@ def load_resources(workbook_path: Path) -> list[dict[str, object]]:
     urls = [resource["url"] for resource in resources]
     if len(ids) != len(set(ids)) or len(urls) != len(set(urls)):
         raise ValueError("工作簿包含重複網址")
-    if len(resources) != 30:
-        raise ValueError(f"MVP 預期 30 筆資源，目前讀到 {len(resources)} 筆")
-
     return resources
+
+
+def merge_resources(
+    existing: list[dict[str, object]], incoming: list[dict[str, object]]
+) -> tuple[list[dict[str, object]], int]:
+    existing_urls = {resource["url"] for resource in existing}
+    existing_ids = {resource["id"] for resource in existing}
+    merged = [*existing]
+    skipped = 0
+
+    for resource in incoming:
+        if resource["url"] in existing_urls or resource["id"] in existing_ids:
+            skipped += 1
+            continue
+        merged.append(resource)
+        existing_urls.add(resource["url"])
+        existing_ids.add(resource["id"])
+
+    return merged, skipped
 
 
 def main() -> None:
@@ -225,13 +241,23 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    resources = load_resources(args.input)
+    incoming = load_resources(args.input)
+    existing = []
+    if args.output.exists():
+        existing = json.loads(args.output.read_text(encoding="utf-8"))
+        if not isinstance(existing, list):
+            raise ValueError("既有資源索引必須是 JSON 陣列")
+
+    resources, skipped = merge_resources(existing, incoming)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(
         json.dumps(resources, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"Imported {len(resources)} resources into {args.output}")
+    print(
+        f"Imported {len(incoming) - skipped} new resources into {args.output} "
+        f"({skipped} duplicates skipped, {len(resources)} total)"
+    )
 
 
 if __name__ == "__main__":

@@ -17,11 +17,18 @@ class ValidateResourcesTests(unittest.TestCase):
     def test_sample_resources_are_valid(self):
         validate_resources(self.resources)
 
-    def test_rejects_wrong_resource_count(self):
+    def test_accepts_fewer_than_thirty_resources(self):
         resources = self.resources[:-1]
+        validate_resources(resources)
 
-        with self.assertRaisesRegex(ValueError, "Expected 30 resources"):
-            validate_resources(resources)
+    def test_accepts_more_than_mvp_resource_count(self):
+        resources = copy.deepcopy(self.resources)
+        resources.append(copy.deepcopy(resources[0]))
+        resources[-1]["id"] = "resource-new"
+        resources[-1]["url"] = "https://example.com/new"
+        resources[-1]["source"]["url"] = resources[-1]["url"]
+
+        validate_resources(resources)
 
     def test_rejects_duplicate_resource_id(self):
         resources = copy.deepcopy(self.resources)

@@ -32,6 +32,17 @@ python tools/validate_resources.py
 
 測試涵蓋資源資料驗證，以及首頁搜尋與篩選的核心規則。GitHub Pages 部署前也會自動執行相同檢查。
 
+### 新增育兒資源
+
+將新資源依照 `docs/resource-template.csv` 的欄位格式填入 Excel 工作簿，再在專案根目錄執行：
+
+```bash
+python tools/import_resources.py
+python tools/validate_resources.py
+```
+
+匯入程式會將 Excel 資料追加到既有網站索引；相同網址或 ID 的資源會自動跳過，不會重複加入。完成檢查後提交 `website/data/sample-resources.json`，推送到 `main` 才會發布更新。
+
 ### 本地開發
 
 1. 進入專案根目錄：

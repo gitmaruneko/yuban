@@ -9,7 +9,6 @@ from urllib.parse import urlparse
 
 
 RESOURCE_PATH = Path("website/data/sample-resources.json")
-EXPECTED_COUNT = 30
 ALLOWED_TYPES = {"文章", "影片", "工具／用品", "混合型內容", "連結入口"}
 ALLOWED_STATUSES = {"verified", "ai_draft"}
 ALLOWED_AGE_STAGES = {"孕期", "0-1歲", "1-3歲", "3-6歲", "全齡"}
@@ -42,9 +41,6 @@ def validate_http_url(url: str, resource_id: str) -> None:
 def validate_resources(resources: object) -> None:
     if not isinstance(resources, list):
         fail("Resource index must contain a JSON array")
-    if len(resources) != EXPECTED_COUNT:
-        fail(f"Expected {EXPECTED_COUNT} resources, found {len(resources)}")
-
     ids: set[str] = set()
     urls: set[str] = set()
     for index, resource in enumerate(resources, start=1):
