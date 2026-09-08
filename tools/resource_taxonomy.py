@@ -58,3 +58,13 @@ TOPIC_GROUPS = {
     "兒童健康與醫療": "健康與照護",
     "發展與早期支持": "發展與學習",
 }
+
+# Reviewed workbooks may use a narrow user need as their topic. Normalize those
+# labels at the import boundary so the public index remains compact and uses
+# its established topic vocabulary.
+IMPORT_TOPIC_ALIASES = {
+    "高齡妊娠": "孕產與嬰幼兒照護",
+    "人工受孕": "備孕與生殖",
+    "唇顎裂": "兒科疾病與照護",
+    "早療": "發展與早療",
+}

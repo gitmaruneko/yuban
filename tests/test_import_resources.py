@@ -1,9 +1,15 @@
 import copy
 import json
+import tempfile
 import unittest
 from pathlib import Path
 
-from tools.import_resources import convert_row, merge_resources
+from tools.import_resources import (
+    archive_input,
+    convert_row,
+    exclude_authorized_duplicate_urls,
+    merge_resources,
+)
 
 
 RESOURCE_PATH = Path(__file__).parents[1] / "website" / "data" / "sample-resources.json"
@@ -27,6 +33,50 @@ class MergeResourcesTests(unittest.TestCase):
         self.assertEqual(skipped, 1)
         self.assertEqual(len(merged), 2)
         self.assertEqual(merged[-1]["url"], "https://example.com/new")
+
+    def test_rejects_existing_url_unless_explicitly_excluded(self):
+        existing = [{"url": "https://example.com/existing"}]
+        incoming = [
+            {"url": "https://example.com/existing"},
+            {"url": "https://example.com/new"},
+        ]
+
+        with self.assertRaisesRegex(ValueError, "already in the resource index"):
+            exclude_authorized_duplicate_urls(incoming, existing, set())
+
+        filtered, excluded = exclude_authorized_duplicate_urls(
+            incoming, existing, {"https://example.com/existing"}
+        )
+
+        self.assertEqual(excluded, ["https://example.com/existing"])
+        self.assertEqual(filtered, [{"url": "https://example.com/new"}])
+
+    def test_moves_source_to_archive_without_overwriting(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "resource.xlsx"
+            archive_dir = root / "archive"
+            source.write_text("workbook placeholder", encoding="utf-8")
+
+            archived = archive_input(source, archive_dir)
+
+            self.assertEqual(archived, archive_dir / source.name)
+            self.assertFalse(source.exists())
+            self.assertEqual(archived.read_text(encoding="utf-8"), "workbook placeholder")
+
+    def test_refuses_to_replace_an_existing_archive(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "resource.xlsx"
+            archive_dir = root / "archive"
+            archive_dir.mkdir()
+            source.write_text("new source", encoding="utf-8")
+            (archive_dir / source.name).write_text("existing archive", encoding="utf-8")
+
+            with self.assertRaisesRegex(FileExistsError, "Archive already exists"):
+                archive_input(source, archive_dir)
+
+            self.assertEqual(source.read_text(encoding="utf-8"), "new source")
 
 
 class ConvertResourceTests(unittest.TestCase):
@@ -90,6 +140,48 @@ class ConvertResourceTests(unittest.TestCase):
         self.assertEqual(resource["age_ranges"], ["備孕"])
         self.assertEqual(resource["topic_group"], "健康與照護")
         self.assertEqual(resource["tags"], ["人工受孕", "不孕症", "IVF", "生殖醫療"])
+
+    def test_converts_reviewed_health_need_aliases_to_compact_topics(self):
+        base_row = {
+            "資源名稱": "健康需求測試資源",
+            "連結": "https://example.com/health-need",
+            "摘要": "測試工作簿別名轉換",
+            "內容類型": "官方QA",
+            "提供方／來源類型": "政府",
+            "原始來源": "測試政府",
+            "是否為入口型資源": "否",
+            "關鍵標籤": "測試標籤",
+            "審核狀態": "通過",
+            "可信度備註": "測試依據",
+            "注意事項": "測試提醒",
+            "年齡群組": "全齡",
+            "地區": "全國",
+            "資源類型": "指南型",
+            "使用對象": "家長",
+            "來源地區": "台灣",
+            "語言": "繁體中文",
+        }
+        cases = [
+            ("高齡妊娠", "孕期", "孕產與嬰幼兒照護", ["孕期"]),
+            ("人工受孕", "備孕／不孕療程", "備孕與生殖", ["備孕"]),
+            ("唇顎裂", "新生兒至青少年", "兒科疾病與照護", ["0-1歲", "1-3歲", "3-6歲"]),
+            ("早療", "嬰幼兒／學齡前", "發展與早療", ["0-1歲", "1-3歲", "3-6歲"]),
+        ]
+
+        for index, (raw_topic, age_label, expected_topic, expected_ages) in enumerate(cases):
+            with self.subTest(raw_topic=raw_topic):
+                row = {
+                    **base_row,
+                    "連結": f"https://example.com/health-need-{index}",
+                    "主題": raw_topic,
+                    "年齡階段": age_label,
+                }
+
+                resource = convert_row(row, index + 2)
+
+                self.assertEqual(resource["type"], "文章")
+                self.assertEqual(resource["topic"], expected_topic)
+                self.assertEqual(resource["age_ranges"], expected_ages)
 
 
 if __name__ == "__main__":

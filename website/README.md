@@ -19,7 +19,7 @@ python tools/import_resources.py --input docs/你的新資源.xlsx
 python tools/validate_resources.py
 ```
 
-匯入程式會將工作簿中的新資源與既有 JSON 索引比對；相同網址或 ID 的資料會跳過，不會重複加入，並將來源檔歸檔到 `docs/imported-resources/`，再更新完整的 `docs/resource_total.xlsx`。資源數量不限，並把工作簿的詳細分類轉成 PRD 定義的網站分類。
+匯入程式會先驗證工作簿中的網址沒有出現在既有 JSON 索引；若有重複，會停止而不變更資料。只有已明確決定排除的既有網址，才可透過 `--exclude-url` 指定，並會在輸出中列出。成功匯入與資料驗證後，來源檔會移至 `docs/imported-resources/`，再更新完整的 `docs/resource_total.xlsx`。資源數量不限，並把工作簿的詳細分類轉成 PRD 定義的網站分類。
 
 ## 頁面
 
