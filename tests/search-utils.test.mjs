@@ -118,3 +118,19 @@ test("舊資源缺少新分類欄位時會套用相容預設值", () => {
   assert.equal(normalized.origin_region, "台灣");
   assert.deepEqual(normalized.languages, ["繁體中文"]);
 });
+
+test("備孕階段與新增主題可一起篩選", () => {
+  const preconceptionResource = {
+    ...resources[0],
+    topic: "備孕與生殖",
+    topic_group: "健康與照護",
+    tags: ["人工受孕", "不孕症", "IVF", "生殖醫療"],
+    age_ranges: ["備孕"],
+  };
+
+  assert.deepEqual(
+    filterResources([preconceptionResource], { age: "備孕", topic: "備孕與生殖" }),
+    [preconceptionResource],
+  );
+  assert.deepEqual(filterResources([preconceptionResource], { age: "孕期" }), []);
+});

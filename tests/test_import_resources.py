@@ -62,6 +62,35 @@ class ConvertResourceTests(unittest.TestCase):
         self.assertEqual(resource["origin_region"], "日本")
         self.assertEqual(resource["languages"], ["日文", "繁體中文"])
 
+    def test_converts_preconception_stage_and_reproductive_topic(self):
+        row = {
+            "資源名稱": "備孕測試資源",
+            "連結": "https://example.com/preconception",
+            "摘要": "測試備孕分類",
+            "內容類型": "文章",
+            "提供方／來源類型": "政府",
+            "原始來源": "測試政府",
+            "是否為入口型資源": "否",
+            "年齡階段": "備孕",
+            "主題": "備孕與生殖",
+            "關鍵標籤": "人工受孕, 不孕症, IVF, 生殖醫療",
+            "審核狀態": "人工核實",
+            "可信度備註": "測試備註",
+            "注意事項": "測試提醒",
+            "年齡群組": "全齡",
+            "地區": "全國",
+            "資源類型": "學習教材",
+            "使用對象": "家長",
+            "來源地區": "台灣",
+            "語言": "繁體中文",
+        }
+
+        resource = convert_row(row, 2)
+
+        self.assertEqual(resource["age_ranges"], ["備孕"])
+        self.assertEqual(resource["topic_group"], "健康與照護")
+        self.assertEqual(resource["tags"], ["人工受孕", "不孕症", "IVF", "生殖醫療"])
+
 
 if __name__ == "__main__":
     unittest.main()

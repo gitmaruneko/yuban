@@ -7,11 +7,15 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
+if __package__:
+    from tools.resource_taxonomy import ALLOWED_AGE_STAGES, TOPIC_GROUPS
+else:
+    from resource_taxonomy import ALLOWED_AGE_STAGES, TOPIC_GROUPS
+
 
 RESOURCE_PATH = Path("website/data/sample-resources.json")
 ALLOWED_TYPES = {"文章", "影片", "工具／用品", "混合型內容", "連結入口"}
 ALLOWED_STATUSES = {"verified", "ai_draft"}
-ALLOWED_AGE_STAGES = {"孕期", "0-1歲", "1-3歲", "3-6歲", "全齡"}
 ALLOWED_AGE_GROUPS = {"學齡前", "國小", "國中", "高中", "全齡"}
 ALLOWED_RESOURCE_CATEGORIES = {"學習教材", "課程", "活動", "補助", "政策", "機構"}
 ALLOWED_AUDIENCES = {"兒童", "家長", "教師", "學校"}
@@ -106,6 +110,14 @@ def validate_resources(resources: object) -> None:
         unknown_ages = set(resource["age_ranges"]) - ALLOWED_AGE_STAGES
         if unknown_ages:
             fail(f"{label}: unsupported age stages: {sorted(unknown_ages)}")
+        expected_topic_group = TOPIC_GROUPS.get(resource["topic"])
+        if expected_topic_group is None:
+            fail(f"{label}: unsupported topic: {resource['topic']}")
+        if resource["topic_group"] != expected_topic_group:
+            fail(
+                f"{label}: topic group must be {expected_topic_group} "
+                f"for topic {resource['topic']}"
+            )
 
         source = resource.get("source")
         if not isinstance(source, dict):
