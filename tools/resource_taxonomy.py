@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 
-ALLOWED_AGE_STAGES = frozenset({"備孕", "孕期", "0-1歲", "1-3歲", "3-6歲", "全齡"})
+ALLOWED_AGE_STAGES = frozenset(
+    {"備孕", "孕期", "0-1歲", "1-3歲", "3-6歲", "國小", "國中", "高中", "成人", "全齡"}
+)
 
 # A topic belongs to exactly one existing topic group. This preserves legacy
 # topics while making the supported taxonomy explicit at the data boundary.
@@ -53,6 +55,7 @@ TOPIC_GROUPS = {
     "兒少網路安全": "安全與保護",
     "托育媒合": "托育與服務",
     "兒童青少年心理健康": "情緒與心理",
+    "注意力與過動（ADHD）": "發展與學習",
     "備孕與生殖": "健康與照護",
     "孕期健康": "健康與照護",
     "兒童健康與醫療": "健康與照護",
@@ -67,4 +70,5 @@ IMPORT_TOPIC_ALIASES = {
     "人工受孕": "備孕與生殖",
     "唇顎裂": "兒科疾病與照護",
     "早療": "發展與早療",
+    "ADHD": "注意力與過動（ADHD）",
 }

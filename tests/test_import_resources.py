@@ -166,6 +166,7 @@ class ConvertResourceTests(unittest.TestCase):
             ("人工受孕", "備孕／不孕療程", "備孕與生殖", ["備孕"]),
             ("唇顎裂", "新生兒至青少年", "兒科疾病與照護", ["0-1歲", "1-3歲", "3-6歲"]),
             ("早療", "嬰幼兒／學齡前", "發展與早療", ["0-1歲", "1-3歲", "3-6歲"]),
+            ("ADHD", "全齡", "注意力與過動（ADHD）", ["全齡"]),
         ]
 
         for index, (raw_topic, age_label, expected_topic, expected_ages) in enumerate(cases):
@@ -182,6 +183,37 @@ class ConvertResourceTests(unittest.TestCase):
                 self.assertEqual(resource["type"], "文章")
                 self.assertEqual(resource["topic"], expected_topic)
                 self.assertEqual(resource["age_ranges"], expected_ages)
+
+    def test_converts_adhd_school_age_resource_without_broadening_to_toddlers(self):
+        row = {
+            "資源名稱": "ADHD 校園支持",
+            "連結": "https://example.com/adhd-school-support",
+            "摘要": "提供 ADHD 學校支持資訊。",
+            "內容類型": "教育權益說明",
+            "提供方／來源類型": "政府",
+            "原始來源": "測試教育局",
+            "是否為入口型資源": "否",
+            "年齡階段": "學齡兒童／青少年",
+            "主題": "ADHD",
+            "關鍵標籤": "ADHD, 校園支持",
+            "審核狀態": "通過",
+            "可信度備註": "測試依據",
+            "注意事項": "測試提醒",
+            "年齡群組": "6–18歲",
+            "地區": "全國",
+            "資源類型": "教育權益型",
+            "使用對象": "家長／教師／青少年",
+            "來源地區": "台灣",
+            "語言": "繁體中文",
+        }
+
+        resource = convert_row(row, 2)
+
+        self.assertEqual(resource["type"], "文章")
+        self.assertEqual(resource["topic"], "注意力與過動（ADHD）")
+        self.assertEqual(resource["age_ranges"], ["國小", "國中", "高中"])
+        self.assertEqual(resource["age_groups"], ["國小", "國中", "高中"])
+        self.assertEqual(resource["audiences"], ["家長", "教師", "兒童"])
 
 
 if __name__ == "__main__":

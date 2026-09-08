@@ -16,9 +16,9 @@ else:
 RESOURCE_PATH = Path("website/data/sample-resources.json")
 ALLOWED_TYPES = {"文章", "影片", "工具／用品", "混合型內容", "連結入口"}
 ALLOWED_STATUSES = {"verified", "ai_draft"}
-ALLOWED_AGE_GROUPS = {"學齡前", "國小", "國中", "高中", "全齡"}
+ALLOWED_AGE_GROUPS = {"學齡前", "國小", "國中", "高中", "成人", "全齡"}
 ALLOWED_RESOURCE_CATEGORIES = {"學習教材", "課程", "活動", "補助", "政策", "機構"}
-ALLOWED_AUDIENCES = {"兒童", "家長", "教師", "學校"}
+ALLOWED_AUDIENCES = {"兒童", "家長", "教師", "學校", "成人"}
 REQUIRED_TEXT_FIELDS = {
     "id",
     "title",
