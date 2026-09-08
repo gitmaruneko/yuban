@@ -18,7 +18,7 @@ node --test tests/search-utils.test.mjs
 python tools/validate_resources.py
 ```
 
-[部署工作流程](.github/workflows/deploy-pages.yml) 在推送 `main` 或手動觸發時，先執行這三項檢查，再部署 `website/`。目前沒有 PR 自動檢查、網站編譯步驟或瀏覽器 E2E 測試。
+[PR 檢查工作流程](.github/workflows/pr-checks.yml) 會在 Pull Request targeting `main` 時執行這三項檢查，作為合併條件。[部署工作流程](.github/workflows/deploy-pages.yml) 在 Pull Request 合併至 `main` 或手動觸發時再次執行相同檢查，成功後才部署 `website/`。目前沒有網站編譯步驟或瀏覽器 E2E 測試。
 
 ## 依變更選擇驗證
 

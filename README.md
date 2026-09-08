@@ -8,7 +8,7 @@ Helping parents find trustworthy knowledge and practical tools for raising child
 
 本專案已設定 GitHub Actions 來自動部署 GitHub Pages。
 
-每次推送到 `main` 分支時，工作流程會自動將 `website` 資料夾上傳為網站產物，並部署至 GitHub Pages。
+Pull Request 合併到 `main` 後，工作流程會再次執行完整檢查，將 `website` 資料夾上傳為網站產物，並部署至 GitHub Pages。
 
 目前部署網址：
 
@@ -30,7 +30,7 @@ node --test tests/search-utils.test.mjs
 python tools/validate_resources.py
 ```
 
-測試涵蓋資源資料驗證，以及首頁搜尋與篩選的核心規則。GitHub Pages 部署前也會自動執行相同檢查。
+測試涵蓋資源資料驗證，以及首頁搜尋與篩選的核心規則。對 `main` 建立 Pull Request 及 GitHub Pages 部署前，都會自動執行相同檢查。
 
 ### 新增育兒資源
 
@@ -60,20 +60,27 @@ python tools/validate_resources.py
 
 ### 推送與部署
 
-1. 將變更加入 git：
+1. 從最新的 `main` 建立短期分支：
+   ```bash
+   git switch main
+   git pull
+   git switch -c feature/主題
+   ```
+   修正問題時使用 `fix/主題`。
+2. 將變更加入 git 並建立提交：
    ```bash
    git add .
-   ```
-2. 建立提交：
-   ```bash
    git commit -m "feat: ..."
    ```
-3. 推送至遠端：
+3. 推送短期分支：
    ```bash
-   git push origin main
+   git push -u origin feature/主題
    ```
+4. 需要遠端預覽時，到 [yuban-preview Actions](https://github.com/gitmaruneko/yuban-preview/actions/workflows/deploy-preview.yml) 手動執行 `Deploy preview`，在 `source_ref` 輸入完整分支名稱。完成後開啟 https://gitmaruneko.github.io/yuban-preview/ 檢查結果。
+5. 從短期分支建立 targeting `main` 的 Pull Request，等待 `PR checks / test` 通過後合併。
+6. 合併後刪除短期分支。
 
-GitHub Actions 會自動接管部署流程，並將 `website` 資料夾部署至 GitHub Pages。
+Pull Request 合併後，GitHub Actions 會在 `main` 再次執行完整檢查，成功才將 `website` 資料夾部署至正式 GitHub Pages。不要直接推送 `main`。
 
 ---
 
