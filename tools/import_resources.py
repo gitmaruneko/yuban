@@ -100,6 +100,16 @@ TYPE_MAP = {
     "疾病專題入口": "連結入口",
     "專家文章入口": "連結入口",
     "醫療服務入口": "連結入口",
+    "官方資源入口": "連結入口",
+    "專業專區": "連結入口",
+    "專業衛教文章": "文章",
+    "專科醫師查詢": "連結入口",
+    "政府資源導覽": "連結入口",
+    "教育權益說明": "文章",
+    "特教教材入口": "連結入口",
+    "校園支持指南": "文章",
+    "家長手冊": "文章",
+    "醫療專題入口": "連結入口",
 }
 
 AGE_STAGE_MAP = {
@@ -141,6 +151,11 @@ AGE_STAGE_MAP = {
     "新生兒至青少年": ["0-1歲", "1-3歲", "3-6歲"],
     "嬰幼兒至青少年": ["0-1歲", "1-3歲", "3-6歲"],
     "新生兒至成人": ["0-1歲", "1-3歲", "3-6歲"],
+    "兒童至成人": ["3-6歲", "國小", "國中", "高中", "成人"],
+    "兒童／青少年": ["3-6歲", "國小", "國中", "高中"],
+    "學齡兒童／青少年": ["國小", "國中", "高中"],
+    "幼兒／學齡兒童": ["3-6歲", "國小"],
+    "大專／成人": ["成人"],
 }
 
 AGE_GROUP_MAP = {
@@ -160,8 +175,12 @@ AGE_GROUP_MAP = {
     "孕期–0歲": "學齡前",
     "孕期–3歲": "學齡前",
     "孕期–6歲": "學齡前",
-    "0–18歲": "全齡",
     "全年齡": "全齡",
+    "兒童至成人": ["學齡前", "國小", "國中", "高中", "成人"],
+    "0–18歲": ["學齡前", "國小", "國中", "高中"],
+    "3–12歲": ["學齡前", "國小"],
+    "6–18歲": ["國小", "國中", "高中"],
+    "18歲以上": "成人",
 }
 
 RESOURCE_CATEGORY_MAP = {
@@ -206,6 +225,17 @@ RESOURCE_CATEGORY_MAP = {
     "篩檢工具型": "學習教材",
     "總覽／導航型": "機構",
     "申辦指南型": "補助",
+    "家長手冊型": "學習教材",
+    "專業衛教型": "學習教材",
+    "專題入口型": "機構",
+    "導航型資源": "機構",
+    "就醫查詢型": "機構",
+    "教師教材型": "學習教材",
+    "教育權益型": "政策",
+    "校園支持型": "學習教材",
+    "治療指南型": "學習教材",
+    "疾病與治療概覽型": "學習教材",
+    "疾病認識型": "學習教材",
 }
 
 AUDIENCE_MAP = {
@@ -217,9 +247,15 @@ AUDIENCE_MAP = {
     "孕婦／準父母": ["家長"],
     "備孕夫妻／不孕症患者": ["家長"],
     "備孕夫妻／醫療專業人員": ["家長"],
-    "家長／患者／照顧者": ["家長"],
+    "家長／患者／照顧者": ["家長", "兒童"],
     "患者／家長": ["家長"],
     "家長／醫療專業人員": ["家長"],
+    "家長／患者": ["家長", "兒童"],
+    "家長／教師": ["家長", "教師"],
+    "家長／教師／青少年": ["家長", "教師", "兒童"],
+    "家長／青少年": ["家長", "兒童"],
+    "教師／家長／青少年": ["教師", "家長", "兒童"],
+    "大學生／教師／同儕": ["成人", "教師"],
 }
 
 
@@ -269,6 +305,12 @@ def convert_row(row: dict[str, str], row_number: int) -> dict[str, object]:
 
     validate_url(url, row_number)
     review_status, reviewed_at = parse_review_status(row["審核狀態"])
+    age_groups = []
+    for value in split_tags(row["年齡群組"]):
+        mapped_groups = AGE_GROUP_MAP.get(value, value)
+        age_groups.extend(
+            mapped_groups if isinstance(mapped_groups, list) else [mapped_groups]
+        )
 
     return {
         "id": make_resource_id(url),
@@ -284,7 +326,7 @@ def convert_row(row: dict[str, str], row_number: int) -> dict[str, object]:
         "is_hub": row["是否為入口型資源"] == "是",
         "age_label": age_label,
         "age_ranges": AGE_STAGE_MAP[age_label],
-        "age_groups": [AGE_GROUP_MAP.get(value, value) for value in split_tags(row["年齡群組"])],
+        "age_groups": list(dict.fromkeys(age_groups)),
         "regions": split_tags(row["地區"]),
         "resource_categories": [RESOURCE_CATEGORY_MAP.get(value, value) for value in split_tags(row["資源類型"])],
         "audiences": [audience for value in split_tags(row["使用對象"]) for audience in AUDIENCE_MAP.get(value, [value])],

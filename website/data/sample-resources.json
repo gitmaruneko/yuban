@@ -3735,5 +3735,751 @@
     "credibility_note": "高：醫學中心兒童發展評估專業團隊。",
     "notice": "北部院所內容可作全台概念參考；實際療育據點仍應依所在地資源選擇。",
     "url": "https://wd.vghtpe.gov.tw/PMREIP/Fpage.action?fid=9954&muid=10308"
+  },
+  {
+    "id": "resource-4b3a9550271e",
+    "title": "ADHD注意力不足過動症相關衛教資源",
+    "summary": "衛生福利部心理健康資源頁，將 ADHD 衛教列為心理健康促進資源之一，提供疾病認識、早期治療與支持照顧者的官方入口。",
+    "type": "連結入口",
+    "type_label": "官方資源入口",
+    "source": {
+      "name": "衛生福利部",
+      "type": "政府／官方",
+      "url": "https://www.mohw.gov.tw/cp-189-212-1.html"
+    },
+    "is_hub": true,
+    "age_label": "兒童至成人",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中",
+      "成人"
+    ],
+    "age_groups": [
+      "學齡前",
+      "國小",
+      "國中",
+      "高中",
+      "成人"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD",
+      "注意力不足",
+      "過動",
+      "心理健康",
+      "早期治療",
+      "照顧者支持"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：中央衛生主管機關心理健康司官方入口。",
+    "notice": "此頁為心理健康綜合入口，ADHD 為其中一項；育伴可再搭配更細的專業衛教與就醫資源。",
+    "url": "https://www.mohw.gov.tw/cp-189-212-1.html"
+  },
+  {
+    "id": "resource-b8384f341edd",
+    "title": "ADHD注意力不足過動症衛教專欄",
+    "summary": "台灣兒童青少年精神醫學會 ADHD 專區，彙整症狀、診斷、治療、藥物、親職、校園支持與迷思澄清等內容。",
+    "type": "連結入口",
+    "type_label": "專業專區",
+    "source": {
+      "name": "台灣兒童青少年精神醫學會",
+      "type": "專業學會",
+      "url": "https://www.tscap.org.tw/TW/NewsColumn/ugC_News.asp?hidNewsCatID=6"
+    },
+    "is_hub": true,
+    "age_label": "兒童／青少年",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長",
+      "教師",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD",
+      "診斷",
+      "治療",
+      "藥物",
+      "親職",
+      "校園支持",
+      "迷思"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：台灣兒童青少年精神醫學專業學會官方衛教專區。",
+    "notice": "專區內同主題文章較多，育伴應精選不同用途的代表資源，不需全量收錄。",
+    "url": "https://www.tscap.org.tw/TW/NewsColumn/ugC_News.asp?hidNewsCatID=6"
+  },
+  {
+    "id": "resource-8637e85cf44b",
+    "title": "注意力不足過動症：診斷標準、病因與盛行率",
+    "summary": "由國家衛生研究院論壇撰文、台灣兒童青少年精神醫學會審評，介紹 ADHD 的核心症狀、病因、盛行率與何時應尋求專業評估。",
+    "type": "文章",
+    "type_label": "專業衛教文章",
+    "source": {
+      "name": "台灣兒童青少年精神醫學會",
+      "type": "專業學會／研究機構",
+      "url": "https://www.tscap.org.tw/TW/NewsColumn/ugC_News_Detail.asp?hidNewsCatID=6&hidNewsID=205"
+    },
+    "is_hub": false,
+    "age_label": "兒童／青少年",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長",
+      "教師",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD症狀",
+      "診斷",
+      "病因",
+      "盛行率",
+      "注意力不集中",
+      "過動",
+      "衝動"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：由專業學會審評，適合建立疾病基本認識。",
+    "notice": "文章內部分段仍引用較舊診斷版本文字；正式診斷應以現行專業評估與最新診斷準則為準。",
+    "url": "https://www.tscap.org.tw/TW/NewsColumn/ugC_News_Detail.asp?hidNewsCatID=6&hidNewsID=205"
+  },
+  {
+    "id": "resource-eea80fcf1dda",
+    "title": "注意力不足過動症需要治療嗎？接下來該怎麼辦、怎麼治療",
+    "summary": "說明 ADHD 的評估流程與整合性治療，包含藥物、行為治療、學校環境支持，以及不同年齡層的治療考量。",
+    "type": "文章",
+    "type_label": "專業衛教文章",
+    "source": {
+      "name": "台灣兒童青少年精神醫學會",
+      "type": "專業學會／研究機構",
+      "url": "https://www.tscap.org.tw/TW/NewsColumn/ugC_News_Detail.asp?hidNewsCatID=6&hidNewsID=206"
+    },
+    "is_hub": false,
+    "age_label": "兒童／青少年",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD治療",
+      "藥物治療",
+      "行為治療",
+      "學校支持",
+      "兒童心智科"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：由台灣兒童青少年精神醫學會審評，聚焦治療決策。",
+    "notice": "治療方式需依年齡、功能受損程度、共病與家庭需求，由兒童青少年精神專科醫師共同規劃。",
+    "url": "https://www.tscap.org.tw/TW/NewsColumn/ugC_News_Detail.asp?hidNewsCatID=6&hidNewsID=206"
+  },
+  {
+    "id": "resource-03f4c3ffc672",
+    "title": "全台兒童青少年精神專科醫師分佈",
+    "summary": "可依地區與縣市查找兒童青少年精神專科醫師，適合疑似 ADHD、需要診斷評估或持續治療的家庭尋找專科資源。",
+    "type": "連結入口",
+    "type_label": "專科醫師查詢",
+    "source": {
+      "name": "台灣兒童青少年精神醫學會",
+      "type": "專業學會",
+      "url": "https://www.tscap.org.tw/TW/Retail/ugC_Retail.asp"
+    },
+    "is_hub": true,
+    "age_label": "兒童／青少年",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "學齡前",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "兒童心智科",
+      "兒童青少年精神科",
+      "ADHD評估",
+      "醫師查詢",
+      "就醫"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：兒童青少年精神專業學會提供的專科醫師分佈資料。",
+    "notice": "實際門診時段與是否收治 ADHD 應再向醫療院所確認。",
+    "url": "https://www.tscap.org.tw/TW/Retail/ugC_Retail.asp"
+  },
+  {
+    "id": "resource-2f22bdb2f446",
+    "title": "ADHD注意力不足過動症資料網推薦",
+    "summary": "臺中市政府衛生局 ADHD 專區推薦台灣兒童青少年精神醫學會所屬資料網，內容涵蓋常見迷思、教養、治療、藥物與醫療資源。",
+    "type": "連結入口",
+    "type_label": "政府資源導覽",
+    "source": {
+      "name": "臺中市政府衛生局",
+      "type": "地方政府／官方",
+      "url": "https://www.health.taichung.gov.tw/2349646/post"
+    },
+    "is_hub": true,
+    "age_label": "兒童／青少年",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長",
+      "教師"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD資料網",
+      "迷思",
+      "教養",
+      "治療",
+      "藥物",
+      "醫療資源"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：地方衛生主管機關於 2026 年更新的 ADHD 導覽資源。",
+    "notice": "屬推薦／導覽頁，核心醫療資訊仍應以專業學會與醫療院所原始內容為準。",
+    "url": "https://www.health.taichung.gov.tw/2349646/post"
+  },
+  {
+    "id": "resource-07817f8a11e3",
+    "title": "領有 ADHD 診斷證明，可以申請特教服務或教育補助嗎？",
+    "summary": "桃園市教育局說明 ADHD 醫療診斷與學校特殊教育鑑定的差異，以及需要特教服務時應向學校輔導室提出情緒行為障礙鑑定安置申請。",
+    "type": "文章",
+    "type_label": "教育權益說明",
+    "source": {
+      "name": "桃園市政府教育局",
+      "type": "地方政府／教育",
+      "url": "https://www.tyc.edu.tw/News_Content.aspx?n=5180&s=1468476"
+    },
+    "is_hub": false,
+    "age_label": "學齡兒童／青少年",
+    "age_ranges": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "桃園市／全台參考"
+    ],
+    "resource_categories": [
+      "政策"
+    ],
+    "audiences": [
+      "家長",
+      "教師"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD",
+      "特教服務",
+      "情緒行為障礙",
+      "鑑輔會",
+      "教育補助",
+      "學校輔導"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：教育主管機關於 2026 年更新，直接回答家長常見教育權益問題。",
+    "notice": "各縣市鑑定流程與補助細節可能不同；非桃園家庭應再確認所在地教育局規定。",
+    "url": "https://www.tyc.edu.tw/News_Content.aspx?n=5180&s=1468476"
+  },
+  {
+    "id": "resource-49cf57424d78",
+    "title": "注意力缺陷過動症20問與 ADHD 青少年教材",
+    "summary": "臺北市東區特教資源中心提供「注意力缺陷過動症20問」及適用國高中的 ADHD 青少年組教材，協助教師理解與支持學生。",
+    "type": "連結入口",
+    "type_label": "特教教材入口",
+    "source": {
+      "name": "臺北市東區特教資源中心",
+      "type": "教育專業／地方教育",
+      "url": "https://web.terc.tp.edu.tw/"
+    },
+    "is_hub": true,
+    "age_label": "學齡兒童／青少年",
+    "age_ranges": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "臺北市／全台參考"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "教師",
+      "家長",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD教師手冊",
+      "特教",
+      "校園支持",
+      "青少年教材",
+      "注意力缺陷過動症20問"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：臺北市教育體系特教資源中心出版／彙整之教材。",
+    "notice": "首頁需進入「教材與出版品」尋找 ADHD 相關教材；不同教材適用年齡不同。",
+    "url": "https://web.terc.tp.edu.tw/"
+  },
+  {
+    "id": "resource-c7706290f81d",
+    "title": "注意力缺陷與過動症：大專校園支持方式",
+    "summary": "臺灣大學資源教室說明 ADHD 對大學生學習與生活的影響，並提供同儕與教學支持策略，例如簡潔指示、具體提醒與學習協助。",
+    "type": "文章",
+    "type_label": "校園支持指南",
+    "source": {
+      "name": "國立臺灣大學學生心理輔導中心資源教室",
+      "type": "大學／教育支持",
+      "url": "https://dss.ntu.edu.tw/AboutDisability/D-7"
+    },
+    "is_hub": false,
+    "age_label": "大專／成人",
+    "age_ranges": [
+      "成人"
+    ],
+    "age_groups": [
+      "成人"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "成人",
+      "教師"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "成人ADHD",
+      "大學生",
+      "校園支持",
+      "學習調整",
+      "注意力",
+      "資源教室"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：國立大學身心障礙學生資源教室官方教育支持內容。",
+    "notice": "主要為大專校園情境，不是診斷或治療指引。",
+    "url": "https://dss.ntu.edu.tw/AboutDisability/D-7"
+  },
+  {
+    "id": "resource-877f9ff22cb4",
+    "title": "注意力不足過動症｜早期療育中心衛教",
+    "summary": "新竹臺大分院早期療育中心提供 ADHD 衛教資料，由臨床心理專業人員整理，供家長理解注意力與過動相關問題。",
+    "type": "文章",
+    "type_label": "醫療衛教",
+    "source": {
+      "name": "新竹臺大分院早期療育中心",
+      "type": "醫療院所",
+      "url": "https://www.hch.gov.tw/?aid=626&iid=1445&page_name=detail&pid=94"
+    },
+    "is_hub": false,
+    "age_label": "幼兒／學齡兒童",
+    "age_ranges": [
+      "3-6歲",
+      "國小"
+    ],
+    "age_groups": [
+      "學齡前",
+      "國小"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD",
+      "早療",
+      "臨床心理",
+      "注意力不集中",
+      "過動",
+      "親職"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：醫學中心體系早療中心，由臨床心理專業人員提供衛教。",
+    "notice": "衛教資料不能取代完整臨床診斷；幼兒期注意力與活動量需配合發展年齡評估。",
+    "url": "https://www.hch.gov.tw/?aid=626&iid=1445&page_name=detail&pid=94"
+  },
+  {
+    "id": "resource-ceaea4f4aa99",
+    "title": "注意力欠缺過動症｜衛教單張",
+    "summary": "中國醫藥大學附設醫院整理 ADHD 的症狀、常見功能困難與療育方式，並說明藥物及行為治療會依個別困擾程度安排。",
+    "type": "文章",
+    "type_label": "醫療衛教",
+    "source": {
+      "name": "中國醫藥大學附設醫院",
+      "type": "醫療院所",
+      "url": "https://www.cmuh.cmu.edu.tw/HealthEdus/Detail?no=5623"
+    },
+    "is_hub": false,
+    "age_label": "兒童／青少年",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD症狀",
+      "行為治療",
+      "藥物治療",
+      "學習",
+      "人際",
+      "情緒"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：醫學中心衛教內容，2026 年更新。",
+    "notice": "診斷需排除其他造成注意力或行為問題的原因；治療需個別化。",
+    "url": "https://www.cmuh.cmu.edu.tw/HealthEdus/Detail?no=5623"
+  },
+  {
+    "id": "resource-4d30e5c2a133",
+    "title": "ADHD家長手冊",
+    "summary": "臺中榮總提供 ADHD 家長手冊，包含與醫師溝通、建立結構化日常生活、尋找支持與理解孩子等照護建議。",
+    "type": "文章",
+    "type_label": "家長手冊",
+    "source": {
+      "name": "臺中榮民總醫院",
+      "type": "醫療院所",
+      "url": "https://www.vghtc.gov.tw/UnitPage/RowViewDetail?CompanyID=e8e0488e-54a0-44bf-b10c-d029c423f6e7&UnitDefaultTemplate=1&UnitID=1f26aa21-7dcc-445a-8fd1-c7aba97c3f30&WebRowsID=64227905-a044-415f-a3d1-257b84969812"
+    },
+    "is_hub": false,
+    "age_label": "兒童／青少年",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD家長手冊",
+      "親職",
+      "日常結構",
+      "醫病溝通",
+      "家庭支持"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：醫學中心提供之家長照護手冊，2025 年更新。",
+    "notice": "頁面可能因網站改版導向院方首頁；若育伴匯入後連結失效，應列入定期連結檢查。",
+    "url": "https://www.vghtc.gov.tw/UnitPage/RowViewDetail?CompanyID=e8e0488e-54a0-44bf-b10c-d029c423f6e7&UnitDefaultTemplate=1&UnitID=1f26aa21-7dcc-445a-8fd1-c7aba97c3f30&WebRowsID=64227905-a044-415f-a3d1-257b84969812"
+  },
+  {
+    "id": "resource-6b6be00f54ed",
+    "title": "注意力不集中／ADHD 衛教資源",
+    "summary": "輔大醫院兒童發展評估暨療育中心彙整 ADHD 與注意力不集中相關衛教，包括兒童 ADHD 上下篇、家長篇、居家活動建議與注意力分類。",
+    "type": "連結入口",
+    "type_label": "醫療專題入口",
+    "source": {
+      "name": "輔仁大學附設醫院兒童發展評估暨療育中心",
+      "type": "醫療院所／兒童發展中心",
+      "url": "https://webdept.fjuh.fju.edu.tw/FjuhDep/childdev/category/headinfo/adhd/"
+    },
+    "is_hub": true,
+    "age_label": "幼兒／學齡兒童",
+    "age_ranges": [
+      "3-6歲",
+      "國小"
+    ],
+    "age_groups": [
+      "學齡前",
+      "國小"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "ADHD",
+      "注意力不集中",
+      "家長篇",
+      "居家活動",
+      "兒童發展",
+      "早療"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：兒童發展評估暨療育中心專題頁，2025–2026 年持續更新。",
+    "notice": "專區文章用途不同，育伴未來可再精選「家長篇」與「居家活動」作子資源。",
+    "url": "https://webdept.fjuh.fju.edu.tw/FjuhDep/childdev/category/headinfo/adhd/"
+  },
+  {
+    "id": "resource-7a134f7cc98a",
+    "title": "臺大醫院兒童心智科／兒童心理衛生服務",
+    "summary": "臺大醫院兒童心理衛生中心提供 ADHD 等兒童青少年情緒行為問題的診斷、藥物、心理治療、家長團體、功能評估與社會資源轉介。",
+    "type": "連結入口",
+    "type_label": "醫療服務入口",
+    "source": {
+      "name": "國立臺灣大學醫學院附設醫院",
+      "type": "醫療院所",
+      "url": "https://www.ntuh.gov.tw/ccnb/Fpage.action?fid=1651"
+    },
+    "is_hub": true,
+    "age_label": "兒童／青少年",
+    "age_ranges": [
+      "3-6歲",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "age_groups": [
+      "學齡前",
+      "國小",
+      "國中",
+      "高中"
+    ],
+    "regions": [
+      "臺北市／全台可就醫"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長",
+      "兒童"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "注意力與過動（ADHD）",
+    "topic_group": "發展與學習",
+    "tags": [
+      "兒童心智科",
+      "ADHD就醫",
+      "心理衡鑑",
+      "行為治療",
+      "家長團體",
+      "藥物治療"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：醫學中心兒童青少年精神醫療專業團隊。",
+    "notice": "屬實際醫療服務入口；門診與團體開設狀況需依院方當期公告。",
+    "url": "https://www.ntuh.gov.tw/ccnb/Fpage.action?fid=1651"
   }
 ]

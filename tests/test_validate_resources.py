@@ -58,6 +58,14 @@ class ValidateResourcesTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unsupported age stages"):
             validate_resources(resources)
 
+    def test_accepts_adult_age_stage_and_group(self):
+        resources = copy.deepcopy(self.resources[:1])
+        resources[0]["age_ranges"] = ["成人"]
+        resources[0]["age_groups"] = ["成人"]
+        resources[0]["audiences"] = ["成人"]
+
+        validate_resources(resources)
+
     def test_accepts_new_health_and_early_support_taxonomy(self):
         resources = []
         cases = [
