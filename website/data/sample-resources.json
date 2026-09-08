@@ -2624,5 +2624,1116 @@
     "credibility_note": "中高：當期活動整理完整，但時效性極高。",
     "notice": "僅適合作為『時效型資源』範例；目前已過期，不建議匯入正式公開清單。",
     "url": "https://www.parenting.com.tw/article/6002339"
+  },
+  {
+    "id": "resource-c819cb927241",
+    "title": "高齡孕婦掌握7原則 助安心懷孕平安生產",
+    "summary": "國民健康署整理高齡孕婦在產檢、營養、體重、慢性病控制與生活管理上的重要原則，協助降低妊娠相關風險。",
+    "type": "文章",
+    "type_label": "官方衛教文章",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4306&pid=14146"
+    },
+    "is_hub": false,
+    "age_label": "孕期",
+    "age_ranges": [
+      "孕期"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "孕產與嬰幼兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "高齡孕婦",
+      "高齡妊娠",
+      "產前檢查",
+      "妊娠風險",
+      "孕期保健"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：中央衛生主管機關官方衛教。",
+    "notice": "屬一般衛教；個人風險與檢查安排仍應由婦產科醫師評估。",
+    "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4306&pid=14146"
+  },
+  {
+    "id": "resource-d69c51282082",
+    "title": "產前遺傳診斷",
+    "summary": "說明產前遺傳診斷的補助對象、檢查項目與減免額度；34歲以上孕婦及其他高風險族群可依條件申請。",
+    "type": "文章",
+    "type_label": "官方服務資訊",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=197"
+    },
+    "is_hub": true,
+    "age_label": "孕期",
+    "age_ranges": [
+      "孕期"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "補助"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "孕產與嬰幼兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "產前遺傳診斷",
+      "羊膜穿刺",
+      "染色體",
+      "遺傳疾病",
+      "高齡孕婦",
+      "補助"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：中央衛生主管機關官方補助與服務資訊。",
+    "notice": "補助資格與金額可能調整，應以頁面最新公告為準。",
+    "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=197"
+  },
+  {
+    "id": "resource-07c3c94014d2",
+    "title": "孕婦健康手冊",
+    "summary": "國民健康署官方孕婦健康手冊，配合產檢時程提供健康紀錄、孕期保健、檢查與警訊等完整資訊。",
+    "type": "文章",
+    "type_label": "官方手冊",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1142"
+    },
+    "is_hub": true,
+    "age_label": "孕期",
+    "age_ranges": [
+      "孕期"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "孕產與嬰幼兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "孕婦健康手冊",
+      "產檢",
+      "孕期保健",
+      "高危險妊娠",
+      "孕婦"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：官方孕產婦基礎指引，可作高齡妊娠的核心總覽資源。",
+    "notice": "內容涵蓋所有孕婦，不只高齡孕婦；育伴可在高齡妊娠主題中作基礎入口。",
+    "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1142"
+  },
+  {
+    "id": "resource-41a2331de3d2",
+    "title": "認識高危險妊娠",
+    "summary": "臺大醫院婦產部說明高危險妊娠定義與常見危險因子，包括孕婦年齡、體重、既有疾病與妊娠併發症。",
+    "type": "文章",
+    "type_label": "醫療衛教",
+    "source": {
+      "name": "國立臺灣大學醫學院附設醫院 婦產部",
+      "type": "醫療院所",
+      "url": "https://www.ntuh.gov.tw/obgy/Faq.action?agroup=a&fid=63&q_type=A05"
+    },
+    "is_hub": false,
+    "age_label": "孕期",
+    "age_ranges": [
+      "孕期"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "孕產與嬰幼兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "高危險妊娠",
+      "高齡孕婦",
+      "妊娠高血壓",
+      "妊娠糖尿病",
+      "產科"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：醫學中心婦產科專業衛教。",
+    "notice": "高齡只是高危險妊娠的其中一項因子，實際風險需依個人病史與孕況評估。",
+    "url": "https://www.ntuh.gov.tw/obgy/Faq.action?agroup=a&fid=63&q_type=A05"
+  },
+  {
+    "id": "resource-b28759929644",
+    "title": "羊膜穿刺術之照護",
+    "summary": "臺北榮總說明羊膜穿刺目的、適用情況、檢查流程與檢查後照護，並列出需立即就醫的警訊。",
+    "type": "文章",
+    "type_label": "醫療衛教",
+    "source": {
+      "name": "臺北榮民總醫院",
+      "type": "醫療院所",
+      "url": "https://ihealth.vghtpe.gov.tw/media/637"
+    },
+    "is_hub": false,
+    "age_label": "孕期",
+    "age_ranges": [
+      "孕期"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "孕產與嬰幼兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "羊膜穿刺",
+      "產前診斷",
+      "染色體異常",
+      "高齡孕婦",
+      "檢查照護"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：醫學中心醫療衛教，適合作為檢查前後照護參考。",
+    "notice": "是否接受羊膜穿刺應與產科醫師或遺傳諮詢專業人員討論。",
+    "url": "https://ihealth.vghtpe.gov.tw/media/637"
+  },
+  {
+    "id": "resource-ef4939a2ba5d",
+    "title": "NIPT可以取代羊膜穿刺作為確診方法嗎？",
+    "summary": "國民健康署說明非侵入性胎兒染色體檢查（NIPT）屬篩檢而非確診，不能直接取代羊膜穿刺或絨毛膜採樣。",
+    "type": "文章",
+    "type_label": "官方QA",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=7795"
+    },
+    "is_hub": false,
+    "age_label": "孕期",
+    "age_ranges": [
+      "孕期"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "孕產與嬰幼兒照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "NIPT",
+      "羊膜穿刺",
+      "染色體篩檢",
+      "產前檢查",
+      "高齡孕婦"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：官方風險溝通與檢查定位說明。",
+    "notice": "檢測技術持續演進；個別檢測選擇仍應依醫師與遺傳諮詢建議。",
+    "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=7795"
+  },
+  {
+    "id": "resource-fb371fd7c4ab",
+    "title": "試管嬰兒專區",
+    "summary": "國民健康署人工生殖官方入口，整合試管嬰兒補助、QA、人工生殖機構名單、申辦說明等資訊。",
+    "type": "連結入口",
+    "type_label": "官方專區",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=314"
+    },
+    "is_hub": true,
+    "age_label": "備孕／不孕療程",
+    "age_ranges": [
+      "備孕"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "備孕與生殖",
+    "topic_group": "健康與照護",
+    "tags": [
+      "人工生殖",
+      "試管嬰兒",
+      "IVF",
+      "不孕症",
+      "補助",
+      "人工生殖機構"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：人工生殖政策與補助的官方主要入口。",
+    "notice": "專區以試管嬰兒為主；人工授精（IUI）療程資訊可搭配醫療院所資源。",
+    "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=314"
+  },
+  {
+    "id": "resource-99832838db46",
+    "title": "不孕症試管嬰兒補助3.0方案",
+    "summary": "國民健康署最新試管嬰兒補助方案，說明資格、補助額度、申請次數與療程規範。",
+    "type": "文章",
+    "type_label": "官方補助資訊",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=500&pid=14149"
+    },
+    "is_hub": false,
+    "age_label": "備孕／不孕療程",
+    "age_ranges": [
+      "備孕"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "補助"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "備孕與生殖",
+    "topic_group": "健康與照護",
+    "tags": [
+      "試管嬰兒補助",
+      "IVF",
+      "不孕症",
+      "人工生殖",
+      "補助3.0"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：官方補助規範，2026年仍持續更新。",
+    "notice": "政策與補助額度可能修正，正式申請前需確認最新版本。",
+    "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=500&pid=14149"
+  },
+  {
+    "id": "resource-2d91cb17308b",
+    "title": "不孕症試管嬰兒補助3.0方案QA問答集",
+    "summary": "以問答方式整理試管嬰兒補助資格、療程、申請與常見特殊情況，適合民眾快速確認細節。",
+    "type": "文章",
+    "type_label": "官方QA",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/EngPages/Detail.aspx?nodeid=500&pid=15871"
+    },
+    "is_hub": false,
+    "age_label": "備孕／不孕療程",
+    "age_ranges": [
+      "備孕"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "備孕與生殖",
+    "topic_group": "健康與照護",
+    "tags": [
+      "IVF補助",
+      "試管嬰兒",
+      "不孕症",
+      "QA",
+      "補助資格"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：官方QA文件，適合搭配補助方案主頁使用。",
+    "notice": "目前搜尋結果導向國健署英文頁面但內容與附件為官方資料；如取得中文直連可再替換。",
+    "url": "https://www.hpa.gov.tw/EngPages/Detail.aspx?nodeid=500&pid=15871"
+  },
+  {
+    "id": "resource-258508149039",
+    "title": "特約人工生殖機構及許可人工生殖機構名單",
+    "summary": "提供試管嬰兒補助特約人工生殖機構及衛福部許可人工生殖機構最新名單，方便查找合法院所。",
+    "type": "連結入口",
+    "type_label": "官方名單",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=500&pid=14267"
+    },
+    "is_hub": true,
+    "age_label": "備孕／不孕療程",
+    "age_ranges": [
+      "備孕"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "備孕與生殖",
+    "topic_group": "健康與照護",
+    "tags": [
+      "人工生殖機構",
+      "試管嬰兒",
+      "IVF",
+      "合法院所",
+      "特約機構"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：主管機關官方許可與特約機構名單。",
+    "notice": "院所名單會更新；網站應以最新更新日期為準。",
+    "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=500&pid=14267"
+  },
+  {
+    "id": "resource-6fafecc82dfe",
+    "title": "人工授精",
+    "summary": "臺大醫院婦產部說明人工授精（IUI）的原理、療程流程、適用條件、費用範圍與一般成功率。",
+    "type": "文章",
+    "type_label": "醫療衛教",
+    "source": {
+      "name": "國立臺灣大學醫學院附設醫院 婦產部",
+      "type": "醫療院所",
+      "url": "https://www.ntuh.gov.tw/obgy/Fpage.action?fid=8625&muid=7913"
+    },
+    "is_hub": false,
+    "age_label": "備孕／不孕療程",
+    "age_ranges": [
+      "備孕"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "備孕與生殖",
+    "topic_group": "健康與照護",
+    "tags": [
+      "人工授精",
+      "IUI",
+      "排卵",
+      "不孕症",
+      "療程流程",
+      "生殖醫學"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：醫學中心生殖醫學專業資訊，直接涵蓋人工授精。",
+    "notice": "成功率與費用依年齡、診斷、用藥與院所而異，應以個別醫療評估為準。",
+    "url": "https://www.ntuh.gov.tw/obgy/Fpage.action?fid=8625&muid=7913"
+  },
+  {
+    "id": "resource-c3e98ce21117",
+    "title": "台灣生殖醫學會",
+    "summary": "台灣生殖醫學專業學會入口，提供人工生殖、生殖醫學專業資訊、政策訊息與相關衛教資源。",
+    "type": "連結入口",
+    "type_label": "專業學會入口",
+    "source": {
+      "name": "台灣生殖醫學會",
+      "type": "專業學會",
+      "url": "https://www.tsrm.org.tw/"
+    },
+    "is_hub": true,
+    "age_label": "備孕／不孕療程",
+    "age_ranges": [
+      "備孕"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "備孕與生殖",
+    "topic_group": "健康與照護",
+    "tags": [
+      "生殖醫學",
+      "不孕症",
+      "人工生殖",
+      "IVF",
+      "IUI",
+      "專業學會"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：台灣生殖醫學專業學會。",
+    "notice": "首頁偏專業與學術資訊；育伴可後續再細拆適合一般民眾閱讀的衛教文章。",
+    "url": "https://www.tsrm.org.tw/"
+  },
+  {
+    "id": "resource-869a7ba4b180",
+    "title": "顱顏百科－唇腭裂",
+    "summary": "羅慧夫顱顏基金會的唇顎裂總覽，涵蓋疾病介紹、療程費用與資源、治療照顧與常見問題。",
+    "type": "連結入口",
+    "type_label": "疾病專題入口",
+    "source": {
+      "name": "財團法人羅慧夫顱顏基金會",
+      "type": "專業基金會",
+      "url": "https://www.nncf.org/family/clp/clp_intro"
+    },
+    "is_hub": true,
+    "age_label": "新生兒至青少年",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "兒科疾病與照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "唇顎裂",
+      "唇裂",
+      "顎裂",
+      "顱顏",
+      "治療",
+      "照護"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：台灣長期專注顱顏患者醫療與支持服務之基金會。",
+    "notice": "適合作為唇顎裂主題總入口；個別治療仍需依顱顏醫療團隊評估。",
+    "url": "https://www.nncf.org/family/clp/clp_intro"
+  },
+  {
+    "id": "resource-2163fd5c317e",
+    "title": "唇腭裂哺餵技巧",
+    "summary": "說明唇顎裂寶寶的母乳、奶瓶、奶嘴選擇、餵食姿勢、拍嗝與口腔清潔等實作技巧。",
+    "type": "文章",
+    "type_label": "照護指南",
+    "source": {
+      "name": "財團法人羅慧夫顱顏基金會",
+      "type": "專業基金會",
+      "url": "https://www.nncf.org/family/clp/clp_treatment/Introduction_feedskill"
+    },
+    "is_hub": false,
+    "age_label": "新生兒／嬰兒",
+    "age_ranges": [
+      "0-1歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "兒科疾病與照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "唇顎裂餵食",
+      "特殊奶瓶",
+      "哺乳",
+      "奶嘴",
+      "吞嚥",
+      "新生兒照護"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：針對唇顎裂家庭的專門照護資源，實作性高。",
+    "notice": "若嬰兒出現吞嚥、呼吸、體重增加等問題，應尋求顱顏團隊、兒科或語言治療師評估。",
+    "url": "https://www.nncf.org/family/clp/clp_treatment/Introduction_feedskill"
+  },
+  {
+    "id": "resource-ffc7396037a9",
+    "title": "唇腭裂術前準備及術後照顧",
+    "summary": "整理唇裂、顎裂及相關顱顏手術的術前準備、傷口清潔、餵食、姿勢與術後照護重點。",
+    "type": "文章",
+    "type_label": "照護指南",
+    "source": {
+      "name": "財團法人羅慧夫顱顏基金會",
+      "type": "專業基金會",
+      "url": "https://www.nncf.org/family/clp/clp_treatment/Introduction_surgery_prepare"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒至青少年",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "兒科疾病與照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "唇顎裂手術",
+      "術前準備",
+      "術後照護",
+      "傷口照護",
+      "餵食"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：唇顎裂手術照護專門資源。",
+    "notice": "不同手術方式與院所指示可能不同，術後照護應以主治團隊指示優先。",
+    "url": "https://www.nncf.org/family/clp/clp_treatment/Introduction_surgery_prepare"
+  },
+  {
+    "id": "resource-1b96d6a05728",
+    "title": "唇腭裂療程費用及社會資源",
+    "summary": "整理唇顎裂療程費用、重大傷病、身心障礙資格與基金會交通及醫療補助等社會資源。",
+    "type": "文章",
+    "type_label": "補助／社會資源",
+    "source": {
+      "name": "財團法人羅慧夫顱顏基金會",
+      "type": "專業基金會",
+      "url": "https://www.nncf.org/family/clp/clp_intro/Introduction_cost_society"
+    },
+    "is_hub": false,
+    "age_label": "新生兒至成人",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "補助"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "兒科疾病與照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "唇顎裂補助",
+      "重大傷病",
+      "身心障礙",
+      "醫療費用",
+      "交通補助"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：專門服務顱顏家庭的社福與醫療支持資訊。",
+    "notice": "補助資格與福利依個案、縣市及當期規定而異，申請前應再向主管機關確認。",
+    "url": "https://www.nncf.org/family/clp/clp_intro/Introduction_cost_society"
+  },
+  {
+    "id": "resource-7eb0e71dcb94",
+    "title": "顱顏照護指南－醫師及專家文章整理",
+    "summary": "彙整顱顏醫療專家文章，涵蓋唇顎裂餵食、口腔、中耳炎、語言治療、心理與整體醫療等議題。",
+    "type": "連結入口",
+    "type_label": "專家文章入口",
+    "source": {
+      "name": "財團法人羅慧夫顱顏基金會",
+      "type": "醫療專業／基金會",
+      "url": "https://www.nncf.org/news/index/1/tx7yl"
+    },
+    "is_hub": true,
+    "age_label": "嬰幼兒至青少年",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "兒科疾病與照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "唇顎裂",
+      "語言治療",
+      "口腔照護",
+      "中耳炎",
+      "心理支持",
+      "顱顏醫療"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：文章作者多為長庚顱顏相關醫師、治療師與專業人員。",
+    "notice": "屬集合頁；育伴後續可再拆出最具家長行動價值的單篇文章。",
+    "url": "https://www.nncf.org/news/index/1/tx7yl"
+  },
+  {
+    "id": "resource-2b3520e4a8a1",
+    "title": "長庚顱顏中心",
+    "summary": "長庚顱顏中心提供唇顎裂及各類顱顏畸形的跨專科整合醫療，包含顱顏外科、齒顎矯正與語言治療等。",
+    "type": "連結入口",
+    "type_label": "醫療服務入口",
+    "source": {
+      "name": "長庚醫療財團法人 顱顏中心",
+      "type": "醫療院所",
+      "url": "https://www.cgmh.org.tw/tw/Systems/BranchInfo/3/32000/32500/32540"
+    },
+    "is_hub": true,
+    "age_label": "新生兒至成人",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "全齡"
+    ],
+    "regions": [
+      "桃園／全台可就醫"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "兒科疾病與照護",
+    "topic_group": "健康與照護",
+    "tags": [
+      "唇顎裂",
+      "顱顏中心",
+      "整合醫療",
+      "顱顏外科",
+      "齒顎矯正",
+      "語言治療"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：大型醫學中心專門顱顏整合團隊。",
+    "notice": "屬就醫入口，實際療程與時程需經團隊評估。",
+    "url": "https://www.cgmh.org.tw/tw/Systems/BranchInfo/3/32000/32500/32540"
+  },
+  {
+    "id": "resource-eb6589713c4f",
+    "title": "兒童發展篩檢服務",
+    "summary": "國民健康署兒童發展篩檢官方專區，整合篩檢服務、量表、懶人包、轉介流程與相關說明。",
+    "type": "連結入口",
+    "type_label": "官方專區",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=4816"
+    },
+    "is_hub": true,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "兒童發展篩檢",
+      "發展遲緩",
+      "早療",
+      "聯合評估",
+      "發展里程碑"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：現行兒童發展篩檢政策的官方核心入口。",
+    "notice": "篩檢結果不是診斷；疑似異常需依流程轉介聯合評估。",
+    "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=4816"
+  },
+  {
+    "id": "resource-9ccb404bb6d7",
+    "title": "兒童發展篩檢量表",
+    "summary": "提供不同年齡層的標準化兒童發展篩檢量表與工具，涵蓋6個月至7歲等多個階段。",
+    "type": "文章",
+    "type_label": "官方量表",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=4821"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "發展篩檢量表",
+      "兒童發展",
+      "發展里程碑",
+      "早期發現",
+      "0-7歲"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：國民健康署與馬偕紀念醫院合作建置之本土化標準化工具。",
+    "notice": "正式兒童發展篩檢應由具資格醫師執行；家長可作理解與準備用途。",
+    "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=4821"
+  },
+  {
+    "id": "resource-25842cae46e2",
+    "title": "兒童發展聯合評估中心名單",
+    "summary": "提供全台兒童發展聯合評估中心最新名單，供疑似發展遲緩兒童接受跨專科評估與診斷。",
+    "type": "連結入口",
+    "type_label": "官方名單",
+    "source": {
+      "name": "衛生福利部國民健康署",
+      "type": "政府／官方",
+      "url": "https://www.hpa.gov.tw/1602/548/n"
+    },
+    "is_hub": true,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "機構"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "聯合評估中心",
+      "發展遲緩",
+      "兒童發展",
+      "早療",
+      "評估"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：主管機關官方中心名單，2026年持續更新。",
+    "notice": "中心名單與服務量能可能更新；預約前應確認各院所門診資訊。",
+    "url": "https://www.hpa.gov.tw/1602/548/n"
+  },
+  {
+    "id": "resource-290c7a42cc4b",
+    "title": "孩子是否發展遲緩？認識發展遲緩及早期療育補助",
+    "summary": "我的E政府以家長流程角度整理發展遲緩辨識、診斷、通報、療育與交通／療育費用補助申請。",
+    "type": "文章",
+    "type_label": "官方懶人包",
+    "source": {
+      "name": "我的E政府",
+      "type": "政府／官方",
+      "url": "https://www.gov.tw/News_Content_26_578611"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "全台"
+    ],
+    "resource_categories": [
+      "補助"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "早療補助",
+      "發展遲緩",
+      "交通費",
+      "療育費",
+      "申請流程",
+      "通報"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：政府整合式申辦說明，家長行動導向清楚。",
+    "notice": "補助金額與申請單位依縣市不同，應以所在地政府最新規定為準。",
+    "url": "https://www.gov.tw/News_Content_26_578611"
+  },
+  {
+    "id": "resource-4107a0c0fdee",
+    "title": "臺北榮總兒童發展評估中心－早期療育資源介紹",
+    "summary": "介紹早療的醫療復健、日間療育、社福與家庭支持等服務型態，幫助家長理解完成評估後有哪些資源可使用。",
+    "type": "文章",
+    "type_label": "醫療衛教",
+    "source": {
+      "name": "臺北榮民總醫院 兒童發展評估中心",
+      "type": "醫療院所",
+      "url": "https://wd.vghtpe.gov.tw/PMREIP/Fpage.action?fid=9954&muid=10308"
+    },
+    "is_hub": false,
+    "age_label": "嬰幼兒／學齡前",
+    "age_ranges": [
+      "0-1歲",
+      "1-3歲",
+      "3-6歲"
+    ],
+    "age_groups": [
+      "學齡前"
+    ],
+    "regions": [
+      "北部／全台參考"
+    ],
+    "resource_categories": [
+      "學習教材"
+    ],
+    "audiences": [
+      "家長"
+    ],
+    "origin_region": "台灣",
+    "languages": [
+      "繁體中文"
+    ],
+    "topic": "發展與早療",
+    "topic_group": "發展與學習",
+    "tags": [
+      "早期療育",
+      "發展遲緩",
+      "復健",
+      "日間療育",
+      "家庭支持",
+      "兒童發展"
+    ],
+    "ai_summary_status": "verified",
+    "reviewed_at": null,
+    "credibility_note": "高：醫學中心兒童發展評估專業團隊。",
+    "notice": "北部院所內容可作全台概念參考；實際療育據點仍應依所在地資源選擇。",
+    "url": "https://wd.vghtpe.gov.tw/PMREIP/Fpage.action?fid=9954&muid=10308"
   }
 ]

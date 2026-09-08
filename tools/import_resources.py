@@ -7,7 +7,6 @@ import argparse
 import hashlib
 import json
 import re
-import shutil
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -15,9 +14,11 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Font
 
 if __package__:
-    from tools.resource_taxonomy import TOPIC_GROUPS
+    from tools.resource_taxonomy import IMPORT_TOPIC_ALIASES, TOPIC_GROUPS
+    from tools.validate_resources import validate_resources
 else:
-    from resource_taxonomy import TOPIC_GROUPS
+    from resource_taxonomy import IMPORT_TOPIC_ALIASES, TOPIC_GROUPS
+    from validate_resources import validate_resources
 
 
 REQUIRED_HEADERS = (
@@ -82,6 +83,23 @@ TYPE_MAP = {
     "專業資訊平台": "連結入口",
     "專業資源入口": "連結入口",
     "親職內容專區": "連結入口",
+    "官方衛教文章": "文章",
+    "官方服務資訊": "文章",
+    "官方手冊": "文章",
+    "醫療衛教": "文章",
+    "官方QA": "文章",
+    "官方補助資訊": "文章",
+    "照護指南": "文章",
+    "補助／社會資源": "文章",
+    "官方量表": "文章",
+    "官方總覽": "文章",
+    "官方懶人包": "文章",
+    "官方專區": "連結入口",
+    "官方名單": "連結入口",
+    "專業學會入口": "連結入口",
+    "疾病專題入口": "連結入口",
+    "專家文章入口": "連結入口",
+    "醫療服務入口": "連結入口",
 }
 
 AGE_STAGE_MAP = {
@@ -118,13 +136,21 @@ AGE_STAGE_MAP = {
     "幼兒至學齡兒童": ["1-3歲", "3-6歲"],
     "幼兒／學齡兒童": ["1-3歲", "3-6歲"],
     "新生兒／嬰兒": ["0-1歲"],
+    "孕期": ["孕期"],
+    "備孕／不孕療程": ["備孕"],
+    "新生兒至青少年": ["0-1歲", "1-3歲", "3-6歲"],
+    "嬰幼兒至青少年": ["0-1歲", "1-3歲", "3-6歲"],
+    "新生兒至成人": ["0-1歲", "1-3歲", "3-6歲"],
 }
 
 AGE_GROUP_MAP = {
+    "孕期": "全齡",
+    "備孕／成人": "全齡",
     "0–1歲": "學齡前",
     "0–3歲": "學齡前",
     "0–5歲": "學齡前",
     "0–6歲": "學齡前",
+    "0–7歲": "學齡前",
     "0–12歲": "國小",
     "0–15歲": "全齡",
     "2–3歲": "學齡前",
@@ -134,6 +160,8 @@ AGE_GROUP_MAP = {
     "孕期–0歲": "學齡前",
     "孕期–3歲": "學齡前",
     "孕期–6歲": "學齡前",
+    "0–18歲": "全齡",
+    "全年齡": "全齡",
 }
 
 RESOURCE_CATEGORY_MAP = {
@@ -162,6 +190,22 @@ RESOURCE_CATEGORY_MAP = {
     "課程型": "課程",
     "費用指南型": "學習教材",
     "選擇指南型": "學習教材",
+    "手冊型": "學習教材",
+    "專業解說型": "學習教材",
+    "檢查照護型": "學習教材",
+    "補助／服務入口型": "補助",
+    "查詢名單型": "機構",
+    "療程指南型": "學習教材",
+    "專業入口型": "機構",
+    "專題入口型": "機構",
+    "實作照護型": "學習教材",
+    "手術照護型": "學習教材",
+    "補助資源型": "補助",
+    "專業內容入口型": "機構",
+    "醫療服務入口型": "機構",
+    "篩檢工具型": "學習教材",
+    "總覽／導航型": "機構",
+    "申辦指南型": "補助",
 }
 
 AUDIENCE_MAP = {
@@ -170,6 +214,12 @@ AUDIENCE_MAP = {
     "家長／兒童": ["家長", "兒童"],
     "家長／準父母": ["家長"],
     "家長／照顧者": ["家長"],
+    "孕婦／準父母": ["家長"],
+    "備孕夫妻／不孕症患者": ["家長"],
+    "備孕夫妻／醫療專業人員": ["家長"],
+    "家長／患者／照顧者": ["家長"],
+    "患者／家長": ["家長"],
+    "家長／醫療專業人員": ["家長"],
 }
 
 
@@ -205,7 +255,9 @@ def validate_url(url: str, row_number: int) -> None:
 def convert_row(row: dict[str, str], row_number: int) -> dict[str, object]:
     raw_type = normalize_text(row["內容類型"])
     age_label = normalize_text(row["年齡階段"])
-    topic = normalize_text(row["主題"])
+    topic = IMPORT_TOPIC_ALIASES.get(
+        normalize_text(row["主題"]), normalize_text(row["主題"])
+    )
     url = normalize_text(row["連結"])
 
     if raw_type not in TYPE_MAP:
@@ -314,6 +366,36 @@ def merge_resources(
     return merged, skipped
 
 
+def exclude_authorized_duplicate_urls(
+    incoming: list[dict[str, object]],
+    existing: list[dict[str, object]],
+    excluded_urls: set[str],
+) -> tuple[list[dict[str, object]], list[str]]:
+    """Reject collisions unless an operator explicitly authorized exclusion."""
+    incoming_urls = {str(resource["url"]) for resource in incoming}
+    unknown_exclusions = excluded_urls - incoming_urls
+    if unknown_exclusions:
+        raise ValueError(
+            "Excluded URLs are not present in the input workbook: "
+            + ", ".join(sorted(unknown_exclusions))
+        )
+
+    existing_urls = {str(resource["url"]) for resource in existing}
+    duplicate_urls = incoming_urls & existing_urls
+    unauthorized_duplicates = duplicate_urls - excluded_urls
+    if unauthorized_duplicates:
+        raise ValueError(
+            "Input workbook contains URLs already in the resource index: "
+            + ", ".join(sorted(unauthorized_duplicates))
+        )
+
+    excluded_duplicates = duplicate_urls & excluded_urls
+    return (
+        [resource for resource in incoming if str(resource["url"]) not in excluded_duplicates],
+        sorted(excluded_duplicates),
+    )
+
+
 def resource_to_row(resource: dict[str, object]) -> list[str]:
     source = resource["source"]
     age_label = str(resource["age_label"])
@@ -368,7 +450,9 @@ def archive_input(input_path: Path, archive_dir: Path) -> Path:
     archive_dir.mkdir(parents=True, exist_ok=True)
     archived_path = archive_dir / input_path.name
     if input_path.resolve() != archived_path.resolve():
-        shutil.copy2(input_path, archived_path)
+        if archived_path.exists():
+            raise FileExistsError(f"Archive already exists: {archived_path}")
+        input_path.replace(archived_path)
     return archived_path
 
 
@@ -386,6 +470,13 @@ def main() -> None:
         default=Path("website/data/sample-resources.json"),
         help="網站 JSON 輸出位置",
     )
+    parser.add_argument(
+        "--exclude-url",
+        action="append",
+        default=[],
+        metavar="URL",
+        help="Explicitly exclude one input URL that is already in the resource index",
+    )
     args = parser.parse_args()
 
     incoming = load_resources(args.input)
@@ -395,17 +486,23 @@ def main() -> None:
         if not isinstance(existing, list):
             raise ValueError("既有資源索引必須是 JSON 陣列")
 
+    incoming, excluded_duplicates = exclude_authorized_duplicate_urls(
+        incoming, existing, set(args.exclude_url)
+    )
     resources, skipped = merge_resources(existing, incoming)
+    if skipped:
+        raise ValueError("Incoming resources unexpectedly collided during merge")
+    validate_resources(resources)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(
         json.dumps(resources, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    archived_path = archive_input(args.input, ARCHIVE_DIR)
     write_total_workbook(resources, TOTAL_WORKBOOK_PATH)
+    archived_path = archive_input(args.input, ARCHIVE_DIR)
     print(
         f"Imported {len(incoming) - skipped} new resources into {args.output} "
-        f"({skipped} duplicates skipped, {len(resources)} total)"
+        f"({len(excluded_duplicates)} authorized duplicates excluded, {len(resources)} total)"
     )
     print(f"Archived source workbook to {archived_path}")
     print(f"Generated total workbook at {TOTAL_WORKBOOK_PATH}")
