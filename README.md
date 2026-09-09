@@ -2,6 +2,18 @@
 
 Helping parents find trustworthy knowledge and practical tools for raising children.
 
+[![GitHub Pages 部署狀態](https://github.com/gitmaruneko/yuban/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/gitmaruneko/yuban/actions/workflows/deploy-pages.yml)
+
+[前往 YuBan 正式網站](https://gitmaruneko.github.io/yuban/)
+
+## 專案快照
+
+資料統計（2026-09-09）：**101** 筆資源、**96** 筆人工核實資源、**46** 個主題分類。
+
+- 資源資料經欄位、分類與重複網址驗證後才會納入網站索引。
+- [開發歷程](docs/HISTORY.md) 記錄重要功能、資源與工作流程的演進。
+- 部署 badge 顯示 `main` 最新 GitHub Actions 部署流程的結果；正式網站可直接由上方連結開啟。
+
 ---
 
 ## 部署
