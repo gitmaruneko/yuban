@@ -27,7 +27,8 @@ After all preconditions pass:
 ## Delivery and deployment
 
 1. Review `git diff --check` and confirm the changed resource count and archive path.
-2. Commit and push the feature branch, run the shared preview workflow if configured, then open a PR targeting `main`.
-3. Do not deploy directly from a feature branch. After the PR checks pass and the PR merges, verify the `main` deployment and the newly added resources on the production site.
+2. Commit and push the feature branch.
+3. Before opening a PR, manually run [yuban-preview's Deploy preview workflow](https://github.com/gitmaruneko/yuban-preview/actions/workflows/deploy-preview.yml), passing the complete feature branch name or commit SHA as `source_ref`. Wait for it to succeed, then confirm https://gitmaruneko.github.io/yuban-preview/ shows the intended source ref and commit.
+4. Open a PR targeting `main` only after the shared preview has been verified. Do not deploy directly from a feature branch. After the PR checks pass and the PR merges, verify the `main` deployment and the newly added resources on the production site.
 
-Report the input row count, duplicate-check result, imported count, skipped count, archive path, validation commands, and deployment status.
+Report the input row count, duplicate-check result, imported count, skipped count, archive path, validation commands, preview ref and status, and deployment status.
