@@ -3,24 +3,45 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>學習素材下載列表</title>
-    <style>
-      body { font-family: Arial, "Microsoft JhengHei", sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.7; }
-      h1, h2 { color: #1f2937; }
-      ul { padding-left: 20px; }
-      a { color: #2563eb; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px 20px; margin-top: 20px; background: #f9fafb; }
-      .meta { color: #6b7280; font-size: 14px; }
-      summary { cursor: pointer; font-weight: 600; color: #111827; }
-      details { padding: 4px 0; }
-      details ul { margin-top: 12px; }
-    </style>
+    <link rel="icon" href="../../website/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../website/styles.css" />
   </head>
   <body>
-    <h1>學習素材下載列表</h1>
-    <p class="meta">這裡整理了可直接開啟與下載的學習資源。</p>
-    <p class="meta">圖片可直接下載；若要一次取得整批素材，請使用 ZIP 版本。</p>
+    <a class="skip-link" href="#learning-materials">跳到學習素材</a>
+
+    <header class="topbar">
+      <div class="page-shell topbar-inner">
+        <a class="brand" href="../../website/index.html" aria-label="育伴首頁">
+          <span class="brand-mark" aria-hidden="true">育</span>
+          <span class="brand-name"><strong>育伴</strong><small>YuBan</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="主要導覽">
+          <a href="../../website/index.html">探索資源</a>
+          <a href="index.html" aria-current="page">學習素材</a>
+          <a class="nav-cta" href="../../website/submit.html">提交資源</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="learning-materials" class="learning-materials-page">
+      <section class="page-intro learning-materials-intro" aria-labelledby="learning-materials-title">
+        <div class="page-shell">
+          <p class="eyebrow">學習素材</p>
+          <h1 id="learning-materials-title">陪孩子一起練習，<span>把學習帶回日常</span></h1>
+          <p class="page-intro-lead">這裡整理了可直接開啟與下載的學習資源，適合在家中列印、使用與分享。</p>
+          <a class="button secondary" href="../../website/index.html">回到育伴首頁</a>
+        </div>
+      </section>
+
+      <section class="learning-materials-content page-shell" aria-labelledby="download-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">下載清單</p>
+            <h2 id="download-title">選一份現在用得上的素材</h2>
+          </div>
+          <p>圖片可直接下載；若要一次取得整批素材，請使用 ZIP 版本。</p>
+        </div>
+        <div class="learning-materials-list">
     <div class="card">
       <details open>
         <summary>注音學習單（學齡前）</summary>
@@ -127,5 +148,26 @@
         </details>
       </details>
     </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <div>
+          <a class="brand footer-brand" href="../../website/index.html">
+            <span class="brand-mark" aria-hidden="true">育</span>
+            <span class="brand-name"><strong>育伴</strong><small>YuBan</small></span>
+          </a>
+          <p>陪父母更快找到可信、實用的育兒資源。</p>
+        </div>
+        <nav aria-label="頁尾導覽">
+          <a href="../../website/index.html">回首頁</a>
+          <a href="../../website/submit.html">提交資源</a>
+          <a href="https://github.com/gitmaruneko/yuban" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </div>
+      <p class="footer-legal">© 2026 育伴 YuBan．本站內容不取代醫療診斷或專業建議。</p>
+    </footer>
   </body>
 </html>
