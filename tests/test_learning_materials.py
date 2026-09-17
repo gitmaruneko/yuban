@@ -48,8 +48,9 @@ class LearningMaterialsTests(unittest.TestCase):
                 if not is_local_link(link):
                     continue
                 with self.subTest(file=file_path, link=link):
-                    self.assertTrue(has_download_attribute)
                     self.assertTrue(link_target(file_path, link).is_file())
+                    if not has_download_attribute:
+                        self.assertEqual(Path(urlsplit(link).path).suffix, ".html")
 
     def test_all_local_markdown_links_exist(self):
         markdown_link_pattern = re.compile(r"\]\(([^)]+)\)")
