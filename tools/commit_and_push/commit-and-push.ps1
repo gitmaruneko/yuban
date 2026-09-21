@@ -15,22 +15,29 @@ Set-Location $repoRoot
 
 if ($All) { git add -A }
 
-$commitCmd = @("git","commit","-m",$Message)
-if ($Force) { $commitCmd += "--no-verify" }
-
 # If there is nothing to commit, exit gracefully
 $diff = git status --porcelain
 if (-not $diff) {
   Write-Output "No changes to commit."
 } else {
-  & $commitCmd
+  if ($Force) {
+    git commit --no-verify -m $Message
+  } else {
+    git commit -m $Message
+  }
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
 }
 
 # Push current branch
 $branch = git rev-parse --abbrev-ref HEAD
 if ($branch) {
-  if ($Force) { & git push -u origin $branch --force }
-  else { & git push -u origin $branch }
+  if ($Force) { git push -u origin $branch --force }
+  else { git push -u origin $branch }
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
 } else {
   Write-Error "Could not determine current branch."
   exit 1
