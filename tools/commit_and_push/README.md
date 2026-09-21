@@ -8,6 +8,7 @@ A lightweight repository-local helper that wraps a simple `git add`, `git commit
 - By default stages all local changes with `git add -A`.
 - Commits the current working tree if there are staged or uncommitted changes.
 - Pushes the current branch to `origin` after committing.
+- Preview deployment is intentionally separate; use `tools/deploy_preview/deploy-preview.ps1` for `yuban-preview`.
 
 ## Parameters
 

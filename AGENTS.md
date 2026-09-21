@@ -13,6 +13,7 @@ Domain documentation uses a single-context layout. See `docs/agents/domain.md`.
 For implementation, refactoring, architecture, and code review, follow `.agents/skills/engineering-standards/SKILL.md`.
 
 For changes involving responsibilities, extension points, substitutability, interfaces, or dependency direction, also follow `.agents/skills/solid-development/SKILL.md`.
+For committing and pushing changes, use `.agents/skills/commit-and-push/SKILL.md`. For shared preview deployment, use `.agents/skills/deploy-preview/SKILL.md` after the source commit is pushed.
 
 ### Testing
 

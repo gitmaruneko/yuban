@@ -1,12 +1,9 @@
 # commit-and-push Skill
 
 Purpose
-- Provide a lightweight, repository-local "skill" that documents and wraps the `commit-and-push` workflow so developers and local agents can run a safe, repeatable commit + push operation.
+- Provide a repository-local skill that documents and wraps only the safe commit + push workflow.
 
 What it does
-- Documents the `tools/commit_and_push/commit-and-push.ps1` script and its parameters.
-- Shows cross-platform invocation options and CI usage examples.
-- Lists safe defaults, required confirmations, and security guidance for agent integration.
 
 Files touched
 - `tools/commit_and_push/commit-and-push.ps1` (PowerShell script)
@@ -56,6 +53,8 @@ jobs:
 Agent integration notes
 - Agents invoking this skill must always request explicit user confirmation before using `-Force` or performing a force-push.
 - Prefer a two-step flow: (1) show a summary of staged/unstaged changes, (2) prompt user to confirm commit message and push.
+- Run the narrowest relevant tests before presenting the confirmation summary when the change affects executable behavior or resource data.
+- After a successful push, report the branch and commit SHA. Invoke `deploy-preview` separately when a preview is requested.
 - Do not store or print tokens in logs; use environment variables for CI credentials.
 
 Security & safety
